@@ -712,56 +712,47 @@ tailwind.config = {
 <div class="section-divider"></div>
 
 <!-- ==================== WHAT I BRING ==================== -->
-<section id="value" class="py-24 bg-gradient-to-br from-gray-950 via-[#0a1628] to-gray-950 relative overflow-hidden">
-  <!-- Background grid -->
-  <div class="absolute inset-0 pointer-events-none opacity-25" style="background-image:linear-gradient(rgba(80,184,255,0.07) 1px,transparent 1px),linear-gradient(90deg,rgba(80,184,255,0.07) 1px,transparent 1px);background-size:60px 60px"></div>
-  <!-- Decorative blobs -->
-  <div class="absolute -top-32 right-0 w-[500px] h-[500px] bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
-  <div class="absolute -bottom-32 left-0 w-[400px] h-[400px] bg-accent/10 rounded-full blur-3xl pointer-events-none"></div>
-
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-    <!-- Header -->
+<section id="value" class="py-24 bg-light-alt dark:bg-dark-card/30">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Section Header -->
     <div class="text-center mb-16">
-      <p class="fade-up text-sm font-semibold uppercase tracking-[0.2em] text-accent mb-3">What I Bring</p>
-      <h2 class="fade-up delay-100 font-heading font-bold text-3xl sm:text-4xl lg:text-5xl text-white mb-4">
+      <p class="fade-up text-sm font-semibold uppercase tracking-[0.2em] text-primary dark:text-accent mb-3">What I Bring</p>
+      <h2 class="fade-up delay-100 font-heading font-bold text-3xl sm:text-4xl lg:text-5xl text-gray-900 dark:text-white mb-4">
         Three things that set me apart.
       </h2>
-      <p class="fade-up delay-200 text-lg text-blue-200/60 max-w-2xl mx-auto">
+      <p class="fade-up delay-200 text-lg text-gray-500 dark:text-gray-400 max-w-2xl mx-auto">
         The rare combination that separates a great demo from a real, lasting deployment.
       </p>
     </div>
 
     <!-- Pillars -->
-    <div class="grid md:grid-cols-3 gap-8">
+    <div class="grid md:grid-cols-3 gap-6">
 
       <!-- Pillar 1: Tech Depth -->
-      <div class="fade-up group relative bg-white/[0.03] border border-white/[0.08] rounded-3xl p-8 hover:bg-white/[0.07] hover:border-white/[0.18] hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500">
-        <div class="w-16 h-16 rounded-2xl bg-primary/20 border border-primary/30 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-primary/30 transition-all duration-300">
-          <span class="text-3xl">⚙️</span>
+      <div class="fade-up group card-shimmer bg-white dark:bg-dark-card border border-gray-200/80 dark:border-white/5 rounded-2xl p-7 hover:shadow-xl hover:shadow-primary/5 dark:hover:shadow-primary/10 transition-all duration-500">
+        <div class="w-14 h-14 rounded-2xl bg-primary/10 dark:bg-primary/20 flex items-center justify-center mb-5 group-hover:scale-110 group-hover:bg-primary/20 dark:group-hover:bg-primary/30 transition-all duration-300">
+          <span class="text-2xl">⚙️</span>
         </div>
-        <div class="font-heading font-extrabold text-7xl text-white/[0.04] mb-3 select-none leading-none" aria-hidden="true">01</div>
-        <h3 class="font-heading font-bold text-2xl text-white mb-4">Tech Depth</h3>
-        <p class="text-blue-200/60 leading-relaxed text-sm">26 years of hands-on engineering — from field work and high-frequency trading systems to enterprise cloud and Microsoft AI. I don't just present slides. I've built, broken, and fixed the infrastructure.</p>
+        <h3 class="font-heading font-bold text-lg text-gray-900 dark:text-white mb-3">Tech Depth</h3>
+        <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">26 years of hands-on engineering — from field work and high-frequency trading systems to enterprise cloud and Microsoft AI. I don't just present slides. I've built, broken, and fixed the infrastructure.</p>
       </div>
 
       <!-- Pillar 2: Business Acumen -->
-      <div class="fade-up delay-100 group relative bg-white/[0.03] border border-white/[0.08] rounded-3xl p-8 hover:bg-white/[0.07] hover:border-white/[0.18] hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500">
-        <div class="w-16 h-16 rounded-2xl bg-primary/20 border border-primary/30 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-primary/30 transition-all duration-300">
-          <span class="text-3xl">📊</span>
+      <div class="fade-up delay-100 group card-shimmer bg-white dark:bg-dark-card border border-gray-200/80 dark:border-white/5 rounded-2xl p-7 hover:shadow-xl hover:shadow-primary/5 dark:hover:shadow-primary/10 transition-all duration-500">
+        <div class="w-14 h-14 rounded-2xl bg-primary/10 dark:bg-primary/20 flex items-center justify-center mb-5 group-hover:scale-110 group-hover:bg-primary/20 dark:group-hover:bg-primary/30 transition-all duration-300">
+          <span class="text-2xl">📊</span>
         </div>
-        <div class="font-heading font-extrabold text-7xl text-white/[0.04] mb-3 select-none leading-none" aria-hidden="true">02</div>
-        <h3 class="font-heading font-bold text-2xl text-white mb-4">Business Acumen</h3>
-        <p class="text-blue-200/60 leading-relaxed text-sm">I translate complex technology into the language executives understand: ROI, efficiency gains, compliance enablement, and competitive advantage. I bridge the gap between IT and the C-suite with confidence.</p>
+        <h3 class="font-heading font-bold text-lg text-gray-900 dark:text-white mb-3">Business Acumen</h3>
+        <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">I translate complex technology into the language executives understand: ROI, efficiency gains, compliance enablement, and competitive advantage. I bridge the gap between IT and the C-suite with confidence.</p>
       </div>
 
       <!-- Pillar 3: Finance Domain -->
-      <div class="fade-up delay-200 group relative bg-white/[0.03] border border-white/[0.08] rounded-3xl p-8 hover:bg-white/[0.07] hover:border-white/[0.18] hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500">
-        <div class="w-16 h-16 rounded-2xl bg-primary/20 border border-primary/30 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-primary/30 transition-all duration-300">
-          <span class="text-3xl">🏦</span>
+      <div class="fade-up delay-200 group card-shimmer bg-white dark:bg-dark-card border border-gray-200/80 dark:border-white/5 rounded-2xl p-7 hover:shadow-xl hover:shadow-primary/5 dark:hover:shadow-primary/10 transition-all duration-500">
+        <div class="w-14 h-14 rounded-2xl bg-primary/10 dark:bg-primary/20 flex items-center justify-center mb-5 group-hover:scale-110 group-hover:bg-primary/20 dark:group-hover:bg-primary/30 transition-all duration-300">
+          <span class="text-2xl">🏦</span>
         </div>
-        <div class="font-heading font-extrabold text-7xl text-white/[0.04] mb-3 select-none leading-none" aria-hidden="true">03</div>
-        <h3 class="font-heading font-bold text-2xl text-white mb-4">Finance Domain</h3>
-        <p class="text-blue-200/60 leading-relaxed text-sm">Deep expertise in the regulatory, risk, and operational demands of financial services. I speak both IT and FinServ fluently — making me the trusted bridge between Microsoft and major financial institutions.</p>
+        <h3 class="font-heading font-bold text-lg text-gray-900 dark:text-white mb-3">Finance Domain</h3>
+        <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Deep expertise in the regulatory, risk, and operational demands of financial services. I speak both IT and FinServ fluently — making me the trusted bridge between Microsoft and major financial institutions.</p>
       </div>
 
     </div>
