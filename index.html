@@ -219,13 +219,13 @@ tailwind.config = {
       </div>
 
     <!-- Mobile Menu -->
-    <div id="mobileMenu" class="md:hidden hidden pb-4">
-      <div class="flex flex-col gap-3 pt-2">
-        <a href="#focus" class="mobile-link px-4 py-2 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-dark-card transition-colors text-sm font-medium">Focus</a>
-        <a href="#journey" class="mobile-link px-4 py-2 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-dark-card transition-colors text-sm font-medium">Journey</a>
-        <a href="#about" class="mobile-link px-4 py-2 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-dark-card transition-colors text-sm font-medium">About</a>
-        <a href="#contact" class="mobile-link px-4 py-2 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-dark-card transition-colors text-sm font-medium">Contact</a>
-        <a href="#contact" class="mx-4 mt-1 text-center px-5 py-2.5 rounded-full bg-primary text-white text-sm font-semibold">Get in Touch</a>
+    <div id="mobileMenu" class="md:hidden hidden border-t border-gray-200/60 dark:border-white/10 mt-2 pb-4">
+      <div class="flex flex-col gap-1 pt-3">
+        <a href="#focus" class="mobile-link px-4 py-3 rounded-xl text-gray-800 dark:text-gray-200 hover:bg-primary/10 dark:hover:bg-primary/20 hover:text-primary dark:hover:text-accent transition-colors text-base font-semibold">Focus</a>
+        <a href="#journey" class="mobile-link px-4 py-3 rounded-xl text-gray-800 dark:text-gray-200 hover:bg-primary/10 dark:hover:bg-primary/20 hover:text-primary dark:hover:text-accent transition-colors text-base font-semibold">Journey</a>
+        <a href="#about" class="mobile-link px-4 py-3 rounded-xl text-gray-800 dark:text-gray-200 hover:bg-primary/10 dark:hover:bg-primary/20 hover:text-primary dark:hover:text-accent transition-colors text-base font-semibold">About</a>
+        <a href="#contact" class="mobile-link px-4 py-3 rounded-xl text-gray-800 dark:text-gray-200 hover:bg-primary/10 dark:hover:bg-primary/20 hover:text-primary dark:hover:text-accent transition-colors text-base font-semibold">Contact</a>
+        <a href="#contact" class="mx-4 mt-3 text-center px-5 py-3 rounded-full bg-primary text-white text-sm font-semibold shadow-lg shadow-primary/25">Get in Touch</a>
       </div>
     </div>
   </div>
@@ -753,11 +753,19 @@ tailwind.config = {
 
   // ── Navigation Glassmorphism on Scroll ──
   const nav = document.getElementById('nav');
+  const navBgClasses = ['nav-glass', 'bg-white/80', 'dark:bg-dark-bg/80', 'shadow-sm', 'border-b', 'border-gray-200/50', 'dark:border-white/5'];
+  const navSolidClasses = ['bg-white', 'dark:bg-dark-bg', 'shadow-md', 'border-b', 'border-gray-200/50', 'dark:border-white/5'];
+  let mobileMenuOpen = false;
+
   function updateNav() {
-    if (window.scrollY > 50) {
-      nav.classList.add('nav-glass', 'bg-white/80', 'dark:bg-dark-bg/80', 'shadow-sm', 'border-b', 'border-gray-200/50', 'dark:border-white/5');
+    if (mobileMenuOpen) {
+      nav.classList.remove(...navBgClasses);
+      nav.classList.add(...navSolidClasses);
+    } else if (window.scrollY > 50) {
+      nav.classList.remove(...navSolidClasses);
+      nav.classList.add(...navBgClasses);
     } else {
-      nav.classList.remove('nav-glass', 'bg-white/80', 'dark:bg-dark-bg/80', 'shadow-sm', 'border-b', 'border-gray-200/50', 'dark:border-white/5');
+      nav.classList.remove(...navBgClasses, ...navSolidClasses);
     }
   }
   window.addEventListener('scroll', updateNav, { passive: true });
@@ -766,9 +774,16 @@ tailwind.config = {
   // ── Mobile Menu ──
   const menuBtn = document.getElementById('mobileMenuBtn');
   const menu = document.getElementById('mobileMenu');
-  menuBtn.addEventListener('click', () => menu.classList.toggle('hidden'));
+  menuBtn.addEventListener('click', () => {
+    mobileMenuOpen = menu.classList.toggle('hidden') ? false : true;
+    updateNav();
+  });
   document.querySelectorAll('.mobile-link').forEach(link => {
-    link.addEventListener('click', () => menu.classList.add('hidden'));
+    link.addEventListener('click', () => {
+      menu.classList.add('hidden');
+      mobileMenuOpen = false;
+      updateNav();
+    });
   });
 
   // ── Fade-Up on Scroll ──
