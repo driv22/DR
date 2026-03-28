@@ -176,11 +176,12 @@
     .logos-section::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent 0%, var(--border) 50%, transparent 100%); }
     .logos-inner { max-width: 1160px; margin: 0 auto; text-align: center; }
     .logos-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--muted); margin-bottom: 32px; }
-    .logos-row { display: flex; align-items: center; justify-content: center; gap: 48px; flex-wrap: wrap; opacity: 0.55; transition: opacity 0.3s; }
-    .logos-row:hover { opacity: 0.8; }
-    .logo-item { display: flex; align-items: center; gap: 10px; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: 1.1rem; color: var(--text); letter-spacing: -0.3px; white-space: nowrap; }
-    .logo-item svg { width: 28px; height: 28px; flex-shrink: 0; }
-    .logo-divider { width: 1px; height: 28px; background: var(--border); flex-shrink: 0; }
+    .logos-row { display: flex; align-items: center; justify-content: center; gap: 40px; flex-wrap: wrap; }
+    .logo-item { display: flex; align-items: center; height: 36px; transition: opacity 0.3s, transform 0.3s; opacity: 0.45; }
+    .logo-item:hover { opacity: 0.85; transform: scale(1.05); }
+    .logo-item img { height: 100%; width: auto; object-fit: contain; }
+    .logo-item.active { opacity: 0.9; }
+    .logo-arrow { color: var(--muted); font-size: 0.8rem; opacity: 0.3; flex-shrink: 0; }
 
     /* DARK MODE */
     .theme-toggle { position: fixed; bottom: 24px; right: 24px; z-index: 300; width: 48px; height: 48px; border-radius: 50%; border: 1px solid var(--border); background: var(--bg); box-shadow: var(--shadow); cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; transition: background 0.3s, border-color 0.3s, transform 0.2s; }
@@ -218,6 +219,7 @@
     html.dark .btn-outline:hover { background: rgba(77,166,255,0.1); }
     html.dark .marquee-section { background: var(--blue-dark); }
     html.dark .logos-section { background: var(--bg); }
+    html.dark .logo-item img { filter: brightness(0) invert(1); }
     html.dark .logo-item { color: var(--text); }
     html.dark .theme-toggle { background: var(--bg-alt); border-color: var(--border); }
     html.dark .section-label { background: rgba(77,166,255,0.1); border-color: rgba(77,166,255,0.2); }
@@ -240,15 +242,60 @@
       .hero-visual { display: none; }
       .about-inner { grid-template-columns: 1fr; gap: 40px; }
       .focus-header { flex-direction: column; align-items: flex-start; }
-      .hero-stats { border-radius: 10px; }
-      .hero-stat { min-width: 50%; border-bottom: 1px solid var(--border); }
+      .hero-stats { border-radius: 10px; flex-direction: column; }
+      .hero-stat { border-right: none; border-bottom: 1px solid var(--border); }
+      .hero-stat:last-child { border-bottom: none; }
+      .logos-row { gap: 28px; }
+      .logo-item { height: 28px; }
+      .logo-arrow { font-size: 0.6rem; }
+      .timeline-item::before { left: -33px; }
     }
     @media (max-width: 600px) {
       .nav-links { display: none; }
+      .nav-inner { padding: 0 16px; }
+      .nav-cta { padding: 8px 16px; font-size: 0.82rem; }
       .cards-grid { grid-template-columns: 1fr; }
-      .section-title { letter-spacing: -1px; }
-      .hero-headline { letter-spacing: -2px; }
+      .section-title { letter-spacing: -1px; font-size: clamp(1.6rem, 5vw, 2.2rem); }
+      .hero-headline { letter-spacing: -2px; font-size: clamp(2.2rem, 8vw, 3rem); }
+      #hero { padding: 110px 16px 60px; min-height: auto; }
+      .hero-sub { font-size: 0.95rem; margin-bottom: 28px; }
+      .hero-eyebrow { font-size: 0.65rem; letter-spacing: 1.2px; }
+      .hero-actions { flex-direction: column; gap: 10px; }
+      .btn-primary, .btn-outline { width: 100%; justify-content: center; padding: 14px 24px; }
+      .btn-primary.large, .btn-outline.large { width: 100%; justify-content: center; padding: 14px 24px; font-size: 0.93rem; }
+      #focus, #timeline, #about { padding: 72px 16px; }
+      #contact { padding: 80px 16px; }
+      .section-sub { font-size: 0.95rem; margin-bottom: 36px; }
+      .focus-header .section-sub { max-width: 100% !important; }
       .timeline-list { padding-left: 32px; }
+      .timeline-item { padding-left: 20px; }
+      .timeline-item::before { left: -27px; width: 12px; height: 12px; }
+      .timeline-card { padding: 20px 20px; }
+      .timeline-role { font-size: 0.95rem; }
+      .card { padding: 28px 24px; }
+      .logos-section { padding: 40px 16px; }
+      .logos-row { gap: 20px; }
+      .logo-item { height: 22px; }
+      .logo-arrow { font-size: 0.55rem; }
+      .logos-label { margin-bottom: 20px; font-size: 0.65rem; }
+      .marquee-section { padding: 14px 0; }
+      .marquee-item { padding: 0 18px; font-size: 0.7rem; }
+      .stats-col { gap: 12px; }
+      .stat-card { padding: 20px; }
+      .stat-num { font-size: 1.5rem; }
+      .skill-tags { gap: 8px; }
+      .skill-tags span { padding: 5px 12px; font-size: 0.75rem; }
+      .contact-sub { font-size: 0.95rem; margin-bottom: 36px; }
+      .contact-actions { flex-direction: column; gap: 10px; }
+      footer { padding: 24px 16px; }
+      .footer-inner { flex-direction: column; text-align: center; gap: 8px; }
+      .footer-right { text-align: center; }
+      .theme-toggle { bottom: 16px; right: 16px; width: 42px; height: 42px; font-size: 1rem; }
+    }
+    @media (max-width: 380px) {
+      .hero-headline { font-size: 2rem; letter-spacing: -1.5px; }
+      .hero-stat { padding: 12px 16px; }
+      .hero-stat-val { font-size: 0.88rem; }
     }
   </style>
 </head>
@@ -304,37 +351,13 @@
   <!-- COMPANY LOGOS -->
   <div class="logos-section">
     <div class="logos-inner">
-      <p class="logos-label">Career Journey</p>
+      <p class="logos-label">Where I've Built My Career</p>
       <div class="logos-row fade-up">
-        <div class="logo-item">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 2H3a1 1 0 0 0-1 1v18a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1zM5 20V4h14v16z"/></svg>
-          Geek Squad
-        </div>
-        <div class="logo-divider"></div>
-        <div class="logo-item">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-          Charter
-        </div>
-        <div class="logo-divider"></div>
-        <div class="logo-item">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 3v18h18V3H3zm16 16H5V5h14v14zM7 7h4v4H7V7zm6 0h4v4h-4V7zm-6 6h4v4H7v-4zm6 0h4v4h-4v-4z"/></svg>
-          Chopper Trading
-        </div>
-        <div class="logo-divider"></div>
-        <div class="logo-item">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
-          TSG
-        </div>
-        <div class="logo-divider"></div>
-        <div class="logo-item">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg>
-          Allstate
-        </div>
-        <div class="logo-divider"></div>
-        <div class="logo-item" style="color: var(--blue); opacity: 1;">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M1 1h10v10H1V1zm12 0h10v10H13V1zM1 13h10v10H1V13zm12 0h10v10H13V13z"/></svg>
-          Microsoft
-        </div>
+        <div class="logo-item"><img src="https://logo.clearbit.com/bestbuy.com?size=120" alt="Geek Squad / Best Buy" title="Geek Squad (Best Buy)" /></div>
+        <span class="logo-arrow">&#9654;</span>
+        <div class="logo-item"><img src="https://logo.clearbit.com/allstate.com?size=120" alt="Allstate" title="Allstate" /></div>
+        <span class="logo-arrow">&#9654;</span>
+        <div class="logo-item active"><img src="https://logo.clearbit.com/microsoft.com?size=120" alt="Microsoft" title="Microsoft" /></div>
       </div>
     </div>
   </div>
