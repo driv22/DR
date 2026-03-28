@@ -10,10 +10,7 @@
 <meta property="og:url" content="https://driv.space/"/>
 <meta property="og:title" content="Dan Rivero · Senior Solution Engineer · Microsoft AI Workforce"/>
 <meta property="og:description" content="26 years in technology. Helping the world's leading financial institutions move from AI ambition to AI reality — powered by Microsoft 365 Copilot, Copilot Studio, and Microsoft Teams."/>
-<meta property="og:image" content="https://driv.space/og-image.png"/>
-<meta property="og:image:width" content="1200"/>
-<meta property="og:image:height" content="630"/>
-<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Dan Rivero · Senior Solution Engineer · Microsoft AI Workforce"/>
 <meta name="twitter:description" content="26 years in technology. Helping the world's leading financial institutions move from AI ambition to AI reality."/>
 
@@ -763,7 +760,7 @@ tailwind.config = {
 <div class="section-divider"></div>
 
 <!-- ==================== CONTACT ==================== -->
-<section id="contact" class="py-24 bg-light-alt dark:bg-dark-card/30 relative overflow-hidden">
+<section id="contact" class="py-24 bg-white dark:bg-dark-bg relative overflow-hidden">
   <!-- Decorative blobs -->
   <div class="absolute -top-20 -right-20 w-96 h-96 bg-primary/5 dark:bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
   <div class="absolute -bottom-20 -left-20 w-80 h-80 bg-accent/5 dark:bg-accent/10 rounded-full blur-3xl pointer-events-none"></div>
@@ -802,7 +799,7 @@ tailwind.config = {
       dan<span class="text-primary">.</span>rivero
     </a>
     <p class="text-sm text-gray-400 dark:text-gray-500 mb-2">
-      © 2025 Dan Rivero · Chicago, IL · All rights reserved.
+      © <span id="footerYear">2025</span> Dan Rivero · Chicago, IL · All rights reserved.
     </p>
     <p class="text-xs text-gray-400 dark:text-gray-600">
       Senior Solution Engineer · AI Workforce · Microsoft
@@ -939,6 +936,10 @@ tailwind.config = {
     });
   }, { threshold: 0, rootMargin: '-60px 0px -50% 0px' });
   spySections.forEach(s => spyObserver.observe(s));
+  // Clear all active states when scrolled back to top (before first section)
+  window.addEventListener('scroll', () => {
+    if (window.scrollY < 100) navLinks.forEach(l => l.classList.remove('nav-active'));
+  }, { passive: true });
 
   // ── Back to Top ──
   const btt = document.getElementById('backToTop');
@@ -1008,6 +1009,10 @@ tailwind.config = {
       }, 16);
     }, 900);
   }
+
+  // ── Dynamic Footer Year ──
+  const fyEl = document.getElementById('footerYear');
+  if (fyEl) fyEl.textContent = new Date().getFullYear();
 
 })();
 </script>
