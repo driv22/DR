@@ -200,13 +200,23 @@ tailwind.config = {
         <a href="#contact" class="inline-flex items-center px-5 py-2.5 rounded-full bg-primary text-white text-sm font-semibold hover:bg-blue-700 shadow-lg shadow-primary/25 hover:shadow-primary/40 btn-press transition-all">
           Get in Touch
         </a>
+        <!-- Dark mode toggle (desktop) -->
+        <button id="darkToggle" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-dark-card border border-gray-200 dark:border-white/10 hover:bg-gray-200 dark:hover:bg-dark-surface flex items-center justify-center transition-all" aria-label="Toggle dark mode">
+          <svg class="w-[18px] h-[18px] hidden dark:block text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"/></svg>
+          <svg class="w-[18px] h-[18px] block dark:hidden text-gray-600" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/></svg>
+        </button>
       </div>
 
-      <!-- Mobile menu button -->
-      <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-dark-card transition-colors" aria-label="Menu">
-        <svg class="w-6 h-6 text-gray-700 dark:text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
-      </button>
-    </div>
+      <!-- Mobile: dark toggle + menu button -->
+      <div class="md:hidden flex items-center gap-2">
+        <button id="darkToggleMobile" class="w-9 h-9 rounded-full bg-gray-100 dark:bg-dark-card border border-gray-200 dark:border-white/10 flex items-center justify-center transition-all" aria-label="Toggle dark mode">
+          <svg class="w-4 h-4 hidden dark:block text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"/></svg>
+          <svg class="w-4 h-4 block dark:hidden text-gray-600" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/></svg>
+        </button>
+        <button id="mobileMenuBtn" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-dark-card transition-colors" aria-label="Menu">
+          <svg class="w-6 h-6 text-gray-700 dark:text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
 
     <!-- Mobile Menu -->
     <div id="mobileMenu" class="md:hidden hidden pb-4">
@@ -711,14 +721,6 @@ tailwind.config = {
   </div>
 </footer>
 
-<!-- ==================== DARK MODE TOGGLE ==================== -->
-<button id="darkToggle" class="fixed bottom-6 right-6 z-50 w-12 h-12 rounded-full bg-white dark:bg-dark-card border border-gray-200 dark:border-white/10 shadow-lg hover:shadow-xl flex items-center justify-center btn-press transition-all" aria-label="Toggle dark mode">
-  <!-- Sun icon (shown in dark mode) -->
-  <svg class="w-5 h-5 hidden dark:block text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"/></svg>
-  <!-- Moon icon (shown in light mode) -->
-  <svg class="w-5 h-5 block dark:hidden text-gray-700" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/></svg>
-</button>
-
 <!-- ==================== JAVASCRIPT ==================== -->
 <script>
 (function() {
@@ -727,6 +729,7 @@ tailwind.config = {
   // ── Dark Mode ──
   const html = document.documentElement;
   const toggle = document.getElementById('darkToggle');
+  const toggleMobile = document.getElementById('darkToggleMobile');
 
   function applyTheme(dark) {
     html.classList.toggle('dark', dark);
@@ -739,9 +742,9 @@ tailwind.config = {
     applyTheme(true);
   }
 
-  toggle.addEventListener('click', () => {
-    applyTheme(!html.classList.contains('dark'));
-  });
+  function handleToggle() { applyTheme(!html.classList.contains('dark')); }
+  toggle.addEventListener('click', handleToggle);
+  if (toggleMobile) toggleMobile.addEventListener('click', handleToggle);
 
   // Listen for system preference changes
   window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
