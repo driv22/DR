@@ -214,22 +214,30 @@ tailwind.config = {
           <svg class="w-4 h-4 block dark:hidden text-gray-600" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/></svg>
         </button>
         <button id="mobileMenuBtn" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-dark-card transition-colors" aria-label="Menu">
-          <svg class="w-6 h-6 text-gray-700 dark:text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          <!-- Hamburger icon -->
+          <svg id="menuIconOpen" class="w-6 h-6 text-gray-700 dark:text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+          <!-- X icon (hidden by default) -->
+          <svg id="menuIconClose" class="w-6 h-6 text-gray-700 dark:text-gray-300 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
         </button>
       </div>
 
-    <!-- Mobile Menu -->
-    <div id="mobileMenu" class="md:hidden hidden border-t border-gray-200/60 dark:border-white/10 mt-2 pb-4">
-      <div class="flex flex-col gap-1 pt-3">
-        <a href="#focus" class="mobile-link px-4 py-3 rounded-xl text-gray-800 dark:text-gray-200 hover:bg-primary/10 dark:hover:bg-primary/20 hover:text-primary dark:hover:text-accent transition-colors text-base font-semibold">Focus</a>
-        <a href="#journey" class="mobile-link px-4 py-3 rounded-xl text-gray-800 dark:text-gray-200 hover:bg-primary/10 dark:hover:bg-primary/20 hover:text-primary dark:hover:text-accent transition-colors text-base font-semibold">Journey</a>
-        <a href="#about" class="mobile-link px-4 py-3 rounded-xl text-gray-800 dark:text-gray-200 hover:bg-primary/10 dark:hover:bg-primary/20 hover:text-primary dark:hover:text-accent transition-colors text-base font-semibold">About</a>
-        <a href="#contact" class="mobile-link px-4 py-3 rounded-xl text-gray-800 dark:text-gray-200 hover:bg-primary/10 dark:hover:bg-primary/20 hover:text-primary dark:hover:text-accent transition-colors text-base font-semibold">Contact</a>
-        <a href="#contact" class="mx-4 mt-3 text-center px-5 py-3 rounded-full bg-primary text-white text-sm font-semibold shadow-lg shadow-primary/25">Get in Touch</a>
-      </div>
     </div>
   </div>
 </nav>
+
+<!-- ==================== MOBILE MENU OVERLAY ==================== -->
+<div id="mobileMenu" class="fixed inset-0 z-40 bg-white dark:bg-dark-bg hidden md:hidden transition-opacity duration-300" style="padding-top:64px">
+  <div class="flex flex-col items-center justify-center h-full gap-2 px-6 -mt-16">
+    <a href="#focus" class="mobile-link w-full text-center py-4 text-2xl font-heading font-bold text-gray-900 dark:text-white hover:text-primary dark:hover:text-accent transition-colors">Focus</a>
+    <div class="w-16 h-px bg-gray-200 dark:bg-white/10"></div>
+    <a href="#journey" class="mobile-link w-full text-center py-4 text-2xl font-heading font-bold text-gray-900 dark:text-white hover:text-primary dark:hover:text-accent transition-colors">Journey</a>
+    <div class="w-16 h-px bg-gray-200 dark:bg-white/10"></div>
+    <a href="#about" class="mobile-link w-full text-center py-4 text-2xl font-heading font-bold text-gray-900 dark:text-white hover:text-primary dark:hover:text-accent transition-colors">About</a>
+    <div class="w-16 h-px bg-gray-200 dark:bg-white/10"></div>
+    <a href="#contact" class="mobile-link w-full text-center py-4 text-2xl font-heading font-bold text-gray-900 dark:text-white hover:text-primary dark:hover:text-accent transition-colors">Contact</a>
+    <a href="#contact" class="mobile-link mt-6 px-8 py-3.5 rounded-full bg-primary text-white text-base font-semibold shadow-lg shadow-primary/25">Get in Touch</a>
+  </div>
+</div>
 
 <!-- ==================== HERO ==================== -->
 <section class="relative min-h-screen flex items-center pt-20 hero-grid overflow-hidden">
@@ -754,36 +762,35 @@ tailwind.config = {
   // ── Navigation Glassmorphism on Scroll ──
   const nav = document.getElementById('nav');
   const navBgClasses = ['nav-glass', 'bg-white/80', 'dark:bg-dark-bg/80', 'shadow-sm', 'border-b', 'border-gray-200/50', 'dark:border-white/5'];
-  const navSolidClasses = ['bg-white', 'dark:bg-dark-bg', 'shadow-md', 'border-b', 'border-gray-200/50', 'dark:border-white/5'];
-  let mobileMenuOpen = false;
 
   function updateNav() {
-    if (mobileMenuOpen) {
-      nav.classList.remove(...navBgClasses);
-      nav.classList.add(...navSolidClasses);
-    } else if (window.scrollY > 50) {
-      nav.classList.remove(...navSolidClasses);
+    if (window.scrollY > 50) {
       nav.classList.add(...navBgClasses);
     } else {
-      nav.classList.remove(...navBgClasses, ...navSolidClasses);
+      nav.classList.remove(...navBgClasses);
     }
   }
   window.addEventListener('scroll', updateNav, { passive: true });
   updateNav();
 
-  // ── Mobile Menu ──
+  // ── Mobile Menu (full-screen overlay) ──
   const menuBtn = document.getElementById('mobileMenuBtn');
   const menu = document.getElementById('mobileMenu');
-  menuBtn.addEventListener('click', () => {
-    mobileMenuOpen = menu.classList.toggle('hidden') ? false : true;
-    updateNav();
-  });
+  const iconOpen = document.getElementById('menuIconOpen');
+  const iconClose = document.getElementById('menuIconClose');
+  let mobileMenuOpen = false;
+
+  function toggleMobileMenu(open) {
+    mobileMenuOpen = open;
+    menu.classList.toggle('hidden', !open);
+    iconOpen.classList.toggle('hidden', open);
+    iconClose.classList.toggle('hidden', !open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  }
+
+  menuBtn.addEventListener('click', () => toggleMobileMenu(!mobileMenuOpen));
   document.querySelectorAll('.mobile-link').forEach(link => {
-    link.addEventListener('click', () => {
-      menu.classList.add('hidden');
-      mobileMenuOpen = false;
-      updateNav();
-    });
+    link.addEventListener('click', () => toggleMobileMenu(false));
   });
 
   // ── Fade-Up on Scroll ──
