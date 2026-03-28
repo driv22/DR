@@ -177,12 +177,39 @@ tailwind.config = {
   .counter { font-variant-numeric: tabular-nums; }
 
   html { scroll-behavior: smooth; }
+
+  /* Scroll Progress Bar */
+  #scrollProgress { transition: width 0.08s linear; }
+
+  /* Active nav link (scrollspy) */
+  nav a.nav-active { color: #0078d4 !important; }
+  .dark nav a.nav-active { color: #50b8ff !important; }
+
+  /* Typewriter cursor */
+  .tw-cursor {
+    display: inline-block;
+    width: 3px;
+    height: 0.8em;
+    background: #50b8ff;
+    margin-left: 3px;
+    vertical-align: middle;
+    border-radius: 2px;
+    animation: blink 1s step-end infinite;
+  }
+  @keyframes blink { 0%,100%{ opacity:1 } 50%{ opacity:0 } }
+
+  /* Back to top */
+  #backToTop { opacity:0; transform:translateY(16px); pointer-events:none; transition:opacity 0.3s ease, transform 0.3s ease; }
+  #backToTop.btt-visible { opacity:1; transform:translateY(0); pointer-events:auto; }
 </style>
 </head>
 
 <body class="font-sans text-gray-800 dark:text-gray-200 bg-white dark:bg-dark-bg antialiased overflow-x-hidden">
 
-<!-- ==================== NAVIGATION ==================== -->
+<!-- Scroll Progress Bar -->
+<div id="scrollProgress" class="fixed top-0 left-0 z-[60] h-[3px] bg-gradient-to-r from-primary to-accent pointer-events-none" style="width:0%"></div>
+
+<!-- ==================== NAVIGATION ====================-->
 <nav id="nav" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500">
   <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
     <div class="flex items-center justify-between h-16 lg:h-20">
@@ -196,6 +223,7 @@ tailwind.config = {
         <a href="#focus" class="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-accent transition-colors">Focus</a>
         <a href="#journey" class="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-accent transition-colors">Journey</a>
         <a href="#about" class="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-accent transition-colors">About</a>
+        <a href="#value" class="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-accent transition-colors">Value</a>
         <a href="#contact" class="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-accent transition-colors">Contact</a>
         <a href="#contact" class="inline-flex items-center px-5 py-2.5 rounded-full bg-primary text-white text-sm font-semibold hover:bg-blue-700 shadow-lg shadow-primary/25 hover:shadow-primary/40 btn-press transition-all">
           Get in Touch
@@ -234,6 +262,8 @@ tailwind.config = {
     <div class="w-16 h-px bg-gray-200 dark:bg-white/10"></div>
     <a href="#about" class="mobile-link w-full text-center py-4 text-2xl font-heading font-bold text-gray-900 dark:text-white hover:text-primary dark:hover:text-accent transition-colors">About</a>
     <div class="w-16 h-px bg-gray-200 dark:bg-white/10"></div>
+    <a href="#value" class="mobile-link w-full text-center py-4 text-2xl font-heading font-bold text-gray-900 dark:text-white hover:text-primary dark:hover:text-accent transition-colors">Value</a>
+    <div class="w-16 h-px bg-gray-200 dark:bg-white/10"></div>
     <a href="#contact" class="mobile-link w-full text-center py-4 text-2xl font-heading font-bold text-gray-900 dark:text-white hover:text-primary dark:hover:text-accent transition-colors">Contact</a>
     <a href="#contact" class="mobile-link mt-6 px-8 py-3.5 rounded-full bg-primary text-white text-base font-semibold shadow-lg shadow-primary/25">Get in Touch</a>
   </div>
@@ -259,7 +289,7 @@ tailwind.config = {
         <!-- Headline -->
         <h1 class="fade-up delay-100 font-heading font-extrabold text-4xl sm:text-5xl lg:text-6xl leading-[1.1] tracking-tight text-gray-900 dark:text-white mb-6">
           Making AI work<br/>
-          <span class="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">in Financial Services.</span>
+          <span id="typewriterText" class="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">in Financial Services.</span><span class="tw-cursor" aria-hidden="true"></span>
         </h1>
 
         <!-- Sub -->
@@ -276,7 +306,7 @@ tailwind.config = {
           <div class="hidden sm:block w-px h-8 bg-gray-200 dark:bg-white/10"></div>
           <div class="flex items-center gap-2 sm:px-5">
             <span class="text-xl">🏅</span>
-            <span class="text-sm font-semibold text-gray-700 dark:text-gray-300">22 Certifications</span>
+            <span class="text-sm font-semibold text-gray-700 dark:text-gray-300"><span id="heroCertCount">0</span> Certifications</span>
           </div>
           <div class="hidden sm:block w-px h-8 bg-gray-200 dark:bg-white/10"></div>
           <div class="flex items-center gap-2 sm:px-5">
@@ -299,7 +329,7 @@ tailwind.config = {
 
       <!-- Right Column: Hero Card (hidden on mobile) -->
       <div class="hidden lg:flex justify-center fade-up delay-300">
-        <div class="relative">
+        <div id="heroCardWrapper" class="relative" style="perspective:1000px;transform-style:preserve-3d">
           <!-- Glow behind card -->
           <div class="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 rounded-3xl blur-2xl scale-110"></div>
           <div class="relative bg-gradient-to-br from-primary via-blue-600 to-accent rounded-3xl p-10 text-white shadow-2xl shadow-primary/30 max-w-sm animate-float">
@@ -681,6 +711,66 @@ tailwind.config = {
 <!-- Section Divider -->
 <div class="section-divider"></div>
 
+<!-- ==================== WHAT I BRING ==================== -->
+<section id="value" class="py-24 bg-gradient-to-br from-gray-950 via-[#0a1628] to-gray-950 relative overflow-hidden">
+  <!-- Background grid -->
+  <div class="absolute inset-0 pointer-events-none opacity-25" style="background-image:linear-gradient(rgba(80,184,255,0.07) 1px,transparent 1px),linear-gradient(90deg,rgba(80,184,255,0.07) 1px,transparent 1px);background-size:60px 60px"></div>
+  <!-- Decorative blobs -->
+  <div class="absolute -top-32 right-0 w-[500px] h-[500px] bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+  <div class="absolute -bottom-32 left-0 w-[400px] h-[400px] bg-accent/10 rounded-full blur-3xl pointer-events-none"></div>
+
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <!-- Header -->
+    <div class="text-center mb-16">
+      <p class="fade-up text-sm font-semibold uppercase tracking-[0.2em] text-accent mb-3">What I Bring</p>
+      <h2 class="fade-up delay-100 font-heading font-bold text-3xl sm:text-4xl lg:text-5xl text-white mb-4">
+        Three things that set me apart.
+      </h2>
+      <p class="fade-up delay-200 text-lg text-blue-200/60 max-w-2xl mx-auto">
+        The rare combination that separates a great demo from a real, lasting deployment.
+      </p>
+    </div>
+
+    <!-- Pillars -->
+    <div class="grid md:grid-cols-3 gap-8">
+
+      <!-- Pillar 1: Tech Depth -->
+      <div class="fade-up group relative bg-white/[0.03] border border-white/[0.08] rounded-3xl p-8 hover:bg-white/[0.07] hover:border-white/[0.18] hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500">
+        <div class="w-16 h-16 rounded-2xl bg-primary/20 border border-primary/30 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-primary/30 transition-all duration-300">
+          <span class="text-3xl">⚙️</span>
+        </div>
+        <div class="font-heading font-extrabold text-7xl text-white/[0.04] mb-3 select-none leading-none" aria-hidden="true">01</div>
+        <h3 class="font-heading font-bold text-2xl text-white mb-4">Tech Depth</h3>
+        <p class="text-blue-200/60 leading-relaxed text-sm">26 years of hands-on engineering — from field work and high-frequency trading systems to enterprise cloud and Microsoft AI. I don't just present slides. I've built, broken, and fixed the infrastructure.</p>
+      </div>
+
+      <!-- Pillar 2: Business Acumen -->
+      <div class="fade-up delay-100 group relative bg-white/[0.03] border border-white/[0.08] rounded-3xl p-8 hover:bg-white/[0.07] hover:border-white/[0.18] hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500">
+        <div class="w-16 h-16 rounded-2xl bg-primary/20 border border-primary/30 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-primary/30 transition-all duration-300">
+          <span class="text-3xl">📊</span>
+        </div>
+        <div class="font-heading font-extrabold text-7xl text-white/[0.04] mb-3 select-none leading-none" aria-hidden="true">02</div>
+        <h3 class="font-heading font-bold text-2xl text-white mb-4">Business Acumen</h3>
+        <p class="text-blue-200/60 leading-relaxed text-sm">I translate complex technology into the language executives understand: ROI, efficiency gains, compliance enablement, and competitive advantage. I bridge the gap between IT and the C-suite with confidence.</p>
+      </div>
+
+      <!-- Pillar 3: Finance Domain -->
+      <div class="fade-up delay-200 group relative bg-white/[0.03] border border-white/[0.08] rounded-3xl p-8 hover:bg-white/[0.07] hover:border-white/[0.18] hover:shadow-2xl hover:shadow-primary/10 transition-all duration-500">
+        <div class="w-16 h-16 rounded-2xl bg-primary/20 border border-primary/30 flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-primary/30 transition-all duration-300">
+          <span class="text-3xl">🏦</span>
+        </div>
+        <div class="font-heading font-extrabold text-7xl text-white/[0.04] mb-3 select-none leading-none" aria-hidden="true">03</div>
+        <h3 class="font-heading font-bold text-2xl text-white mb-4">Finance Domain</h3>
+        <p class="text-blue-200/60 leading-relaxed text-sm">Deep expertise in the regulatory, risk, and operational demands of financial services. I speak both IT and FinServ fluently — making me the trusted bridge between Microsoft and major financial institutions.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Section Divider -->
+<div class="section-divider"></div>
+
 <!-- ==================== CONTACT ==================== -->
 <section id="contact" class="py-24 bg-light-alt dark:bg-dark-card/30 relative overflow-hidden">
   <!-- Decorative blobs -->
@@ -728,6 +818,11 @@ tailwind.config = {
     </p>
   </div>
 </footer>
+
+<!-- Back to Top -->
+<button id="backToTop" class="fixed bottom-8 right-8 z-50 w-12 h-12 rounded-full bg-primary text-white shadow-lg shadow-primary/40 flex items-center justify-center hover:bg-blue-700 hover:shadow-xl hover:shadow-primary/50 btn-press" aria-label="Back to top">
+  <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 10l7-7m0 0l7 7m-7-7v18"/></svg>
+</button>
 
 <!-- ==================== JAVASCRIPT ==================== -->
 <script>
@@ -829,6 +924,99 @@ tailwind.config = {
   }, { threshold: 0.5 });
 
   document.querySelectorAll('.counter').forEach(el => counterObserver.observe(el));
+
+  // ── Scroll Progress Bar ──
+  const progressBar = document.getElementById('scrollProgress');
+  function updateProgress() {
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    progressBar.style.width = (docHeight > 0 ? (window.scrollY / docHeight) * 100 : 0) + '%';
+  }
+  window.addEventListener('scroll', updateProgress, { passive: true });
+
+  // ── Scrollspy ──
+  const navLinks = document.querySelectorAll('nav a[href^="#"]');
+  const spySections = document.querySelectorAll('section[id]');
+  const spyObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.id;
+        navLinks.forEach(link => {
+          link.classList.remove('nav-active');
+          if (link.getAttribute('href') === '#' + id) link.classList.add('nav-active');
+        });
+      }
+    });
+  }, { threshold: 0, rootMargin: '-60px 0px -50% 0px' });
+  spySections.forEach(s => spyObserver.observe(s));
+
+  // ── Back to Top ──
+  const btt = document.getElementById('backToTop');
+  function updateBtt() { btt.classList.toggle('btt-visible', window.scrollY > 400); }
+  window.addEventListener('scroll', updateBtt, { passive: true });
+  btt.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+  // ── Typewriter Effect ──
+  const twEl = document.getElementById('typewriterText');
+  if (twEl) {
+    const twPhrases = ['in Financial Services.', 'for Global Banks.', 'in Capital Markets.', 'at Enterprise Scale.', 'for Insurance Leaders.'];
+    let twIdx = 0, twChar = twPhrases[0].length, twDeleting = true;
+    function typeWrite() {
+      const phrase = twPhrases[twIdx];
+      if (!twDeleting) {
+        twChar++;
+        twEl.textContent = phrase.substring(0, twChar);
+        if (twChar >= phrase.length) { twDeleting = true; setTimeout(typeWrite, 2600); return; }
+        setTimeout(typeWrite, 80);
+      } else {
+        twChar--;
+        twEl.textContent = phrase.substring(0, twChar);
+        if (twChar === 0) {
+          twDeleting = false;
+          twIdx = (twIdx + 1) % twPhrases.length;
+          setTimeout(typeWrite, 350);
+          return;
+        }
+        setTimeout(typeWrite, 45);
+      }
+    }
+    setTimeout(typeWrite, 3500);
+  }
+
+  // ── Hero Card Mouse Parallax ──
+  const heroSection = document.querySelector('section.hero-grid');
+  const heroWrapper = document.getElementById('heroCardWrapper');
+  if (heroSection && heroWrapper) {
+    heroSection.addEventListener('mousemove', (e) => {
+      const rect = heroSection.getBoundingClientRect();
+      const x = ((e.clientX - rect.left) / rect.width - 0.5) * 14;
+      const y = ((e.clientY - rect.top) / rect.height - 0.5) * 8;
+      heroWrapper.style.transform = `rotateX(${-y}deg) rotateY(${x}deg)`;
+    });
+    heroSection.addEventListener('mouseleave', () => { heroWrapper.style.transform = ''; });
+  }
+
+  // ── D Key → Dark Mode Toggle ──
+  document.addEventListener('keydown', (e) => {
+    if (e.key !== 'd' && e.key !== 'D') return;
+    const tag = e.target.tagName.toLowerCase();
+    if (tag === 'input' || tag === 'textarea' || tag === 'select') return;
+    handleToggle();
+  });
+
+  // ── Hero Certification Counter (page load) ──
+  const heroCertEl = document.getElementById('heroCertCount');
+  if (heroCertEl) {
+    let count = 0;
+    const certTarget = 22;
+    const certStep = certTarget / (1400 / 16);
+    setTimeout(() => {
+      const t = setInterval(() => {
+        count += certStep;
+        if (count >= certTarget) { heroCertEl.textContent = certTarget; clearInterval(t); }
+        else heroCertEl.textContent = Math.floor(count);
+      }, 16);
+    }, 900);
+  }
 
 })();
 </script>
