@@ -1,594 +1,812 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dan Rivero &middot; Senior Solution Engineer &middot; AI Workforce &middot; Microsoft</title>
-  <meta name="description" content="Dan Rivero — Senior Solution Engineer on Microsoft's AI Workforce team. 26 years in technology, helping financial institutions deploy Microsoft 365 Copilot, Copilot Studio, and Microsoft Teams." />
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+<title>Dan Rivero · Senior Solution Engineer · AI Workforce · Microsoft</title>
+<meta name="description" content="Dan Rivero — Senior Solution Engineer on Microsoft's AI Workforce team. 26 years in technology, helping financial institutions deploy Microsoft 365 Copilot, Copilot Studio, and Microsoft Teams."/>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect rx='14' width='64' height='64' fill='%230078d4'/><text x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Inter,sans-serif' font-weight='700' font-size='28' fill='white'>DR</text></svg>"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://driv.space/"/>
+<meta property="og:title" content="Dan Rivero · Senior Solution Engineer · Microsoft AI Workforce"/>
+<meta property="og:description" content="26 years in technology. Helping the world's leading financial institutions move from AI ambition to AI reality — powered by Microsoft 365 Copilot, Copilot Studio, and Microsoft Teams."/>
+<meta property="og:image" content="https://driv.space/og-image.png"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Dan Rivero · Senior Solution Engineer · Microsoft AI Workforce"/>
+<meta name="twitter:description" content="26 years in technology. Helping the world's leading financial institutions move from AI ambition to AI reality."/>
 
-  <!-- Open Graph (LinkedIn, Teams, Slack, etc.) -->
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://driv.space/" />
-  <meta property="og:title" content="Dan Rivero · Senior Solution Engineer · Microsoft AI Workforce" />
-  <meta property="og:description" content="26 years in technology. Helping the world's leading financial institutions move from AI ambition to AI reality — powered by Microsoft 365 Copilot, Copilot Studio, and Microsoft Teams." />
-  <meta property="og:image" content="https://driv.space/og-image.png" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
+<!-- Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet"/>
 
-  <!-- Twitter/X Card -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Dan Rivero · Senior Solution Engineer · Microsoft AI Workforce" />
-  <meta name="twitter:description" content="26 years in tech. Making AI work in Financial Services." />
-  <meta name="twitter:image" content="https://driv.space/og-image.png" />
+<!-- Tailwind CSS Play CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        primary: '#0078d4',
+        accent: '#50b8ff',
+        'dark-bg': '#0c1521',
+        'dark-card': '#111d2c',
+        'dark-surface': '#162133',
+        'light-alt': '#f5f9fe',
+      },
+      fontFamily: {
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        heading: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
+      },
+      animation: {
+        'marquee': 'marquee 40s linear infinite',
+        'marquee2': 'marquee2 40s linear infinite',
+        'fade-up': 'fadeUp 0.7s cubic-bezier(0.16,1,0.3,1) forwards',
+        'pulse-dot': 'pulseDot 2s ease-in-out infinite',
+        'float': 'float 6s ease-in-out infinite',
+        'shimmer': 'shimmer 3s ease-in-out infinite',
+        'gradient-x': 'gradient-x 3s ease infinite',
+      },
+      keyframes: {
+        marquee: {
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-50%)' },
+        },
+        marquee2: {
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-50%)' },
+        },
+        fadeUp: {
+          '0%': { opacity: '0', transform: 'translateY(30px)' },
+          '100%': { opacity: '1', transform: 'translateY(0)' },
+        },
+        pulseDot: {
+          '0%, 100%': { boxShadow: '0 0 0 0 rgba(0,120,212,0.7)' },
+          '50%': { boxShadow: '0 0 0 12px rgba(0,120,212,0)' },
+        },
+        float: {
+          '0%, 100%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(-12px)' },
+        },
+        shimmer: {
+          '0%': { backgroundPosition: '-200% 0' },
+          '100%': { backgroundPosition: '200% 0' },
+        },
+        'gradient-x': {
+          '0%, 100%': { backgroundPosition: '0% 50%' },
+          '50%': { backgroundPosition: '100% 50%' },
+        },
+      },
+    },
+  },
+}
+</script>
 
-  <!-- Favicon (inline SVG — no extra file needed) -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%230078d4'/><text x='50' y='68' font-family='system-ui,sans-serif' font-size='52' font-weight='900' fill='white' text-anchor='middle'>DR</text></svg>" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@700;800;900&display=swap" rel="stylesheet" />
-  <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    :root {
-      --blue: #0078d4; --blue-mid: #005fa3; --blue-dark: #004578;
-      --blue-glow: rgba(0,120,212,0.22); --blue-light: #e5f2fd;
-      --accent: #50b8ff; --text: #0c1521; --text-2: #334155;
-      --muted: #64748b; --border: #e1eaf4; --bg: #ffffff;
-      --bg-alt: #f5f9fe; --bg-deep: #eef5fc;
-      --radius-sm: 10px; --radius: 18px; --radius-lg: 28px;
-      --shadow-sm: 0 2px 12px rgba(0,80,160,0.07);
-      --shadow: 0 6px 32px rgba(0,80,160,0.10);
-      --shadow-lg: 0 16px 64px rgba(0,80,160,0.16);
-      --shadow-xl: 0 24px 96px rgba(0,80,160,0.22);
-    }
-    html { scroll-behavior: smooth; }
-    body { font-family: 'Inter', system-ui, sans-serif; color: var(--text); background: var(--bg); line-height: 1.6; overflow-x: hidden; }
+<style>
+  /* Scroll-triggered fade-up: hidden by default */
+  .fade-up { opacity: 0; transform: translateY(30px); transition: opacity 0.7s cubic-bezier(0.16,1,0.3,1), transform 0.7s cubic-bezier(0.16,1,0.3,1); }
+  .fade-up.visible { opacity: 1; transform: translateY(0); }
 
-    /* NAV */
-    nav { position: fixed; top: 0; left: 0; right: 0; z-index: 200; transition: box-shadow 0.3s, background 0.3s; }
-    nav.scrolled { background: rgba(255,255,255,0.9); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); box-shadow: 0 1px 0 var(--border), 0 4px 24px rgba(0,60,120,0.07); }
-    .nav-inner { max-width: 1160px; margin: 0 auto; padding: 0 28px; height: 68px; display: flex; align-items: center; justify-content: space-between; gap: 24px; }
-    .nav-logo { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 900; font-size: 1.2rem; color: var(--text); text-decoration: none; letter-spacing: -0.5px; }
-    .nav-logo .dot { color: var(--blue); }
-    .nav-links { display: flex; list-style: none; gap: 36px; }
-    .nav-links a { text-decoration: none; color: var(--text-2); font-weight: 500; font-size: 0.9rem; transition: color 0.2s; }
-    .nav-links a:hover { color: var(--blue); }
-    .nav-cta { background: var(--blue); color: #fff; border: none; border-radius: 10px; padding: 10px 22px; font-family: inherit; font-size: 0.88rem; font-weight: 700; cursor: pointer; transition: background 0.2s, transform 0.15s, box-shadow 0.2s; box-shadow: 0 4px 14px rgba(0,120,212,0.28); }
-    .nav-cta:hover { background: var(--blue-mid); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(0,120,212,0.36); }
+  /* Staggered delays */
+  .delay-100 { transition-delay: 100ms; }
+  .delay-200 { transition-delay: 200ms; }
+  .delay-300 { transition-delay: 300ms; }
+  .delay-400 { transition-delay: 400ms; }
+  .delay-500 { transition-delay: 500ms; }
 
-    /* HERO */
-    #hero { min-height: 100vh; display: flex; align-items: center; padding: 130px 28px 100px; position: relative; overflow: hidden; background: #fff; }
-    .hero-bg { position: absolute; inset: 0; z-index: 0; background: radial-gradient(ellipse 80% 60% at 70% 20%, rgba(0,120,212,0.08) 0%, transparent 60%), radial-gradient(ellipse 60% 50% at 90% 80%, rgba(80,184,255,0.07) 0%, transparent 55%), radial-gradient(ellipse 50% 60% at 10% 60%, rgba(0,69,120,0.05) 0%, transparent 55%), linear-gradient(170deg, #f0f8ff 0%, #fafcff 40%, #f8fbff 100%); }
-    .hero-grid { position: absolute; inset: 0; z-index: 0; background-image: linear-gradient(rgba(0,120,212,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(0,120,212,0.04) 1px, transparent 1px); background-size: 48px 48px; mask-image: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.4) 30%, rgba(0,0,0,0.4) 70%, transparent 100%); -webkit-mask-image: linear-gradient(to bottom, transparent 0%, rgba(0,0,0,0.4) 30%, rgba(0,0,0,0.4) 70%, transparent 100%); }
-    .hero-inner { max-width: 1160px; margin: 0 auto; display: grid; grid-template-columns: 1fr 380px; align-items: center; gap: 64px; width: 100%; position: relative; z-index: 1; }
-    .hero-eyebrow { display: inline-flex; align-items: center; gap: 10px; font-size: 0.78rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--blue); margin-bottom: 22px; }
-    .hero-eyebrow::before { content: ''; display: inline-block; width: 28px; height: 2px; background: var(--blue); border-radius: 2px; }
-    .hero-headline { font-family: 'Plus Jakarta Sans', sans-serif; font-size: clamp(2.8rem, 6vw, 4.6rem); font-weight: 900; line-height: 1.02; letter-spacing: -3px; color: var(--text); margin-bottom: 28px; }
-    .hero-headline em { font-style: normal; display: block; background: linear-gradient(120deg, var(--blue) 0%, #1a9fff 60%, var(--accent) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-    .hero-sub { font-size: 1.08rem; color: var(--muted); max-width: 500px; margin-bottom: 40px; line-height: 1.8; }
-    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+  /* Card shimmer border */
+  .card-shimmer { position: relative; overflow: hidden; }
+  .card-shimmer::before {
+    content: '';
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    background: linear-gradient(90deg, transparent 0%, rgba(0,120,212,0.3) 30%, rgba(80,184,255,0.5) 50%, rgba(0,120,212,0.3) 70%, transparent 100%);
+    background-size: 200% 100%;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    animation: shimmer 3s ease-in-out infinite;
+  }
+  .card-shimmer:hover::before { opacity: 1; }
 
-    /* BUTTONS */
-    .btn-primary { display: inline-flex; align-items: center; gap: 8px; background: var(--blue); color: #fff; border: 2px solid var(--blue); border-radius: var(--radius-sm); padding: 14px 30px; font-family: inherit; font-size: 0.93rem; font-weight: 700; text-decoration: none; cursor: pointer; transition: all 0.2s cubic-bezier(.22,1,.36,1); box-shadow: 0 4px 18px rgba(0,120,212,0.25); }
-    .btn-primary:hover { background: var(--blue-mid); border-color: var(--blue-mid); transform: translateY(-3px); box-shadow: 0 10px 32px rgba(0,120,212,0.35); }
-    .btn-outline { display: inline-flex; align-items: center; gap: 8px; background: rgba(255,255,255,0.8); color: var(--blue); border: 2px solid rgba(0,120,212,0.3); border-radius: var(--radius-sm); padding: 14px 30px; font-family: inherit; font-size: 0.93rem; font-weight: 700; text-decoration: none; cursor: pointer; transition: all 0.2s cubic-bezier(.22,1,.36,1); backdrop-filter: blur(8px); }
-    .btn-outline:hover { background: var(--blue-light); border-color: var(--blue); transform: translateY(-3px); box-shadow: 0 8px 24px rgba(0,120,212,0.12); }
-    .btn-primary.large, .btn-outline.large { padding: 16px 36px; font-size: 0.98rem; border-radius: 12px; }
+  /* Grid pattern for hero */
+  .hero-grid {
+    background-image:
+      linear-gradient(rgba(0,120,212,0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0,120,212,0.04) 1px, transparent 1px);
+    background-size: 60px 60px;
+  }
+  .dark .hero-grid {
+    background-image:
+      linear-gradient(rgba(80,184,255,0.06) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(80,184,255,0.06) 1px, transparent 1px);
+  }
 
-    /* HERO VISUAL */
-    .hero-visual { display: flex; flex-direction: column; }
-    .hero-card-main { background: linear-gradient(145deg, var(--blue) 0%, var(--blue-dark) 100%); border-radius: var(--radius-lg); padding: 52px 44px 56px; color: #fff; position: relative; overflow: hidden; box-shadow: var(--shadow-xl), inset 0 1px 0 rgba(255,255,255,0.15); }
-    .hero-card-main::before { content: ''; position: absolute; top: -60px; right: -60px; width: 260px; height: 260px; background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%); border-radius: 50%; }
-    .hero-card-main::after { content: ''; position: absolute; bottom: -50px; left: -30px; width: 200px; height: 200px; background: radial-gradient(circle, rgba(80,184,255,0.12) 0%, transparent 70%); border-radius: 50%; }
-    .hero-card-num { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 7rem; font-weight: 900; line-height: 1; letter-spacing: -5px; color: #fff; position: relative; z-index: 1; }
-    .hero-card-subtitle { font-size: 0.9rem; font-weight: 600; color: rgba(255,255,255,0.75); letter-spacing: 1px; text-transform: uppercase; margin-top: 8px; position: relative; z-index: 1; }
-    .hero-card-desc { font-size: 0.85rem; color: rgba(255,255,255,0.5); margin-top: 6px; position: relative; z-index: 1; }
-    /* Hero inline stats strip */
-    .hero-stats { display: flex; flex-wrap: wrap; gap: 0; margin-bottom: 32px; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; background: #fff; }
-    .hero-stat { display: flex; align-items: center; gap: 10px; padding: 14px 20px; flex: 1; min-width: 0; border-right: 1px solid var(--border); }
-    .hero-stat:last-child { border-right: none; }
-    .hero-stat-icon { font-size: 1.2rem; flex-shrink: 0; }
-    .hero-stat-text { display: flex; flex-direction: column; gap: 1px; min-width: 0; }
-    .hero-stat-val { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 0.95rem; font-weight: 800; color: var(--text); line-height: 1.2; white-space: nowrap; }
-    .hero-stat-label { font-size: 0.68rem; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; white-space: nowrap; }
+  /* Marquee */
+  .marquee-track { display: flex; width: max-content; }
 
-    /* MARQUEE */
-    .marquee-section { background: var(--blue); overflow: hidden; padding: 18px 0; }
-    .marquee-track { display: flex; animation: marquee 32s linear infinite; white-space: nowrap; }
-    .marquee-item { display: inline-flex; align-items: center; gap: 20px; padding: 0 28px; font-size: 0.8rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: rgba(255,255,255,0.85); flex-shrink: 0; }
-    .marquee-item::after { content: '\2736'; font-size: 0.5rem; color: rgba(255,255,255,0.4); }
-    @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+  /* Timeline vertical line */
+  .timeline-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, transparent, #0078d4 10%, #0078d4 90%, transparent);
+    transform: translateX(-50%);
+  }
+  @media (max-width: 767px) {
+    .timeline-line { left: 24px; }
+  }
 
-    /* SECTION SHARED */
-    .section-label { display: inline-flex; align-items: center; gap: 8px; font-size: 0.72rem; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--blue); background: var(--blue-light); border: 1px solid rgba(0,120,212,0.18); border-radius: 100px; padding: 5px 14px; margin-bottom: 20px; }
-    .section-title { font-family: 'Plus Jakarta Sans', sans-serif; font-size: clamp(2rem, 4.5vw, 3rem); font-weight: 900; line-height: 1.05; letter-spacing: -1.5px; color: var(--text); margin-bottom: 16px; }
-    .section-sub { font-size: 1.05rem; color: var(--muted); line-height: 1.8; margin-bottom: 56px; max-width: 560px; }
-    .fade-up { opacity: 0; transform: translateY(32px); transition: opacity 0.65s cubic-bezier(.22,1,.36,1), transform 0.65s cubic-bezier(.22,1,.36,1); }
-    .fade-up.visible { opacity: 1; transform: translateY(0); }
+  /* Section gradient divider */
+  .section-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(0,120,212,0.2), transparent);
+  }
+  .dark .section-divider {
+    background: linear-gradient(90deg, transparent, rgba(80,184,255,0.15), transparent);
+  }
 
-    /* FOCUS */
-    #focus { padding: 112px 28px; background: var(--bg-alt); position: relative; }
-    #focus::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent 0%, var(--border) 50%, transparent 100%); }
-    .focus-inner { max-width: 1160px; margin: 0 auto; }
-    .focus-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 56px; gap: 24px; flex-wrap: wrap; }
-    .cards-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
-    .card { background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 36px 32px; transition: transform 0.3s cubic-bezier(.22,1,.36,1), box-shadow 0.3s, border-color 0.3s; position: relative; overflow: hidden; cursor: default; }
-    .card::before { content: ''; position: absolute; inset: 0; border-radius: var(--radius); padding: 1.5px; background: linear-gradient(135deg, var(--blue) 0%, var(--accent) 100%); -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); -webkit-mask-composite: xor; mask-composite: exclude; opacity: 0; transition: opacity 0.3s; }
-    .card:hover { transform: translateY(-8px) scale(1.01); box-shadow: var(--shadow-lg); border-color: transparent; }
-    .card:hover::before { opacity: 1; }
-    .card-icon-wrap { width: 52px; height: 52px; background: var(--blue-light); border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 1.6rem; margin-bottom: 22px; transition: background 0.3s, transform 0.3s; }
-    .card:hover .card-icon-wrap { background: linear-gradient(135deg, var(--blue) 0%, var(--accent) 100%); transform: scale(1.08) rotate(-4deg); }
-    .card h3 { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1rem; font-weight: 800; color: var(--text); margin-bottom: 12px; letter-spacing: -0.3px; }
-    .card p { font-size: 0.88rem; color: var(--muted); line-height: 1.75; }
+  /* Glassmorphism nav */
+  .nav-glass {
+    backdrop-filter: blur(16px) saturate(1.4);
+    -webkit-backdrop-filter: blur(16px) saturate(1.4);
+  }
 
-    /* TIMELINE */
-    #timeline { padding: 112px 28px; background: #fff; position: relative; overflow: hidden; }
-    #timeline::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent 0%, var(--border) 50%, transparent 100%); }
-    .bg-number { position: absolute; right: -40px; top: 50%; transform: translateY(-50%); font-family: 'Plus Jakarta Sans', sans-serif; font-size: 30vw; font-weight: 900; color: rgba(0,120,212,0.03); line-height: 1; pointer-events: none; user-select: none; letter-spacing: -10px; }
-    .timeline-inner { max-width: 1160px; margin: 0 auto; position: relative; z-index: 1; }
-    .timeline-list { position: relative; margin-top: 60px; padding-left: 48px; }
-    .timeline-list::before { content: ''; position: absolute; left: 15px; top: 8px; bottom: 8px; width: 2px; background: linear-gradient(180deg, var(--blue) 0%, var(--accent) 100%); border-radius: 2px; }
-    .timeline-item { position: relative; margin-bottom: 48px; padding-left: 28px; }
-    .timeline-item:last-child { margin-bottom: 0; }
-    .timeline-item::before { content: ''; position: absolute; left: -33px; top: 10px; width: 14px; height: 14px; border-radius: 50%; background: var(--blue); border: 3px solid #fff; box-shadow: 0 0 0 2px var(--blue), 0 4px 12px rgba(0,120,212,0.3); transition: transform 0.2s, box-shadow 0.2s; }
-    .timeline-item:hover::before { transform: scale(1.3); box-shadow: 0 0 0 2px var(--blue), 0 6px 20px rgba(0,120,212,0.45); }
-    .timeline-item.current::before { background: linear-gradient(135deg, var(--blue) 0%, var(--accent) 100%); animation: pulse-dot 2s ease-in-out infinite; }
-    @keyframes pulse-dot { 0%, 100% { box-shadow: 0 0 0 2px var(--blue), 0 4px 12px rgba(0,120,212,0.3); } 50% { box-shadow: 0 0 0 5px rgba(0,120,212,0.15), 0 8px 20px rgba(0,120,212,0.4); } }
-    .timeline-card { background: var(--bg-alt); border: 1px solid var(--border); border-radius: var(--radius); padding: 28px 32px; transition: transform 0.3s cubic-bezier(.22,1,.36,1), box-shadow 0.3s, border-color 0.3s; }
-    .timeline-item.current .timeline-card { background: linear-gradient(135deg, #f0f8ff 0%, #e6f4ff 100%); border-color: rgba(0,120,212,0.2); }
-    .timeline-item:hover .timeline-card { transform: translateX(6px); box-shadow: var(--shadow); border-color: rgba(0,120,212,0.2); }
-    .timeline-year { display: inline-block; font-size: 0.72rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--blue); background: var(--blue-light); border: 1px solid rgba(0,120,212,0.18); border-radius: 100px; padding: 3px 12px; margin-bottom: 12px; }
-    .timeline-role { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.05rem; font-weight: 800; color: var(--text); letter-spacing: -0.3px; margin-bottom: 4px; }
-    .timeline-company { font-size: 0.88rem; font-weight: 600; color: var(--blue); margin-bottom: 10px; }
-    .timeline-desc { font-size: 0.88rem; color: var(--muted); line-height: 1.75; }
+  /* Button press effect */
+  .btn-press { transition: transform 0.2s ease, box-shadow 0.2s ease; }
+  .btn-press:hover { transform: translateY(-2px); }
+  .btn-press:active { transform: translateY(0); }
 
-    /* ABOUT */
-    #about { padding: 112px 28px; background: var(--bg-alt); position: relative; }
-    #about::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent 0%, var(--border) 50%, transparent 100%); }
-    .about-inner { max-width: 1160px; margin: 0 auto; display: grid; grid-template-columns: 1fr 380px; gap: 80px; align-items: start; }
-    .about-text .section-title { margin-bottom: 20px; }
-    .about-text p { font-size: 1rem; color: var(--muted); margin-bottom: 18px; line-height: 1.85; }
-    .about-text p strong { color: var(--text); font-weight: 700; }
-    .skill-tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 30px; }
-    .skill-tags span { background: #fff; color: var(--blue); border: 1px solid rgba(0,120,212,0.22); border-radius: 8px; padding: 7px 16px; font-size: 0.8rem; font-weight: 700; transition: background 0.2s, box-shadow 0.2s, transform 0.2s; cursor: default; }
-    .skill-tags span:hover { background: var(--blue-light); transform: translateY(-2px); box-shadow: var(--shadow-sm); }
-    .stats-col { display: flex; flex-direction: column; gap: 16px; }
-    .stat-card { background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 28px; display: flex; align-items: center; gap: 20px; box-shadow: var(--shadow-sm); transition: transform 0.25s cubic-bezier(.22,1,.36,1), box-shadow 0.25s, border-color 0.25s; }
-    .stat-card:hover { transform: translateX(6px); box-shadow: var(--shadow); border-color: rgba(0,120,212,0.2); }
-    .stat-icon-wrap { width: 52px; height: 52px; flex-shrink: 0; border-radius: 14px; background: var(--blue-light); display: flex; align-items: center; justify-content: center; font-size: 1.4rem; }
-    .stat-text { display: flex; flex-direction: column; gap: 2px; }
-    .stat-num { font-family: 'Plus Jakarta Sans', sans-serif; font-size: 1.8rem; font-weight: 900; color: var(--blue); line-height: 1; letter-spacing: -1.5px; }
-    .stat-label { font-size: 0.78rem; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 0.5px; }
+  /* Scrollbar styling */
+  ::-webkit-scrollbar { width: 8px; }
+  ::-webkit-scrollbar-track { background: transparent; }
+  ::-webkit-scrollbar-thumb { background: rgba(0,120,212,0.3); border-radius: 10px; }
+  .dark ::-webkit-scrollbar-thumb { background: rgba(80,184,255,0.3); }
 
-    /* CONTACT */
-    #contact { padding: 120px 28px; background: linear-gradient(160deg, #f0f8ff 0%, #e8f4fd 60%, #f5f9fe 100%); position: relative; overflow: hidden; }
-    #contact::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent 0%, rgba(0,120,212,0.2) 50%, transparent 100%); }
-    .blob { position: absolute; border-radius: 50%; filter: blur(80px); pointer-events: none; }
-    .blob-1 { width: 500px; height: 500px; background: radial-gradient(circle, rgba(0,120,212,0.08) 0%, transparent 70%); top: -100px; right: -100px; }
-    .blob-2 { width: 400px; height: 400px; background: radial-gradient(circle, rgba(80,184,255,0.07) 0%, transparent 70%); bottom: -80px; left: -80px; }
-    .contact-inner { max-width: 700px; margin: 0 auto; text-align: center; position: relative; z-index: 1; }
-    .contact-inner .section-title { margin-bottom: 18px; }
-    .contact-sub { font-size: 1.05rem; color: var(--muted); margin-bottom: 48px; line-height: 1.8; }
-    .contact-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
-    .li-icon { width: 18px; height: 18px; flex-shrink: 0; }
+  /* Company logo hover */
+  .company-logo-wrap { transition: transform 0.3s ease, filter 0.3s ease; }
+  .company-logo-wrap:hover { transform: translateY(-4px) scale(1.05); }
 
-    /* LOGOS STRIP */
-    .logos-section { padding: 56px 28px; background: #fff; position: relative; }
-    .logos-section::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent 0%, var(--border) 50%, transparent 100%); }
-    .logos-inner { max-width: 1160px; margin: 0 auto; text-align: center; }
-    .logos-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--muted); margin-bottom: 32px; }
-    .logos-row { display: flex; align-items: center; justify-content: center; gap: 40px; flex-wrap: wrap; }
-    .logo-item { display: flex; align-items: center; gap: 8px; transition: opacity 0.3s, transform 0.3s; opacity: 0.4; }
-    .logo-item:hover { opacity: 0.8; transform: scale(1.05); }
-    .logo-item.active { opacity: 0.85; }
-    .logo-name { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: 1.15rem; color: var(--text); letter-spacing: -0.5px; white-space: nowrap; }
-    .logo-item.active .logo-name { color: var(--blue); }
-    .logo-icon { width: 24px; height: 24px; flex-shrink: 0; }
-    .logo-arrow { color: var(--muted); font-size: 0.8rem; opacity: 0.3; flex-shrink: 0; }
+  /* Counter number */
+  .counter { font-variant-numeric: tabular-nums; }
 
-    /* DARK MODE */
-    .theme-toggle { position: fixed; bottom: 24px; right: 24px; z-index: 300; width: 48px; height: 48px; border-radius: 50%; border: 1px solid var(--border); background: var(--bg); box-shadow: var(--shadow); cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; transition: background 0.3s, border-color 0.3s, transform 0.2s; }
-    .theme-toggle:hover { transform: scale(1.1); box-shadow: var(--shadow-lg); }
-
-    html.dark {
-      --blue: #4da6ff; --blue-mid: #3d94e6; --blue-dark: #2d7acc;
-      --blue-light: rgba(77,166,255,0.12); --accent: #6cc4ff;
-      --text: #e8edf3; --text-2: #b0bec5; --muted: #8899aa;
-      --border: rgba(255,255,255,0.08); --bg: #0c1521; --bg-alt: #111d2c;
-      --bg-deep: #0a1320;
-      --shadow-sm: 0 2px 12px rgba(0,0,0,0.3);
-      --shadow: 0 6px 32px rgba(0,0,0,0.4);
-      --shadow-lg: 0 16px 64px rgba(0,0,0,0.5);
-      --shadow-xl: 0 24px 96px rgba(0,0,0,0.6);
-    }
-    html.dark body { background: var(--bg); }
-    html.dark nav.scrolled { background: rgba(12,21,33,0.9); box-shadow: 0 1px 0 var(--border), 0 4px 24px rgba(0,0,0,0.3); }
-    html.dark .hero-bg { background: radial-gradient(ellipse 80% 60% at 70% 20%, rgba(77,166,255,0.06) 0%, transparent 60%), radial-gradient(ellipse 60% 50% at 90% 80%, rgba(108,196,255,0.05) 0%, transparent 55%), radial-gradient(ellipse 50% 60% at 10% 60%, rgba(45,122,204,0.04) 0%, transparent 55%), linear-gradient(170deg, #0c1521 0%, #111d2c 40%, #0c1521 100%); }
-    html.dark .hero-grid { background-image: linear-gradient(rgba(77,166,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(77,166,255,0.04) 1px, transparent 1px); }
-    html.dark #hero { background: var(--bg); }
-    html.dark .card { background: var(--bg-alt); }
-    html.dark .card::before { background: linear-gradient(135deg, var(--blue) 0%, var(--accent) 100%); }
-    html.dark .hero-stats { background: var(--bg-alt); border-color: var(--border); }
-    html.dark .hero-stat { border-color: var(--border); }
-    html.dark .hero-mini-card { background: var(--bg-alt); border-color: var(--border); }
-    html.dark .stat-card { background: var(--bg-alt); border-color: var(--border); }
-    html.dark .skill-tags span { background: var(--bg-alt); border-color: var(--border); }
-    html.dark .timeline-card { background: var(--bg-alt); border-color: var(--border); }
-    html.dark .timeline-item.current .timeline-card { background: rgba(77,166,255,0.08); border-color: rgba(77,166,255,0.2); }
-    html.dark .timeline-item::before { border-color: var(--bg); }
-    html.dark #contact { background: linear-gradient(160deg, #0f1a28 0%, #111d2c 60%, #0c1521 100%); }
-    html.dark #contact::before { background: linear-gradient(90deg, transparent 0%, rgba(77,166,255,0.15) 50%, transparent 100%); }
-    html.dark .btn-outline { background: rgba(255,255,255,0.05); border-color: rgba(77,166,255,0.3); }
-    html.dark .btn-outline:hover { background: rgba(77,166,255,0.1); }
-    html.dark .marquee-section { background: var(--blue-dark); }
-    html.dark .logos-section { background: var(--bg); }
-    html.dark .logo-name { color: var(--text); }
-    html.dark .logo-item.active .logo-name { color: var(--blue); }
-    html.dark .theme-toggle { background: var(--bg-alt); border-color: var(--border); }
-    html.dark .section-label { background: rgba(77,166,255,0.1); border-color: rgba(77,166,255,0.2); }
-    html.dark footer { background: #080e18; }
-    html.dark .bg-number { color: rgba(77,166,255,0.03); }
-
-    /* FOOTER */
-    footer { background: var(--text); padding: 32px 28px; }
-    .footer-inner { max-width: 1160px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
-    .footer-left { display: flex; flex-direction: column; gap: 4px; }
-    .footer-logo { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 900; font-size: 1rem; color: #fff; letter-spacing: -0.3px; }
-    .footer-logo span { color: #50b8ff; }
-    .footer-copy { font-size: 0.78rem; color: rgba(255,255,255,0.35); }
-    .footer-right { font-size: 0.78rem; color: rgba(255,255,255,0.35); text-align: right; }
-
-    /* RESPONSIVE */
-    @media (max-width: 1040px) { .cards-grid { grid-template-columns: repeat(2, 1fr); } }
-    @media (max-width: 860px) {
-      .hero-inner { grid-template-columns: 1fr; }
-      .hero-visual { display: none; }
-      .about-inner { grid-template-columns: 1fr; gap: 40px; }
-      .focus-header { flex-direction: column; align-items: flex-start; }
-      .hero-stats { border-radius: 10px; flex-direction: column; }
-      .hero-stat { border-right: none; border-bottom: 1px solid var(--border); }
-      .hero-stat:last-child { border-bottom: none; }
-      .logos-row { gap: 28px; }
-      .logo-name { font-size: 0.95rem; }
-      .logo-arrow { font-size: 0.6rem; }
-      .timeline-item::before { left: -33px; }
-    }
-    @media (max-width: 600px) {
-      .nav-links { display: none; }
-      .nav-inner { padding: 0 16px; }
-      .nav-cta { padding: 8px 16px; font-size: 0.82rem; }
-      .cards-grid { grid-template-columns: 1fr; }
-      .section-title { letter-spacing: -1px; font-size: clamp(1.6rem, 5vw, 2.2rem); }
-      .hero-headline { letter-spacing: -2px; font-size: clamp(2.2rem, 8vw, 3rem); }
-      #hero { padding: 110px 16px 60px; min-height: auto; }
-      .hero-sub { font-size: 0.95rem; margin-bottom: 28px; }
-      .hero-eyebrow { font-size: 0.65rem; letter-spacing: 1.2px; }
-      .hero-actions { flex-direction: column; gap: 10px; }
-      .btn-primary, .btn-outline { width: 100%; justify-content: center; padding: 14px 24px; }
-      .btn-primary.large, .btn-outline.large { width: 100%; justify-content: center; padding: 14px 24px; font-size: 0.93rem; }
-      #focus, #timeline, #about { padding: 72px 16px; }
-      #contact { padding: 80px 16px; }
-      .section-sub { font-size: 0.95rem; margin-bottom: 36px; }
-      .focus-header .section-sub { max-width: 100% !important; }
-      .timeline-list { padding-left: 32px; }
-      .timeline-item { padding-left: 20px; }
-      .timeline-item::before { left: -27px; width: 12px; height: 12px; }
-      .timeline-card { padding: 20px 20px; }
-      .timeline-role { font-size: 0.95rem; }
-      .card { padding: 28px 24px; }
-      .logos-section { padding: 40px 16px; }
-      .logos-row { gap: 16px; }
-      .logo-name { font-size: 0.82rem; }
-      .logo-icon { width: 18px; height: 18px; }
-      .logo-item { gap: 5px; }
-      .logo-arrow { font-size: 0.55rem; }
-      .logos-label { margin-bottom: 20px; font-size: 0.65rem; }
-      .marquee-section { padding: 14px 0; }
-      .marquee-item { padding: 0 18px; font-size: 0.7rem; }
-      .stats-col { gap: 12px; }
-      .stat-card { padding: 20px; }
-      .stat-num { font-size: 1.5rem; }
-      .skill-tags { gap: 8px; }
-      .skill-tags span { padding: 5px 12px; font-size: 0.75rem; }
-      .contact-sub { font-size: 0.95rem; margin-bottom: 36px; }
-      .contact-actions { flex-direction: column; gap: 10px; }
-      footer { padding: 24px 16px; }
-      .footer-inner { flex-direction: column; text-align: center; gap: 8px; }
-      .footer-right { text-align: center; }
-      .theme-toggle { bottom: 16px; right: 16px; width: 42px; height: 42px; font-size: 1rem; }
-    }
-    @media (max-width: 380px) {
-      .hero-headline { font-size: 2rem; letter-spacing: -1.5px; }
-      .hero-stat { padding: 12px 16px; }
-      .hero-stat-val { font-size: 0.88rem; }
-    }
-  </style>
+  html { scroll-behavior: smooth; }
+</style>
 </head>
-<body>
 
-  <nav id="navbar">
-    <div class="nav-inner">
-      <a href="#" class="nav-logo">dan<span class="dot">.</span>rivero</a>
-      <ul class="nav-links">
-        <li><a href="#focus">Focus</a></li>
-        <li><a href="#timeline">Journey</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-      <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Get in Touch</button>
-    </div>
-  </nav>
+<body class="font-sans text-gray-800 dark:text-gray-200 bg-white dark:bg-dark-bg antialiased overflow-x-hidden">
 
-  <section id="hero">
-    <div class="hero-bg"></div>
-    <div class="hero-grid"></div>
-    <div class="hero-inner">
-      <div class="hero-content">
-        <p class="hero-eyebrow">Senior Solution Engineer &middot; AI Workforce &middot; Microsoft</p>
-        <h1 class="hero-headline">Making AI work<br /><em>in Financial Services.</em></h1>
-        <p class="hero-sub">26 years of technology expertise. One mission: helping the world's leading financial institutions move from AI ambition to AI reality &mdash; powered by Microsoft 365 Copilot, Copilot Studio, and Microsoft Teams.</p>
-        <div class="hero-stats">
-          <div class="hero-stat"><span class="hero-stat-icon">🏦</span><div class="hero-stat-text"><span class="hero-stat-val">Financial Services</span><span class="hero-stat-label">Industry Focus</span></div></div>
-          <div class="hero-stat"><span class="hero-stat-icon">🏅</span><div class="hero-stat-text"><span class="hero-stat-val">22 Certifications</span><span class="hero-stat-label">Microsoft Certified</span></div></div>
-          <div class="hero-stat"><span class="hero-stat-icon">📍</span><div class="hero-stat-text"><span class="hero-stat-val">Chicago, IL</span><span class="hero-stat-label">Based In</span></div></div>
-        </div>
-        <div class="hero-actions">
-          <a href="#focus" class="btn-primary">See What I Do</a>
-          <a href="#contact" class="btn-outline">Let's Connect</a>
-        </div>
-      </div>
-      <div class="hero-visual">
-        <div class="hero-card-main">
-          <div class="hero-card-num">26<sup>+</sup></div>
-          <div class="hero-card-subtitle">Years in Technology</div>
-          <div class="hero-card-desc">From Geek Squad to Microsoft AI</div>
-        </div>
-      </div>
-    </div>
-  </section>
+<!-- ==================== NAVIGATION ==================== -->
+<nav id="nav" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16 lg:h-20">
+      <!-- Logo -->
+      <a href="#" class="font-heading font-bold text-xl tracking-tight text-gray-900 dark:text-white">
+        dan<span class="text-primary">.</span>rivero
+      </a>
 
-  <div class="marquee-section">
-    <div class="marquee-track">
-      <span class="marquee-item">Microsoft 365 Copilot</span><span class="marquee-item">Copilot Studio</span><span class="marquee-item">Microsoft Teams</span><span class="marquee-item">Teams Rooms</span><span class="marquee-item">Prompt Engineering</span><span class="marquee-item">Financial Services AI</span><span class="marquee-item">Enterprise AI Strategy</span><span class="marquee-item">Unified Communications</span><span class="marquee-item">Microsoft 365</span><span class="marquee-item">Microsoft 365 Copilot</span><span class="marquee-item">Copilot Studio</span><span class="marquee-item">Microsoft Teams</span><span class="marquee-item">Teams Rooms</span><span class="marquee-item">Prompt Engineering</span><span class="marquee-item">Financial Services AI</span><span class="marquee-item">Enterprise AI Strategy</span><span class="marquee-item">Unified Communications</span><span class="marquee-item">Microsoft 365</span>
-    </div>
-  </div>
-
-  <!-- COMPANY LOGOS -->
-  <div class="logos-section">
-    <div class="logos-inner">
-      <p class="logos-label">Where I've Built My Career</p>
-      <div class="logos-row fade-up">
-        <div class="logo-item">
-          <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 12h8M12 8v8"/></svg>
-          <span class="logo-name">Geek Squad</span>
-        </div>
-        <span class="logo-arrow">&#9654;</span>
-        <div class="logo-item">
-          <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="M7 14l4-4 4 4 5-5"/></svg>
-          <span class="logo-name">Chopper Trading</span>
-        </div>
-        <span class="logo-arrow">&#9654;</span>
-        <div class="logo-item">
-          <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18"/></svg>
-          <span class="logo-name">TSG / TeleTech</span>
-        </div>
-        <span class="logo-arrow">&#9654;</span>
-        <div class="logo-item">
-          <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L3 7v6c0 5.5 3.8 10.7 9 12 5.2-1.3 9-6.5 9-12V7l-9-5z"/></svg>
-          <span class="logo-name">Allstate</span>
-        </div>
-        <span class="logo-arrow">&#9654;</span>
-        <div class="logo-item active">
-          <svg class="logo-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M1 1h10v10H1V1zm12 0h10v10H13V1zM1 13h10v10H1V13zm12 0h10v10H13V13z"/></svg>
-          <span class="logo-name">Microsoft</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <section id="focus">
-    <div class="focus-inner">
-      <div class="focus-header fade-up">
-        <div>
-          <p class="section-label">What I Do</p>
-          <h2 class="section-title">Bridging AI capability<br />and enterprise reality.</h2>
-        </div>
-        <p class="section-sub" style="margin-bottom:0; max-width:360px;">Translating Microsoft's most powerful AI technologies into production-ready solutions for the financial services industry.</p>
-      </div>
-      <div class="cards-grid">
-        <div class="card fade-up"><div class="card-icon-wrap">&#129302;</div><h3>Microsoft 365 Copilot</h3><p>Guiding financial institutions through the full M365 Copilot journey &mdash; from readiness and governance to scaled deployment &mdash; unlocking real productivity, compliance intelligence, and measurable ROI.</p></div>
-        <div class="card fade-up"><div class="card-icon-wrap">&#129504;</div><h3>Copilot Studio</h3><p>Designing and deploying custom AI agents that automate complex financial workflows, surface critical insights in real time, and give knowledge workers an unfair productivity advantage.</p></div>
-        <div class="card fade-up"><div class="card-icon-wrap">&#128172;</div><h3>Microsoft Teams</h3><p>Transforming how financial institutions communicate &mdash; enabling secure, compliant, enterprise-grade unified collaboration that meets the rigorous demands of regulated industries at global scale.</p></div>
-        <div class="card fade-up"><div class="card-icon-wrap">&#127970;</div><h3>Microsoft Teams Rooms</h3><p>Modernizing the hybrid meeting experience for enterprise environments &mdash; bringing AI-powered, immersive collaboration to every boardroom, trading floor, and branch location.</p></div>
-        <div class="card fade-up"><div class="card-icon-wrap">&#9997;&#65039;</div><h3>Prompt Engineering</h3><p>Crafting precision prompts that unlock the full potential of large language models &mdash; building repeatable, high-quality AI interactions designed for real enterprise use cases in financial services.</p></div>
-        <div class="card fade-up"><div class="card-icon-wrap">&#127970;</div><h3>Financial Services AI</h3><p>Deep expertise in the unique regulatory, compliance, and operational demands of financial institutions &mdash; turning cutting-edge Microsoft AI into trusted, production-ready outcomes your business can rely on.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section id="timeline">
-    <div class="bg-number">26</div>
-    <div class="timeline-inner">
-      <div class="fade-up">
-        <p class="section-label">My Journey</p>
-        <h2 class="section-title">26 years. One constant:<br />making technology work.</h2>
-        <p class="section-sub">From field technician to Microsoft AI &mdash; a career built on hands-on execution, relentless learning, and a genuine obsession with what technology can do for people.</p>
-      </div>
-      <div class="timeline-list">
-
-        <div class="timeline-item fade-up">
-          <div class="timeline-card">
-            <span class="timeline-year">~2000 &ndash; Early Career</span>
-            <div class="timeline-role">Senior Field Agent</div>
-            <div class="timeline-company">Geek Squad</div>
-            <p class="timeline-desc">Started from the ground up as a charter Geek Squad field agent &mdash; troubleshooting, installing, and repairing technology in the real world. Built an instinct for diagnosing complex problems fast and a relentless drive to find solutions that actually stick.</p>
-          </div>
-        </div>
-
-        <div class="timeline-item fade-up">
-          <div class="timeline-card">
-            <span class="timeline-year">~2003 &ndash; Leadership</span>
-            <div class="timeline-role">Field Operations Manager</div>
-            <div class="timeline-company">Geek Squad</div>
-            <p class="timeline-desc">Stepped into management, leading a team of field agents across service operations. Discovered a passion for developing people and building high-performing teams &mdash; a leadership mindset that has shaped every role since.</p>
-          </div>
-        </div>
-
-        <div class="timeline-item fade-up">
-          <div class="timeline-card">
-            <span class="timeline-year">~2006 &ndash; Finance Sector</span>
-            <div class="timeline-role">Level 3 IT Support Specialist</div>
-            <div class="timeline-company">Chopper Trading</div>
-            <p class="timeline-desc">Entered the high-stakes world of financial services technology &mdash; providing Level 3 support in a trading environment where every second matters. Gained deep respect for the performance and reliability demands of finance.</p>
-          </div>
-        </div>
-
-        <div class="timeline-item fade-up">
-          <div class="timeline-card">
-            <span class="timeline-year">~2009 &ndash; Enterprise Infrastructure</span>
-            <div class="timeline-role">Senior Network &amp; Microsoft Engineer</div>
-            <div class="timeline-company">Technology Solutions Group, a TeleTech Company</div>
-            <p class="timeline-desc">Led enterprise deployments spanning wireless networks, data networking, Microsoft Lync Server, Skype for Business Server, and complex Avaya &amp; Microsoft UC integrations &mdash; building the infrastructure foundation that would define the rest of my career.</p>
-          </div>
-        </div>
-
-        <div class="timeline-item fade-up">
-          <div class="timeline-card">
-            <span class="timeline-year">~2015 &ndash; Enterprise Scale</span>
-            <div class="timeline-role">Senior Engineer &middot; Unified Communications</div>
-            <div class="timeline-company">Allstate Insurance</div>
-            <p class="timeline-desc">Led the enterprise-wide migration from Webex to Skype for Business, followed by a full Microsoft Teams implementation &mdash; replacing legacy systems, decommissioning aging infrastructure, and transforming how one of America's largest insurers communicates and collaborates.</p>
-          </div>
-        </div>
-
-        <div class="timeline-item fade-up">
-          <div class="timeline-card">
-            <span class="timeline-year">~2020 &ndash; Microsoft</span>
-            <div class="timeline-role">Solutions Engineer &middot; Microsoft 365 Copilot Focus</div>
-            <div class="timeline-company">Microsoft</div>
-            <p class="timeline-desc">Joined Microsoft as a Solutions Engineer with a dedicated focus on Microsoft 365 Copilot &mdash; helping financial institutions understand, adopt, and scale Copilot across their organizations. From demos and discovery to architecture and deployment strategy, this was where years of enterprise experience met the next era of AI.</p>
-          </div>
-        </div>
-
-        <div class="timeline-item current fade-up">
-          <div class="timeline-card">
-            <span class="timeline-year">Now &middot; Microsoft</span>
-            <div class="timeline-role">Senior Solution Engineer &middot; AI Workforce</div>
-            <div class="timeline-company">Microsoft</div>
-            <p class="timeline-desc">Today, I'm at the leading edge of the AI revolution &mdash; partnering with major financial institutions to deploy Microsoft 365 Copilot, Copilot Studio, and Microsoft Teams at enterprise scale. 26 years of hands-on technology experience, deployed in service of the most exciting moment in tech history.</p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <section id="about">
-    <div class="about-inner">
-      <div class="about-text fade-up">
-        <p class="section-label">About</p>
-        <h2 class="section-title">More than a<br />tech guy.</h2>
-        <p>Based in Chicago, IL, I'm a Senior Solution Engineer on Microsoft's AI Workforce team, focused exclusively on Financial Services. With <strong>26 years in the technology industry</strong>, I've navigated every major shift in enterprise tech &mdash; from the early days of network infrastructure to today's era of generative AI.</p>
-        <p>What sets me apart isn't just technical depth &mdash; it's the ability to translate complex AI capabilities into language executives understand and outcomes they can measure. I've sat in the server room and the boardroom, and I know how to make both conversations count.</p>
-        <p>Holding <strong>22 Microsoft certifications</strong>, I bring validated expertise across the Microsoft ecosystem &mdash; from M365 and Teams to AI and cloud &mdash; and a genuine passion for helping financial institutions achieve what's actually possible with today's technology.</p>
-        <div class="skill-tags">
-          <span>M365 Copilot</span><span>Copilot Studio</span><span>Microsoft Teams</span><span>Teams Rooms</span><span>Prompt Engineering</span><span>Microsoft 365</span><span>Financial Services</span><span>Enterprise AI</span><span>Unified Communications</span>
-        </div>
-      </div>
-      <div class="stats-col fade-up">
-        <div class="stat-card"><div class="stat-icon-wrap">&#9201;&#65039;</div><div class="stat-text"><span class="stat-num" data-target="26">0</span><span class="stat-label">Years in Technology</span></div></div>
-        <div class="stat-card"><div class="stat-icon-wrap">&#127885;</div><div class="stat-text"><span class="stat-num" data-target="22">0</span><span class="stat-label">Microsoft Certifications</span></div></div>
-        <div class="stat-card"><div class="stat-icon-wrap">&#127970;</div><div class="stat-text"><span class="stat-num">FS</span><span class="stat-label">Financial Services Focus</span></div></div>
-        <div class="stat-card"><div class="stat-icon-wrap">&#129302;</div><div class="stat-text"><span class="stat-num">AI</span><span class="stat-label">Microsoft AI Workforce</span></div></div>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <div class="blob blob-1"></div>
-    <div class="blob blob-2"></div>
-    <div class="contact-inner">
-      <p class="section-label fade-up">Get in Touch</p>
-      <h2 class="section-title fade-up">Let's build something<br />remarkable together.</h2>
-      <p class="contact-sub fade-up">Whether it's an AI strategy conversation, a Microsoft 365 Copilot deployment, exploring Copilot Studio for your financial institution, or transforming your collaboration infrastructure with Microsoft Teams &mdash; I'd love to connect.</p>
-      <div class="contact-actions fade-up">
-        <a href="mailto:DLRivero2@gmail.com" class="btn-primary large">&#9993;&#65039;&nbsp; Email Me</a>
-        <a href="https://www.linkedin.com/in/drivero/" target="_blank" rel="noopener" class="btn-outline large">
-          <svg class="li-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-          &nbsp;LinkedIn
+      <!-- Desktop Links -->
+      <div class="hidden md:flex items-center gap-8">
+        <a href="#focus" class="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-accent transition-colors">Focus</a>
+        <a href="#journey" class="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-accent transition-colors">Journey</a>
+        <a href="#about" class="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-accent transition-colors">About</a>
+        <a href="#contact" class="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-accent transition-colors">Contact</a>
+        <a href="#contact" class="inline-flex items-center px-5 py-2.5 rounded-full bg-primary text-white text-sm font-semibold hover:bg-blue-700 shadow-lg shadow-primary/25 hover:shadow-primary/40 btn-press transition-all">
+          Get in Touch
         </a>
       </div>
-    </div>
-  </section>
 
-  <footer>
-    <div class="footer-inner">
-      <div class="footer-left">
-        <div class="footer-logo">dan<span>.</span>rivero</div>
-        <div class="footer-copy">&copy; 2025 Dan Rivero &middot; Chicago, IL &middot; All rights reserved.</div>
+      <!-- Mobile menu button -->
+      <button id="mobileMenuBtn" class="md:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-dark-card transition-colors" aria-label="Menu">
+        <svg class="w-6 h-6 text-gray-700 dark:text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="md:hidden hidden pb-4">
+      <div class="flex flex-col gap-3 pt-2">
+        <a href="#focus" class="mobile-link px-4 py-2 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-dark-card transition-colors text-sm font-medium">Focus</a>
+        <a href="#journey" class="mobile-link px-4 py-2 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-dark-card transition-colors text-sm font-medium">Journey</a>
+        <a href="#about" class="mobile-link px-4 py-2 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-dark-card transition-colors text-sm font-medium">About</a>
+        <a href="#contact" class="mobile-link px-4 py-2 rounded-lg text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-dark-card transition-colors text-sm font-medium">Contact</a>
+        <a href="#contact" class="mx-4 mt-1 text-center px-5 py-2.5 rounded-full bg-primary text-white text-sm font-semibold">Get in Touch</a>
       </div>
-      <div class="footer-right">Senior Solution Engineer &middot; AI Workforce &middot; Microsoft</div>
     </div>
-  </footer>
+  </div>
+</nav>
 
-  <!-- DARK MODE TOGGLE -->
-  <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+<!-- ==================== HERO ==================== -->
+<section class="relative min-h-screen flex items-center pt-20 hero-grid overflow-hidden">
+  <!-- Decorative blobs -->
+  <div class="absolute top-20 -left-32 w-[500px] h-[500px] bg-primary/5 dark:bg-primary/10 rounded-full blur-3xl animate-float pointer-events-none"></div>
+  <div class="absolute bottom-10 right-0 w-[400px] h-[400px] bg-accent/5 dark:bg-accent/10 rounded-full blur-3xl pointer-events-none" style="animation:float 8s ease-in-out infinite 2s"></div>
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-gradient-radial from-primary/[0.03] to-transparent rounded-full pointer-events-none"></div>
 
-  <script>
-    // Dark mode
-    const toggle = document.getElementById('themeToggle');
-    const html = document.documentElement;
-    const saved = localStorage.getItem('theme');
-    if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-      html.classList.add('dark');
-      toggle.textContent = '☀️';
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-0 w-full">
+    <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <!-- Left Column -->
+      <div>
+        <!-- Eyebrow -->
+        <div class="fade-up inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/5 dark:bg-primary/15 border border-primary/10 dark:border-primary/20 mb-6">
+          <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+          <span class="text-sm font-medium text-primary dark:text-accent">Senior Solution Engineer · AI Workforce · Microsoft</span>
+        </div>
+
+        <!-- Headline -->
+        <h1 class="fade-up delay-100 font-heading font-extrabold text-4xl sm:text-5xl lg:text-6xl leading-[1.1] tracking-tight text-gray-900 dark:text-white mb-6">
+          Making AI work<br/>
+          <span class="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">in Financial Services.</span>
+        </h1>
+
+        <!-- Sub -->
+        <p class="fade-up delay-200 text-lg sm:text-xl text-gray-600 dark:text-gray-400 leading-relaxed max-w-xl mb-8">
+          26 years of technology expertise. One mission: helping the world's leading financial institutions move from AI ambition to AI reality — powered by <strong class="text-gray-800 dark:text-gray-200">Microsoft 365 Copilot</strong>, <strong class="text-gray-800 dark:text-gray-200">Copilot Studio</strong>, and <strong class="text-gray-800 dark:text-gray-200">Microsoft Teams</strong>.
+        </p>
+
+        <!-- Inline Stats Strip -->
+        <div class="fade-up delay-300 flex flex-wrap items-center gap-4 sm:gap-0 mb-10 p-4 rounded-2xl bg-white/60 dark:bg-dark-card/60 border border-gray-200/60 dark:border-white/5 shadow-sm">
+          <div class="flex items-center gap-2 sm:px-5">
+            <span class="text-xl">🏦</span>
+            <span class="text-sm font-semibold text-gray-700 dark:text-gray-300">Financial Services</span>
+          </div>
+          <div class="hidden sm:block w-px h-8 bg-gray-200 dark:bg-white/10"></div>
+          <div class="flex items-center gap-2 sm:px-5">
+            <span class="text-xl">🏅</span>
+            <span class="text-sm font-semibold text-gray-700 dark:text-gray-300">22 Certifications</span>
+          </div>
+          <div class="hidden sm:block w-px h-8 bg-gray-200 dark:bg-white/10"></div>
+          <div class="flex items-center gap-2 sm:px-5">
+            <span class="text-xl">📍</span>
+            <span class="text-sm font-semibold text-gray-700 dark:text-gray-300">Chicago, IL</span>
+          </div>
+        </div>
+
+        <!-- Buttons -->
+        <div class="fade-up delay-400 flex flex-wrap gap-4">
+          <a href="#focus" class="inline-flex items-center px-7 py-3.5 rounded-full bg-primary text-white font-semibold hover:bg-blue-700 shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 btn-press transition-all">
+            See What I Do
+            <svg class="ml-2 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+          </a>
+          <a href="#contact" class="inline-flex items-center px-7 py-3.5 rounded-full border-2 border-primary/30 dark:border-primary/40 text-primary dark:text-accent font-semibold hover:border-primary hover:bg-primary/5 dark:hover:bg-primary/10 btn-press transition-all">
+            Let's Connect
+          </a>
+        </div>
+      </div>
+
+      <!-- Right Column: Hero Card (hidden on mobile) -->
+      <div class="hidden lg:flex justify-center fade-up delay-300">
+        <div class="relative">
+          <!-- Glow behind card -->
+          <div class="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 rounded-3xl blur-2xl scale-110"></div>
+          <div class="relative bg-gradient-to-br from-primary via-blue-600 to-accent rounded-3xl p-10 text-white shadow-2xl shadow-primary/30 max-w-sm animate-float">
+            <div class="text-8xl font-heading font-extrabold leading-none mb-3 tracking-tight">26<span class="text-accent/80">+</span></div>
+            <div class="text-2xl font-heading font-bold mb-2">Years in Technology</div>
+            <div class="w-12 h-1 bg-white/30 rounded-full mb-4"></div>
+            <p class="text-blue-100 text-base leading-relaxed">From Geek Squad to Microsoft AI</p>
+            <!-- Decorative elements -->
+            <div class="absolute top-6 right-6 w-16 h-16 border-2 border-white/10 rounded-2xl"></div>
+            <div class="absolute bottom-6 right-6 w-8 h-8 border-2 border-white/10 rounded-lg rotate-12"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section Divider -->
+<div class="section-divider"></div>
+
+<!-- ==================== SKILLS MARQUEE ==================== -->
+<section class="relative bg-primary dark:bg-primary/90 py-5 overflow-hidden">
+  <div class="marquee-track animate-marquee">
+    <span class="inline-flex items-center gap-12 text-white/90 text-sm font-semibold tracking-wide uppercase whitespace-nowrap px-6">
+      <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>Microsoft 365 Copilot</span>
+      <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>Copilot Studio</span>
+      <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>Microsoft Teams</span>
+      <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>Teams Rooms</span>
+      <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>Prompt Engineering</span>
+      <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>Financial Services AI</span>
+      <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>Enterprise AI Strategy</span>
+      <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>Unified Communications</span>
+      <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>Microsoft 365</span>
+    </span>
+    <span class="inline-flex items-center gap-12 text-white/90 text-sm font-semibold tracking-wide uppercase whitespace-nowrap px-6" aria-hidden="true">
+      <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>Microsoft 365 Copilot</span>
+      <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>Copilot Studio</span>
+      <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>Microsoft Teams</span>
+      <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>Teams Rooms</span>
+      <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>Prompt Engineering</span>
+      <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>Financial Services AI</span>
+      <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>Enterprise AI Strategy</span>
+      <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>Unified Communications</span>
+      <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>Microsoft 365</span>
+    </span>
+  </div>
+</section>
+
+<!-- ==================== COMPANY LOGOS STRIP ==================== -->
+<section class="py-14 bg-light-alt dark:bg-dark-card/50">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6">
+    <p class="text-center text-xs font-semibold uppercase tracking-[0.2em] text-gray-400 dark:text-gray-500 mb-10 fade-up">Where I've Built My Career</p>
+    <div class="flex flex-wrap items-center justify-center gap-4 sm:gap-2 fade-up delay-100">
+
+      <!-- Geek Squad / Best Buy -->
+      <div class="company-logo-wrap flex items-center gap-2 px-4 py-2 opacity-60 dark:opacity-50 hover:opacity-100 transition-all cursor-default">
+        <img src="https://cdn.simpleicons.org/bestbuy/0046be" alt="Best Buy" class="w-6 h-6 dark:invert dark:brightness-200 dark:hue-rotate-180" onerror="this.style.display='none'"/>
+        <span class="text-sm font-bold text-gray-600 dark:text-gray-400">Geek Squad</span>
+      </div>
+
+      <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 hidden sm:block flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+
+      <!-- Chopper Trading -->
+      <div class="company-logo-wrap flex items-center gap-2 px-4 py-2 opacity-60 dark:opacity-50 hover:opacity-100 transition-all cursor-default">
+        <span class="text-sm font-bold text-gray-600 dark:text-gray-400">Chopper Trading</span>
+      </div>
+
+      <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 hidden sm:block flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+
+      <!-- TSG / TeleTech -->
+      <div class="company-logo-wrap flex items-center gap-2 px-4 py-2 opacity-60 dark:opacity-50 hover:opacity-100 transition-all cursor-default">
+        <span class="text-sm font-bold text-gray-600 dark:text-gray-400">TSG / TeleTech</span>
+      </div>
+
+      <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 hidden sm:block flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+
+      <!-- Allstate -->
+      <div class="company-logo-wrap flex items-center gap-2 px-4 py-2 opacity-60 dark:opacity-50 hover:opacity-100 transition-all cursor-default">
+        <svg class="w-6 h-6 text-gray-500 dark:text-gray-400" viewBox="0 0 24 24" fill="currentColor">
+          <path d="M12 1C7.03 1 3 5.03 3 10c0 3.9 2.49 7.22 5.97 8.48L12 23l3.03-4.52C18.51 17.22 21 13.9 21 10c0-4.97-4.03-9-9-9zm0 2c3.86 0 7 3.14 7 7 0 3.04-1.95 5.63-4.66 6.6L12 20.2l-2.34-3.6C6.95 15.63 5 13.04 5 10c0-3.86 3.14-7 7-7z"/>
+          <path d="M12 6a4 4 0 100 8 4 4 0 000-8zm0 2a2 2 0 110 4 2 2 0 010-4z"/>
+        </svg>
+        <span class="text-sm font-bold text-gray-600 dark:text-gray-400">Allstate</span>
+      </div>
+
+      <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 hidden sm:block flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+
+      <!-- Microsoft (highlighted) -->
+      <div class="company-logo-wrap flex items-center gap-2 px-4 py-2 opacity-100 transition-all cursor-default">
+        <img src="https://cdn.simpleicons.org/microsoft/0078d4" alt="Microsoft" class="w-6 h-6" onerror="this.style.display='none'"/>
+        <span class="text-sm font-bold text-primary dark:text-accent">Microsoft</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Section Divider -->
+<div class="section-divider"></div>
+
+<!-- ==================== WHAT I DO ==================== -->
+<section id="focus" class="py-24 bg-white dark:bg-dark-bg">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- Section Header -->
+    <div class="text-center mb-16">
+      <p class="fade-up text-sm font-semibold uppercase tracking-[0.2em] text-primary dark:text-accent mb-3">What I Do</p>
+      <h2 class="fade-up delay-100 font-heading font-bold text-3xl sm:text-4xl lg:text-5xl text-gray-900 dark:text-white mb-4">
+        Specialized in what matters most.
+      </h2>
+      <p class="fade-up delay-200 text-lg text-gray-500 dark:text-gray-400 max-w-2xl mx-auto">
+        Deep expertise across the Microsoft AI and collaboration stack — purpose-built for the demands of financial services.
+      </p>
+    </div>
+
+    <!-- Cards Grid -->
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+
+      <!-- Card 1: M365 Copilot -->
+      <div class="fade-up group card-shimmer bg-white dark:bg-dark-card border border-gray-200/80 dark:border-white/5 rounded-2xl p-7 hover:shadow-xl hover:shadow-primary/5 dark:hover:shadow-primary/10 transition-all duration-500">
+        <div class="w-14 h-14 rounded-2xl bg-primary/10 dark:bg-primary/20 flex items-center justify-center mb-5 group-hover:scale-110 group-hover:bg-primary/20 dark:group-hover:bg-primary/30 transition-all duration-300">
+          <span class="text-2xl">🤖</span>
+        </div>
+        <h3 class="font-heading font-bold text-lg text-gray-900 dark:text-white mb-3">Microsoft 365 Copilot</h3>
+        <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Guiding financial institutions through the full M365 Copilot journey — from readiness and governance to scaled deployment — unlocking real productivity, compliance intelligence, and measurable ROI.</p>
+      </div>
+
+      <!-- Card 2: Copilot Studio -->
+      <div class="fade-up delay-100 group card-shimmer bg-white dark:bg-dark-card border border-gray-200/80 dark:border-white/5 rounded-2xl p-7 hover:shadow-xl hover:shadow-primary/5 dark:hover:shadow-primary/10 transition-all duration-500">
+        <div class="w-14 h-14 rounded-2xl bg-primary/10 dark:bg-primary/20 flex items-center justify-center mb-5 group-hover:scale-110 group-hover:bg-primary/20 dark:group-hover:bg-primary/30 transition-all duration-300">
+          <span class="text-2xl">🧠</span>
+        </div>
+        <h3 class="font-heading font-bold text-lg text-gray-900 dark:text-white mb-3">Copilot Studio</h3>
+        <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Designing and deploying custom AI agents that automate complex financial workflows, surface critical insights in real time, and give knowledge workers an unfair productivity advantage.</p>
+      </div>
+
+      <!-- Card 3: Microsoft Teams -->
+      <div class="fade-up delay-200 group card-shimmer bg-white dark:bg-dark-card border border-gray-200/80 dark:border-white/5 rounded-2xl p-7 hover:shadow-xl hover:shadow-primary/5 dark:hover:shadow-primary/10 transition-all duration-500">
+        <div class="w-14 h-14 rounded-2xl bg-primary/10 dark:bg-primary/20 flex items-center justify-center mb-5 group-hover:scale-110 group-hover:bg-primary/20 dark:group-hover:bg-primary/30 transition-all duration-300">
+          <span class="text-2xl">💬</span>
+        </div>
+        <h3 class="font-heading font-bold text-lg text-gray-900 dark:text-white mb-3">Microsoft Teams</h3>
+        <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Transforming how financial institutions communicate — enabling secure, compliant, enterprise-grade unified collaboration that meets the rigorous demands of regulated industries at global scale.</p>
+      </div>
+
+      <!-- Card 4: Teams Rooms -->
+      <div class="fade-up delay-100 group card-shimmer bg-white dark:bg-dark-card border border-gray-200/80 dark:border-white/5 rounded-2xl p-7 hover:shadow-xl hover:shadow-primary/5 dark:hover:shadow-primary/10 transition-all duration-500">
+        <div class="w-14 h-14 rounded-2xl bg-primary/10 dark:bg-primary/20 flex items-center justify-center mb-5 group-hover:scale-110 group-hover:bg-primary/20 dark:group-hover:bg-primary/30 transition-all duration-300">
+          <span class="text-2xl">🏢</span>
+        </div>
+        <h3 class="font-heading font-bold text-lg text-gray-900 dark:text-white mb-3">Microsoft Teams Rooms</h3>
+        <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Modernizing the hybrid meeting experience for enterprise environments — bringing AI-powered, immersive collaboration to every boardroom, trading floor, and branch location.</p>
+      </div>
+
+      <!-- Card 5: Prompt Engineering -->
+      <div class="fade-up delay-200 group card-shimmer bg-white dark:bg-dark-card border border-gray-200/80 dark:border-white/5 rounded-2xl p-7 hover:shadow-xl hover:shadow-primary/5 dark:hover:shadow-primary/10 transition-all duration-500">
+        <div class="w-14 h-14 rounded-2xl bg-primary/10 dark:bg-primary/20 flex items-center justify-center mb-5 group-hover:scale-110 group-hover:bg-primary/20 dark:group-hover:bg-primary/30 transition-all duration-300">
+          <span class="text-2xl">✍️</span>
+        </div>
+        <h3 class="font-heading font-bold text-lg text-gray-900 dark:text-white mb-3">Prompt Engineering</h3>
+        <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Crafting precision prompts that unlock the full potential of large language models — building repeatable, high-quality AI interactions designed for real enterprise use cases in financial services.</p>
+      </div>
+
+      <!-- Card 6: Financial Services AI -->
+      <div class="fade-up delay-300 group card-shimmer bg-white dark:bg-dark-card border border-gray-200/80 dark:border-white/5 rounded-2xl p-7 hover:shadow-xl hover:shadow-primary/5 dark:hover:shadow-primary/10 transition-all duration-500">
+        <div class="w-14 h-14 rounded-2xl bg-primary/10 dark:bg-primary/20 flex items-center justify-center mb-5 group-hover:scale-110 group-hover:bg-primary/20 dark:group-hover:bg-primary/30 transition-all duration-300">
+          <span class="text-2xl">🏦</span>
+        </div>
+        <h3 class="font-heading font-bold text-lg text-gray-900 dark:text-white mb-3">Financial Services AI</h3>
+        <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Deep expertise in the unique regulatory, compliance, and operational demands of financial institutions — turning cutting-edge Microsoft AI into trusted, production-ready outcomes your business can rely on.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Section Divider -->
+<div class="section-divider"></div>
+
+<!-- ==================== CAREER TIMELINE ==================== -->
+<section id="journey" class="py-24 bg-light-alt dark:bg-dark-card/30 relative overflow-hidden">
+  <!-- Watermark "26" -->
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-heading font-extrabold text-[20rem] sm:text-[28rem] text-gray-100/50 dark:text-white/[0.02] select-none pointer-events-none leading-none" aria-hidden="true">26</div>
+
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <!-- Section Header -->
+    <div class="text-center mb-20">
+      <p class="fade-up text-sm font-semibold uppercase tracking-[0.2em] text-primary dark:text-accent mb-3">The Journey</p>
+      <h2 class="fade-up delay-100 font-heading font-bold text-3xl sm:text-4xl lg:text-5xl text-gray-900 dark:text-white mb-4">
+        26 years of building what's next.
+      </h2>
+      <p class="fade-up delay-200 text-lg text-gray-500 dark:text-gray-400 max-w-2xl mx-auto">
+        From troubleshooting PCs in the field to deploying AI at enterprise scale — every chapter built on the last.
+      </p>
+    </div>
+
+    <!-- Timeline -->
+    <div class="relative">
+      <!-- Vertical Line -->
+      <div class="timeline-line hidden md:block"></div>
+      <div class="md:hidden absolute left-6 top-0 bottom-0 w-0.5 bg-gradient-to-b from-transparent via-primary to-transparent"></div>
+
+      <!-- Entry 1 -->
+      <div class="fade-up relative flex flex-col md:flex-row md:items-start mb-16 group">
+        <div class="pl-12 md:pl-0 md:w-1/2 md:text-right md:pr-12">
+          <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-primary/10 dark:bg-primary/20 text-primary dark:text-accent mb-2">~2000 – Early Career</span>
+          <h3 class="font-heading font-bold text-xl text-gray-900 dark:text-white">Senior Field Agent</h3>
+          <p class="text-sm font-semibold text-primary dark:text-accent mb-2">Geek Squad</p>
+          <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Started as a charter Geek Squad field agent — one of the original team members. Troubleshooting, installing, and repairing technology in the real world. Built an instinct for diagnosing complex problems fast and a relentless drive to find solutions that stick.</p>
+        </div>
+        <!-- Dot -->
+        <div class="absolute left-[18px] md:left-1/2 md:-translate-x-1/2 top-2 md:top-3 w-4 h-4 rounded-full bg-white dark:bg-dark-bg border-[3px] border-primary z-10 group-hover:scale-125 transition-transform"></div>
+        <div class="md:w-1/2 md:pl-12"></div>
+      </div>
+
+      <!-- Entry 2 -->
+      <div class="fade-up relative flex flex-col md:flex-row md:items-start mb-16 group">
+        <div class="md:w-1/2 md:pr-12"></div>
+        <!-- Dot -->
+        <div class="absolute left-[18px] md:left-1/2 md:-translate-x-1/2 top-2 md:top-3 w-4 h-4 rounded-full bg-white dark:bg-dark-bg border-[3px] border-primary z-10 group-hover:scale-125 transition-transform"></div>
+        <div class="md:w-1/2 md:pl-12 pl-12 md:pl-12">
+          <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-primary/10 dark:bg-primary/20 text-primary dark:text-accent mb-2">~2003 – Leadership</span>
+          <h3 class="font-heading font-bold text-xl text-gray-900 dark:text-white">Field Operations Manager</h3>
+          <p class="text-sm font-semibold text-primary dark:text-accent mb-2">Geek Squad</p>
+          <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Stepped into management, leading a team of field agents across service operations. Discovered a passion for developing people and building high-performing teams — a leadership mindset that has shaped every role since.</p>
+        </div>
+      </div>
+
+      <!-- Entry 3 -->
+      <div class="fade-up relative flex flex-col md:flex-row md:items-start mb-16 group">
+        <div class="pl-12 md:pl-0 md:w-1/2 md:text-right md:pr-12">
+          <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-primary/10 dark:bg-primary/20 text-primary dark:text-accent mb-2">~2006 – Finance Sector</span>
+          <h3 class="font-heading font-bold text-xl text-gray-900 dark:text-white">Level 3 IT Support Specialist</h3>
+          <p class="text-sm font-semibold text-primary dark:text-accent mb-2">Chopper Trading</p>
+          <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Entered the high-stakes world of financial services technology — providing Level 3 support in a trading environment where every second matters. Gained deep respect for the performance and reliability demands of finance.</p>
+        </div>
+        <div class="absolute left-[18px] md:left-1/2 md:-translate-x-1/2 top-2 md:top-3 w-4 h-4 rounded-full bg-white dark:bg-dark-bg border-[3px] border-primary z-10 group-hover:scale-125 transition-transform"></div>
+        <div class="md:w-1/2 md:pl-12"></div>
+      </div>
+
+      <!-- Entry 4 -->
+      <div class="fade-up relative flex flex-col md:flex-row md:items-start mb-16 group">
+        <div class="md:w-1/2 md:pr-12"></div>
+        <div class="absolute left-[18px] md:left-1/2 md:-translate-x-1/2 top-2 md:top-3 w-4 h-4 rounded-full bg-white dark:bg-dark-bg border-[3px] border-primary z-10 group-hover:scale-125 transition-transform"></div>
+        <div class="md:w-1/2 md:pl-12 pl-12 md:pl-12">
+          <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-primary/10 dark:bg-primary/20 text-primary dark:text-accent mb-2">~2009 – Enterprise Infrastructure</span>
+          <h3 class="font-heading font-bold text-xl text-gray-900 dark:text-white">Senior Network &amp; Microsoft Engineer</h3>
+          <p class="text-sm font-semibold text-primary dark:text-accent mb-2">Technology Solutions Group, a TeleTech Company</p>
+          <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Led enterprise deployments spanning wireless networks, data networking, Microsoft Lync Server, Skype for Business Server, and complex Avaya &amp; Microsoft UC integrations — building the infrastructure foundation that would define the rest of my career.</p>
+        </div>
+      </div>
+
+      <!-- Entry 5 -->
+      <div class="fade-up relative flex flex-col md:flex-row md:items-start mb-16 group">
+        <div class="pl-12 md:pl-0 md:w-1/2 md:text-right md:pr-12">
+          <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-primary/10 dark:bg-primary/20 text-primary dark:text-accent mb-2">~2015 – Enterprise Scale</span>
+          <h3 class="font-heading font-bold text-xl text-gray-900 dark:text-white">Senior Engineer · Unified Communications</h3>
+          <p class="text-sm font-semibold text-primary dark:text-accent mb-2">Allstate</p>
+          <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Led the enterprise-wide migration from Webex to Skype for Business, followed by a full Microsoft Teams implementation — replacing legacy systems, decommissioning aging infrastructure, and transforming how one of America's largest insurers communicates and collaborates.</p>
+        </div>
+        <div class="absolute left-[18px] md:left-1/2 md:-translate-x-1/2 top-2 md:top-3 w-4 h-4 rounded-full bg-white dark:bg-dark-bg border-[3px] border-primary z-10 group-hover:scale-125 transition-transform"></div>
+        <div class="md:w-1/2 md:pl-12"></div>
+      </div>
+
+      <!-- Entry 6 -->
+      <div class="fade-up relative flex flex-col md:flex-row md:items-start mb-16 group">
+        <div class="md:w-1/2 md:pr-12"></div>
+        <div class="absolute left-[18px] md:left-1/2 md:-translate-x-1/2 top-2 md:top-3 w-4 h-4 rounded-full bg-white dark:bg-dark-bg border-[3px] border-primary z-10 group-hover:scale-125 transition-transform"></div>
+        <div class="md:w-1/2 md:pl-12 pl-12 md:pl-12">
+          <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-primary/10 dark:bg-primary/20 text-primary dark:text-accent mb-2">~2020 – Microsoft</span>
+          <h3 class="font-heading font-bold text-xl text-gray-900 dark:text-white">Solutions Engineer · Microsoft 365 Copilot</h3>
+          <p class="text-sm font-semibold text-primary dark:text-accent mb-2">Microsoft</p>
+          <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Joined Microsoft as a Solutions Engineer with a dedicated focus on Microsoft 365 Copilot — helping financial institutions understand, adopt, and scale Copilot across their organizations. From demos and discovery to architecture and deployment strategy, this was where years of enterprise experience met the next era of AI.</p>
+        </div>
+      </div>
+
+      <!-- Entry 7: CURRENT -->
+      <div class="fade-up relative flex flex-col md:flex-row md:items-start group">
+        <div class="pl-12 md:pl-0 md:w-1/2 md:text-right md:pr-12">
+          <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-primary text-white mb-2">
+            <span class="w-2 h-2 rounded-full bg-white animate-pulse"></span>
+            Now · Microsoft
+          </span>
+          <h3 class="font-heading font-bold text-xl text-gray-900 dark:text-white">Senior Solution Engineer · AI Workforce</h3>
+          <p class="text-sm font-semibold text-primary dark:text-accent mb-2">Microsoft</p>
+          <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Today, at the leading edge of the AI revolution — partnering with major financial institutions to deploy Microsoft 365 Copilot, Copilot Studio, and Microsoft Teams at enterprise scale. 26 years of hands-on technology experience, deployed in service of the most exciting moment in tech history.</p>
+        </div>
+        <!-- Pulsing Dot -->
+        <div class="absolute left-[18px] md:left-1/2 md:-translate-x-1/2 top-2 md:top-3 z-10">
+          <div class="w-5 h-5 rounded-full bg-primary animate-pulse-dot"></div>
+          <div class="absolute inset-0 w-5 h-5 rounded-full bg-primary/40 animate-ping"></div>
+        </div>
+        <div class="md:w-1/2 md:pl-12"></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Section Divider -->
+<div class="section-divider"></div>
+
+<!-- ==================== ABOUT ==================== -->
+<section id="about" class="py-24 bg-white dark:bg-dark-bg">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="grid lg:grid-cols-2 gap-16 items-start">
+
+      <!-- Left: Text -->
+      <div>
+        <p class="fade-up text-sm font-semibold uppercase tracking-[0.2em] text-primary dark:text-accent mb-3">About</p>
+        <h2 class="fade-up delay-100 font-heading font-bold text-3xl sm:text-4xl lg:text-5xl text-gray-900 dark:text-white mb-8">
+          More than a tech guy.
+        </h2>
+        <div class="fade-up delay-200 space-y-5 text-gray-600 dark:text-gray-400 leading-relaxed">
+          <p>
+            Over <strong class="text-gray-800 dark:text-gray-200">26 years in technology</strong>, I've built a career that spans from troubleshooting PCs in the field to deploying AI at the largest financial institutions in the world. I've earned <strong class="text-gray-800 dark:text-gray-200">22 Microsoft certifications</strong> and built deep expertise across the Microsoft ecosystem — but what I'm most proud of is the ability to meet people where they are and help them get where they need to go.
+          </p>
+          <p>
+            Based in <strong class="text-gray-800 dark:text-gray-200">Chicago, IL</strong>, I specialize in <strong class="text-gray-800 dark:text-gray-200">financial services</strong> — an industry where precision, compliance, and reliability aren't optional. I'm as comfortable in the server room as I am in the boardroom, and I bring that rare combination of deep technical skill and genuine human connection to every engagement.
+          </p>
+          <p>
+            Today, I'm focused on helping the world's leading financial institutions harness the power of <strong class="text-gray-800 dark:text-gray-200">Microsoft 365 Copilot, Copilot Studio, and Microsoft Teams</strong> — turning AI ambition into AI reality.
+          </p>
+        </div>
+
+        <!-- Skill Tags -->
+        <div class="fade-up delay-300 flex flex-wrap gap-2 mt-8">
+          <span class="px-3 py-1.5 rounded-full text-xs font-semibold bg-primary/10 dark:bg-primary/20 text-primary dark:text-accent hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors cursor-default">M365 Copilot</span>
+          <span class="px-3 py-1.5 rounded-full text-xs font-semibold bg-primary/10 dark:bg-primary/20 text-primary dark:text-accent hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors cursor-default">Copilot Studio</span>
+          <span class="px-3 py-1.5 rounded-full text-xs font-semibold bg-primary/10 dark:bg-primary/20 text-primary dark:text-accent hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors cursor-default">Microsoft Teams</span>
+          <span class="px-3 py-1.5 rounded-full text-xs font-semibold bg-primary/10 dark:bg-primary/20 text-primary dark:text-accent hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors cursor-default">Teams Rooms</span>
+          <span class="px-3 py-1.5 rounded-full text-xs font-semibold bg-primary/10 dark:bg-primary/20 text-primary dark:text-accent hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors cursor-default">Prompt Engineering</span>
+          <span class="px-3 py-1.5 rounded-full text-xs font-semibold bg-primary/10 dark:bg-primary/20 text-primary dark:text-accent hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors cursor-default">Microsoft 365</span>
+          <span class="px-3 py-1.5 rounded-full text-xs font-semibold bg-primary/10 dark:bg-primary/20 text-primary dark:text-accent hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors cursor-default">Financial Services</span>
+          <span class="px-3 py-1.5 rounded-full text-xs font-semibold bg-primary/10 dark:bg-primary/20 text-primary dark:text-accent hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors cursor-default">Enterprise AI</span>
+          <span class="px-3 py-1.5 rounded-full text-xs font-semibold bg-primary/10 dark:bg-primary/20 text-primary dark:text-accent hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors cursor-default">Unified Communications</span>
+        </div>
+      </div>
+
+      <!-- Right: Stat Cards -->
+      <div class="fade-up delay-200 grid grid-cols-2 gap-4">
+
+        <!-- Stat 1 -->
+        <div class="card-shimmer bg-light-alt dark:bg-dark-card border border-gray-200/80 dark:border-white/5 rounded-2xl p-6 text-center hover:shadow-lg transition-all duration-300">
+          <div class="text-3xl mb-2">⏱️</div>
+          <div class="font-heading font-extrabold text-3xl text-gray-900 dark:text-white mb-1">
+            <span class="counter" data-target="26">0</span><span class="text-primary">+</span>
+          </div>
+          <p class="text-xs font-medium text-gray-500 dark:text-gray-400">Years in Technology</p>
+        </div>
+
+        <!-- Stat 2 -->
+        <div class="card-shimmer bg-light-alt dark:bg-dark-card border border-gray-200/80 dark:border-white/5 rounded-2xl p-6 text-center hover:shadow-lg transition-all duration-300">
+          <div class="text-3xl mb-2">🏅</div>
+          <div class="font-heading font-extrabold text-3xl text-gray-900 dark:text-white mb-1">
+            <span class="counter" data-target="22">0</span><span class="text-primary">+</span>
+          </div>
+          <p class="text-xs font-medium text-gray-500 dark:text-gray-400">Microsoft Certifications</p>
+        </div>
+
+        <!-- Stat 3 -->
+        <div class="card-shimmer bg-light-alt dark:bg-dark-card border border-gray-200/80 dark:border-white/5 rounded-2xl p-6 text-center hover:shadow-lg transition-all duration-300">
+          <div class="text-3xl mb-2">🏦</div>
+          <div class="font-heading font-extrabold text-xl text-gray-900 dark:text-white mb-1">FS</div>
+          <p class="text-xs font-medium text-gray-500 dark:text-gray-400">Financial Services Focus</p>
+        </div>
+
+        <!-- Stat 4 -->
+        <div class="card-shimmer bg-light-alt dark:bg-dark-card border border-gray-200/80 dark:border-white/5 rounded-2xl p-6 text-center hover:shadow-lg transition-all duration-300">
+          <div class="text-3xl mb-2">🤖</div>
+          <div class="font-heading font-extrabold text-xl text-gray-900 dark:text-white mb-1">AI</div>
+          <p class="text-xs font-medium text-gray-500 dark:text-gray-400">Microsoft AI Workforce</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section Divider -->
+<div class="section-divider"></div>
+
+<!-- ==================== CONTACT ==================== -->
+<section id="contact" class="py-24 bg-light-alt dark:bg-dark-card/30 relative overflow-hidden">
+  <!-- Decorative blobs -->
+  <div class="absolute -top-20 -right-20 w-96 h-96 bg-primary/5 dark:bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
+  <div class="absolute -bottom-20 -left-20 w-80 h-80 bg-accent/5 dark:bg-accent/10 rounded-full blur-3xl pointer-events-none"></div>
+
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center relative z-10">
+    <p class="fade-up text-sm font-semibold uppercase tracking-[0.2em] text-primary dark:text-accent mb-3">Contact</p>
+    <h2 class="fade-up delay-100 font-heading font-bold text-3xl sm:text-4xl lg:text-5xl text-gray-900 dark:text-white mb-6">
+      Let's build something<br class="hidden sm:block"/> remarkable together.
+    </h2>
+    <p class="fade-up delay-200 text-lg text-gray-500 dark:text-gray-400 max-w-xl mx-auto mb-10 leading-relaxed">
+      Whether it's AI strategy, M365 Copilot deployment, Copilot Studio agents, or Microsoft Teams transformation — I'd love to connect.
+    </p>
+
+    <div class="fade-up delay-300 flex flex-col sm:flex-row items-center justify-center gap-4">
+      <!-- Email -->
+      <a href="mailto:DLRivero2@gmail.com" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-primary text-white font-semibold hover:bg-blue-700 shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 btn-press transition-all">
+        <span>✉️</span>
+        Email Me
+      </a>
+      <!-- LinkedIn -->
+      <a href="https://www.linkedin.com/in/drivero/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full border-2 border-gray-300 dark:border-white/10 text-gray-700 dark:text-gray-300 font-semibold hover:border-[#0A66C2] hover:text-[#0A66C2] dark:hover:text-[#0A66C2] hover:bg-[#0A66C2]/5 btn-press transition-all">
+        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        LinkedIn
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Section Divider -->
+<div class="section-divider"></div>
+
+<!-- ==================== FOOTER ==================== -->
+<footer class="py-12 bg-white dark:bg-dark-bg border-t border-gray-100 dark:border-white/5">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <a href="#" class="font-heading font-bold text-xl tracking-tight text-gray-900 dark:text-white inline-block mb-4">
+      dan<span class="text-primary">.</span>rivero
+    </a>
+    <p class="text-sm text-gray-400 dark:text-gray-500 mb-2">
+      © 2025 Dan Rivero · Chicago, IL · All rights reserved.
+    </p>
+    <p class="text-xs text-gray-400 dark:text-gray-600">
+      Senior Solution Engineer · AI Workforce · Microsoft
+    </p>
+  </div>
+</footer>
+
+<!-- ==================== DARK MODE TOGGLE ==================== -->
+<button id="darkToggle" class="fixed bottom-6 right-6 z-50 w-12 h-12 rounded-full bg-white dark:bg-dark-card border border-gray-200 dark:border-white/10 shadow-lg hover:shadow-xl flex items-center justify-center btn-press transition-all" aria-label="Toggle dark mode">
+  <!-- Sun icon (shown in dark mode) -->
+  <svg class="w-5 h-5 hidden dark:block text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"/></svg>
+  <!-- Moon icon (shown in light mode) -->
+  <svg class="w-5 h-5 block dark:hidden text-gray-700" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/></svg>
+</button>
+
+<!-- ==================== JAVASCRIPT ==================== -->
+<script>
+(function() {
+  'use strict';
+
+  // ── Dark Mode ──
+  const html = document.documentElement;
+  const toggle = document.getElementById('darkToggle');
+
+  function applyTheme(dark) {
+    html.classList.toggle('dark', dark);
+    localStorage.setItem('theme', dark ? 'dark' : 'light');
+  }
+
+  // Init: check localStorage, then system preference
+  const saved = localStorage.getItem('theme');
+  if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+    applyTheme(true);
+  }
+
+  toggle.addEventListener('click', () => {
+    applyTheme(!html.classList.contains('dark'));
+  });
+
+  // Listen for system preference changes
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+    if (!localStorage.getItem('theme')) applyTheme(e.matches);
+  });
+
+  // ── Navigation Glassmorphism on Scroll ──
+  const nav = document.getElementById('nav');
+  function updateNav() {
+    if (window.scrollY > 50) {
+      nav.classList.add('nav-glass', 'bg-white/80', 'dark:bg-dark-bg/80', 'shadow-sm', 'border-b', 'border-gray-200/50', 'dark:border-white/5');
+    } else {
+      nav.classList.remove('nav-glass', 'bg-white/80', 'dark:bg-dark-bg/80', 'shadow-sm', 'border-b', 'border-gray-200/50', 'dark:border-white/5');
     }
-    toggle.addEventListener('click', () => {
-      html.classList.toggle('dark');
-      const isDark = html.classList.contains('dark');
-      toggle.textContent = isDark ? '☀️' : '🌙';
-      localStorage.setItem('theme', isDark ? 'dark' : 'light');
-    });
+  }
+  window.addEventListener('scroll', updateNav, { passive: true });
+  updateNav();
 
-    // Nav scrolled
-    const navbar = document.getElementById('navbar');
-    window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 20));
-    document.querySelectorAll('a[href^="#"]').forEach(a => {
-      a.addEventListener('click', function(e) {
-        const t = document.querySelector(this.getAttribute('href'));
-        if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth' }); }
-      });
+  // ── Mobile Menu ──
+  const menuBtn = document.getElementById('mobileMenuBtn');
+  const menu = document.getElementById('mobileMenu');
+  menuBtn.addEventListener('click', () => menu.classList.toggle('hidden'));
+  document.querySelectorAll('.mobile-link').forEach(link => {
+    link.addEventListener('click', () => menu.classList.add('hidden'));
+  });
+
+  // ── Fade-Up on Scroll ──
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
     });
-    const fadeObs = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const sibs = entry.target.parentElement.querySelectorAll('.fade-up:not(.visible)');
-          sibs.forEach((el, i) => setTimeout(() => el.classList.add('visible'), i * 90));
-          entry.target.classList.add('visible');
-          fadeObs.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.fade-up').forEach(el => fadeObs.observe(el));
-    const counterObs = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const el = entry.target;
-          const target = parseInt(el.getAttribute('data-target'));
-          if (isNaN(target)) return;
-          let start = 0;
-          const step = (ts) => {
-            if (!start) start = ts;
-            const p = Math.min((ts - start) / 1400, 1);
-            const e = 1 - Math.pow(1 - p, 3);
-            el.textContent = Math.round(e * target) + (p < 1 ? '' : '+');
-            if (p < 1) requestAnimationFrame(step); else el.textContent = target + '+';
-          };
-          requestAnimationFrame(step);
-          counterObs.unobserve(el);
-        }
-      });
-    }, { threshold: 0.5 });
-    document.querySelectorAll('[data-target]').forEach(el => counterObs.observe(el));
-  </script>
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+  // ── Animated Counters ──
+  const counterObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const el = entry.target;
+        const target = parseInt(el.getAttribute('data-target'), 10);
+        let current = 0;
+        const duration = 2000;
+        const step = target / (duration / 16);
+        const timer = setInterval(() => {
+          current += step;
+          if (current >= target) {
+            el.textContent = target;
+            clearInterval(timer);
+          } else {
+            el.textContent = Math.floor(current);
+          }
+        }, 16);
+        counterObserver.unobserve(el);
+      }
+    });
+  }, { threshold: 0.5 });
+
+  document.querySelectorAll('.counter').forEach(el => counterObserver.observe(el));
+
+})();
+</script>
+
 </body>
 </html>
