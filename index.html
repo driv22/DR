@@ -171,6 +171,59 @@
     .contact-actions { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
     .li-icon { width: 18px; height: 18px; flex-shrink: 0; }
 
+    /* LOGOS STRIP */
+    .logos-section { padding: 56px 28px; background: #fff; position: relative; }
+    .logos-section::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px; background: linear-gradient(90deg, transparent 0%, var(--border) 50%, transparent 100%); }
+    .logos-inner { max-width: 1160px; margin: 0 auto; text-align: center; }
+    .logos-label { font-size: 0.72rem; font-weight: 700; letter-spacing: 2.5px; text-transform: uppercase; color: var(--muted); margin-bottom: 32px; }
+    .logos-row { display: flex; align-items: center; justify-content: center; gap: 48px; flex-wrap: wrap; opacity: 0.55; transition: opacity 0.3s; }
+    .logos-row:hover { opacity: 0.8; }
+    .logo-item { display: flex; align-items: center; gap: 10px; font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: 1.1rem; color: var(--text); letter-spacing: -0.3px; white-space: nowrap; }
+    .logo-item svg { width: 28px; height: 28px; flex-shrink: 0; }
+    .logo-divider { width: 1px; height: 28px; background: var(--border); flex-shrink: 0; }
+
+    /* DARK MODE */
+    .theme-toggle { position: fixed; bottom: 24px; right: 24px; z-index: 300; width: 48px; height: 48px; border-radius: 50%; border: 1px solid var(--border); background: var(--bg); box-shadow: var(--shadow); cursor: pointer; display: flex; align-items: center; justify-content: center; font-size: 1.2rem; transition: background 0.3s, border-color 0.3s, transform 0.2s; }
+    .theme-toggle:hover { transform: scale(1.1); box-shadow: var(--shadow-lg); }
+
+    html.dark {
+      --blue: #4da6ff; --blue-mid: #3d94e6; --blue-dark: #2d7acc;
+      --blue-light: rgba(77,166,255,0.12); --accent: #6cc4ff;
+      --text: #e8edf3; --text-2: #b0bec5; --muted: #8899aa;
+      --border: rgba(255,255,255,0.08); --bg: #0c1521; --bg-alt: #111d2c;
+      --bg-deep: #0a1320;
+      --shadow-sm: 0 2px 12px rgba(0,0,0,0.3);
+      --shadow: 0 6px 32px rgba(0,0,0,0.4);
+      --shadow-lg: 0 16px 64px rgba(0,0,0,0.5);
+      --shadow-xl: 0 24px 96px rgba(0,0,0,0.6);
+    }
+    html.dark body { background: var(--bg); }
+    html.dark nav.scrolled { background: rgba(12,21,33,0.9); box-shadow: 0 1px 0 var(--border), 0 4px 24px rgba(0,0,0,0.3); }
+    html.dark .hero-bg { background: radial-gradient(ellipse 80% 60% at 70% 20%, rgba(77,166,255,0.06) 0%, transparent 60%), radial-gradient(ellipse 60% 50% at 90% 80%, rgba(108,196,255,0.05) 0%, transparent 55%), radial-gradient(ellipse 50% 60% at 10% 60%, rgba(45,122,204,0.04) 0%, transparent 55%), linear-gradient(170deg, #0c1521 0%, #111d2c 40%, #0c1521 100%); }
+    html.dark .hero-grid { background-image: linear-gradient(rgba(77,166,255,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(77,166,255,0.04) 1px, transparent 1px); }
+    html.dark #hero { background: var(--bg); }
+    html.dark .card { background: var(--bg-alt); }
+    html.dark .card::before { background: linear-gradient(135deg, var(--blue) 0%, var(--accent) 100%); }
+    html.dark .hero-stats { background: var(--bg-alt); border-color: var(--border); }
+    html.dark .hero-stat { border-color: var(--border); }
+    html.dark .hero-mini-card { background: var(--bg-alt); border-color: var(--border); }
+    html.dark .stat-card { background: var(--bg-alt); border-color: var(--border); }
+    html.dark .skill-tags span { background: var(--bg-alt); border-color: var(--border); }
+    html.dark .timeline-card { background: var(--bg-alt); border-color: var(--border); }
+    html.dark .timeline-item.current .timeline-card { background: rgba(77,166,255,0.08); border-color: rgba(77,166,255,0.2); }
+    html.dark .timeline-item::before { border-color: var(--bg); }
+    html.dark #contact { background: linear-gradient(160deg, #0f1a28 0%, #111d2c 60%, #0c1521 100%); }
+    html.dark #contact::before { background: linear-gradient(90deg, transparent 0%, rgba(77,166,255,0.15) 50%, transparent 100%); }
+    html.dark .btn-outline { background: rgba(255,255,255,0.05); border-color: rgba(77,166,255,0.3); }
+    html.dark .btn-outline:hover { background: rgba(77,166,255,0.1); }
+    html.dark .marquee-section { background: var(--blue-dark); }
+    html.dark .logos-section { background: var(--bg); }
+    html.dark .logo-item { color: var(--text); }
+    html.dark .theme-toggle { background: var(--bg-alt); border-color: var(--border); }
+    html.dark .section-label { background: rgba(77,166,255,0.1); border-color: rgba(77,166,255,0.2); }
+    html.dark footer { background: #080e18; }
+    html.dark .bg-number { color: rgba(77,166,255,0.03); }
+
     /* FOOTER */
     footer { background: var(--text); padding: 32px 28px; }
     .footer-inner { max-width: 1160px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
@@ -245,6 +298,44 @@
   <div class="marquee-section">
     <div class="marquee-track">
       <span class="marquee-item">Microsoft 365 Copilot</span><span class="marquee-item">Copilot Studio</span><span class="marquee-item">Microsoft Teams</span><span class="marquee-item">Teams Rooms</span><span class="marquee-item">Prompt Engineering</span><span class="marquee-item">Financial Services AI</span><span class="marquee-item">Enterprise AI Strategy</span><span class="marquee-item">Unified Communications</span><span class="marquee-item">Microsoft 365</span><span class="marquee-item">Microsoft 365 Copilot</span><span class="marquee-item">Copilot Studio</span><span class="marquee-item">Microsoft Teams</span><span class="marquee-item">Teams Rooms</span><span class="marquee-item">Prompt Engineering</span><span class="marquee-item">Financial Services AI</span><span class="marquee-item">Enterprise AI Strategy</span><span class="marquee-item">Unified Communications</span><span class="marquee-item">Microsoft 365</span>
+    </div>
+  </div>
+
+  <!-- COMPANY LOGOS -->
+  <div class="logos-section">
+    <div class="logos-inner">
+      <p class="logos-label">Career Journey</p>
+      <div class="logos-row fade-up">
+        <div class="logo-item">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M21 2H3a1 1 0 0 0-1 1v18a1 1 0 0 0 1 1h18a1 1 0 0 0 1-1V3a1 1 0 0 0-1-1zM5 20V4h14v16z"/></svg>
+          Geek Squad
+        </div>
+        <div class="logo-divider"></div>
+        <div class="logo-item">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+          Charter
+        </div>
+        <div class="logo-divider"></div>
+        <div class="logo-item">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3 3v18h18V3H3zm16 16H5V5h14v14zM7 7h4v4H7V7zm6 0h4v4h-4V7zm-6 6h4v4H7v-4zm6 0h4v4h-4v-4z"/></svg>
+          Chopper Trading
+        </div>
+        <div class="logo-divider"></div>
+        <div class="logo-item">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+          TSG
+        </div>
+        <div class="logo-divider"></div>
+        <div class="logo-item">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg>
+          Allstate
+        </div>
+        <div class="logo-divider"></div>
+        <div class="logo-item" style="color: var(--blue); opacity: 1;">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M1 1h10v10H1V1zm12 0h10v10H13V1zM1 13h10v10H1V13zm12 0h10v10H13V13z"/></svg>
+          Microsoft
+        </div>
+      </div>
     </div>
   </div>
 
@@ -393,7 +484,26 @@
     </div>
   </footer>
 
+  <!-- DARK MODE TOGGLE -->
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+
   <script>
+    // Dark mode
+    const toggle = document.getElementById('themeToggle');
+    const html = document.documentElement;
+    const saved = localStorage.getItem('theme');
+    if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+      html.classList.add('dark');
+      toggle.textContent = '☀️';
+    }
+    toggle.addEventListener('click', () => {
+      html.classList.toggle('dark');
+      const isDark = html.classList.contains('dark');
+      toggle.textContent = isDark ? '☀️' : '🌙';
+      localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    });
+
+    // Nav scrolled
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 20));
     document.querySelectorAll('a[href^="#"]').forEach(a => {
