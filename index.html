@@ -1,1013 +1,1380 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
+<html lang="en">
+<!--
+  DIRECTION CONTRACT — driv.space
+  THESIS: A runbook is what you write so someone else can do the work without you. That is the
+  whole career, and it is why the promotion makes sense. Refuses the portfolio hero: no gradient
+  headline, no stat tiles, no icon cards, no eyebrows.
+  OWN-WORLD: An enterprise change-record set printed on green-bar listing paper. Cool paper ground,
+  printed green bands carrying the structure, near-black ink, tractor-feed perforations at the page
+  edges, and one authorized accent — stamp-pad vermilion. Archivo (variable width) for voice; Courier
+  Prime for record fields, dates, and counts only.
+  STORY: A senior visitor reads the change record, sees the promotion stamped IN EFFECT, learns he
+  leads Model / Coach / Care, checks the history and the names of people who vouch, and escalates.
+  FIRST VIEWPORT: Document strip, then the masthead — name at display scale left, IN EFFECT stamp
+  rotated at right, FROM → TO beneath it, a banded field strip, one thesis line, and the action.
+  FORM: Grounded candidate 4 of 7 (change runbook), seed key 44b219dc. Staging is the form's own
+  document sequence, taking the constant-title-block idea from the dealt staging: a fixed strip whose
+  SECTION field re-reads as you scroll.
+-->
 <head>
 <meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>Dan Rivero · Senior Solution Engineer · AI Workforce · Microsoft</title>
-<meta name="description" content="Dan Rivero — Senior Solution Engineer on Microsoft's AI Workforce team. 26 years in technology, helping financial institutions deploy Microsoft 365 Copilot, Copilot Studio, and Microsoft Teams."/>
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect rx='14' width='64' height='64' fill='%230078d4'/><text x='50%25' y='54%25' dominant-baseline='middle' text-anchor='middle' font-family='Inter,sans-serif' font-weight='700' font-size='28' fill='white'>DR</text></svg>"/>
-<meta property="og:type" content="website"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Dan Rivero — Managing Director, Solution Engineering · Financial Services · Microsoft</title>
+<meta name="description" content="Dan Rivero leads solution engineering for financial services at Microsoft. Twenty-six years on record: 150K+ Copilot seats, a 98,000-user migration, a council of 281 executives, and a bench of engineers who say so by name."/>
+<meta name="author" content="Dan Rivero"/>
+<meta name="theme-color" content="#f7f8f5" media="(prefers-color-scheme: light)"/>
+<meta name="theme-color" content="#101310" media="(prefers-color-scheme: dark)"/>
+<link rel="canonical" href="https://driv.space/"/>
+<meta property="og:type" content="profile"/>
 <meta property="og:url" content="https://driv.space/"/>
-<meta property="og:title" content="Dan Rivero · Senior Solution Engineer · Microsoft AI Workforce"/>
-<meta property="og:description" content="26 years in technology. Helping the world's leading financial institutions move from AI ambition to AI reality — powered by Microsoft 365 Copilot, Copilot Studio, and Microsoft Teams."/>
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Dan Rivero · Senior Solution Engineer · Microsoft AI Workforce"/>
-<meta name="twitter:description" content="26 years in technology. Helping the world's leading financial institutions move from AI ambition to AI reality."/>
+<meta property="og:title" content="Dan Rivero — Managing Director, Solution Engineering · Financial Services"/>
+<meta property="og:description" content="Helping financial institutions move from AI ambition to AI reality. Twenty-six years on record, now leading solution engineering for financial services at Microsoft."/>
+<meta property="og:image" content="https://driv.space/og.png"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta property="og:image:alt" content="A personnel change record for Dan Rivero with his photo on file, stamped IN EFFECT Jul 2026: Managing Director, Solution Engineering — Financial Services, Microsoft."/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://driv.space/og.png"/>
+<meta name="twitter:title" content="Dan Rivero — Managing Director, Solution Engineering · Financial Services"/>
+<meta name="twitter:description" content="Helping financial institutions move from AI ambition to AI reality. Twenty-six years on record, now leading solution engineering for financial services at Microsoft."/>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' fill='%23f7f8f5'/><rect x='4' y='4' width='56' height='56' fill='none' stroke='%23a63417' stroke-width='3'/><text x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-family='Courier New,monospace' font-weight='700' font-size='26' fill='%2312150f'>DR</text></svg>"/>
 
-<!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,400..800;1,62..125,400..600&family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet"/>
 
-<!-- Tailwind CSS Play CDN -->
-<script src="https://cdn.tailwindcss.com"></script>
 <script>
-tailwind.config = {
-  darkMode: 'class',
-  theme: {
-    extend: {
-      colors: {
-        primary: '#0078d4',
-        accent: '#50b8ff',
-        'dark-bg': '#0c1521',
-        'dark-card': '#111d2c',
-        'dark-surface': '#162133',
-        'light-alt': '#f5f9fe',
-      },
-      fontFamily: {
-        sans: ['Inter', 'system-ui', 'sans-serif'],
-        heading: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
-      },
-      animation: {
-        'marquee': 'marquee 40s linear infinite',
-        'marquee2': 'marquee2 40s linear infinite',
-        'fade-up': 'fadeUp 0.7s cubic-bezier(0.16,1,0.3,1) forwards',
-        'pulse-dot': 'pulseDot 2s ease-in-out infinite',
-        'float': 'float 6s ease-in-out infinite',
-        'shimmer': 'shimmer 3s ease-in-out infinite',
-        'gradient-x': 'gradient-x 3s ease infinite',
-      },
-      keyframes: {
-        marquee: {
-          '0%': { transform: 'translateX(0%)' },
-          '100%': { transform: 'translateX(-50%)' },
-        },
-        marquee2: {
-          '0%': { transform: 'translateX(0%)' },
-          '100%': { transform: 'translateX(-50%)' },
-        },
-        fadeUp: {
-          '0%': { opacity: '0', transform: 'translateY(30px)' },
-          '100%': { opacity: '1', transform: 'translateY(0)' },
-        },
-        pulseDot: {
-          '0%, 100%': { boxShadow: '0 0 0 0 rgba(0,120,212,0.7)' },
-          '50%': { boxShadow: '0 0 0 12px rgba(0,120,212,0)' },
-        },
-        float: {
-          '0%, 100%': { transform: 'translateY(0px)' },
-          '50%': { transform: 'translateY(-12px)' },
-        },
-        shimmer: {
-          '0%': { backgroundPosition: '-200% 0' },
-          '100%': { backgroundPosition: '200% 0' },
-        },
-        'gradient-x': {
-          '0%, 100%': { backgroundPosition: '0% 50%' },
-          '50%': { backgroundPosition: '100% 50%' },
-        },
-      },
-    },
-  },
-}
+  // Set the theme before first paint so the paper never flashes.
+  (function () {
+    try {
+      var s = localStorage.getItem('driv-theme');
+      var d = s ? s === 'night' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+      document.documentElement.dataset.theme = d ? 'night' : 'day';
+    } catch (e) { document.documentElement.dataset.theme = 'day'; }
+  })();
 </script>
 
 <style>
-  /* Scroll-triggered fade-up: hidden by default */
-  .fade-up { opacity: 0; transform: translateY(30px); transition: opacity 0.7s cubic-bezier(0.16,1,0.3,1), transform 0.7s cubic-bezier(0.16,1,0.3,1); }
-  .fade-up.visible { opacity: 1; transform: translateY(0); }
+/* ─────────────────────────────────────────────────────────────
+   GREEN-BAR CHANGE RECORD — driv.space
+   ───────────────────────────────────────────────────────────── */
 
-  /* Staggered delays */
-  .delay-100 { transition-delay: 100ms; }
-  .delay-200 { transition-delay: 200ms; }
-  .delay-300 { transition-delay: 300ms; }
-  .delay-400 { transition-delay: 400ms; }
-  .delay-500 { transition-delay: 500ms; }
+:root {
+  --paper:      #f7f8f5;
+  --band:       #dde8d6;
+  --band-soft:  #ebf1e7;
+  --ink:        #12150f;
+  --ink-2:      #4a5147;
+  --rule:       #12150f;
+  --rule-soft:  #c2c9ba;
+  --stamp:      #a63417;
+  --stamp-on:   #ffffff;
+  --perf:       #d2d9c9;
+  --inverted-bg:#12150f;
+  --inverted-ink:#f2f4ef;
+  --inverted-2: #a9b2a2;
+  --inverted-stamp: #ff9b73;
 
-  /* Card shimmer border */
-  .card-shimmer { position: relative; overflow: hidden; }
-  .card-shimmer::before {
-    content: '';
-    position: absolute;
-    inset: -1px;
-    border-radius: inherit;
-    background: linear-gradient(90deg, transparent 0%, rgba(0,120,212,0.3) 30%, rgba(80,184,255,0.5) 50%, rgba(0,120,212,0.3) 70%, transparent 100%);
-    background-size: 200% 100%;
-    z-index: -1;
-    opacity: 0;
-    transition: opacity 0.4s ease;
-    animation: shimmer 3s ease-in-out infinite;
+  --measure: 68ch;
+  --gutter: clamp(1.25rem, 4vw, 3.5rem);
+  --shell: 78rem;
+
+  --step-xs: 0.6875rem;
+  --step-s:  0.8125rem;
+  --step-m:  clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+  --step-l:  clamp(1.35rem, 1.15rem + 1vw, 1.85rem);
+  --step-xl: clamp(1.9rem, 1.4rem + 2.4vw, 3.25rem);
+  --step-2xl:clamp(2.9rem, 1.6rem + 6vw, 6rem);
+}
+
+html[data-theme='night'] {
+  --paper:      #101310;
+  --band:       rgba(163,208,152,0.085);
+  --band-soft:  rgba(163,208,152,0.042);
+  --ink:        #e9ede6;
+  --ink-2:      #a3ad9d;
+  --rule:       #e9ede6;
+  --rule-soft:  rgba(233,237,230,0.19);
+  --stamp:      #ff9b73;
+  --stamp-on:   #1c0f07;
+  --perf:       rgba(233,237,230,0.10);
+  --inverted-bg:#1c2119;
+  --inverted-ink:#eef2e9;
+  --inverted-2: #a9b2a2;
+  --inverted-stamp: #ff9b73;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; scroll-padding-top: 5.5rem; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: Archivo, ui-sans-serif, system-ui, sans-serif;
+  font-size: var(--step-m);
+  line-height: 1.6;
+  font-synthesis-weight: none;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+/* Tractor-feed perforation down both page edges (see .perf svg in body). */
+.perf {
+  display: block;
+  position: fixed;
+  top: 0; bottom: 0;
+  width: 30px; height: 100%;
+  z-index: 3;
+  pointer-events: none;
+  background: var(--paper);
+}
+.perf-dot { fill: var(--perf); }
+.perf-l { left: 0;  border-right: 1px solid var(--rule-soft); }
+.perf-r { right: 0; border-left:  1px solid var(--rule-soft); }
+@media (max-width: 1180px) { .perf { display: none; } }
+
+.shell { max-width: var(--shell); margin-inline: auto; padding-inline: var(--gutter); }
+
+/* ── Type primitives ───────────────────────────────────────── */
+
+.field, .mono {
+  font-family: 'Courier Prime', ui-monospace, 'Courier New', monospace;
+  font-variant-numeric: tabular-nums;
+}
+.label {
+  font-family: 'Courier Prime', ui-monospace, 'Courier New', monospace;
+  font-size: var(--step-xs);
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+  display: block;
+}
+h1, h2, h3 { margin: 0; font-weight: 800; letter-spacing: -0.03em; line-height: 1.02; }
+
+.section-head {
+  font-size: var(--step-xl);
+  font-stretch: 96%;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+  max-width: 22ch;
+}
+.lede {
+  margin: 1rem 0 0;
+  max-width: 58ch;
+  color: var(--ink-2);
+  font-size: var(--step-m);
+}
+p { margin: 0 0 1rem; }
+p:last-child { margin-bottom: 0; }
+.prose { max-width: var(--measure); }
+
+a { color: inherit; }
+:focus-visible {
+  outline: 3px solid var(--stamp);
+  outline-offset: 3px;
+  border-radius: 1px;
+}
+
+.skip {
+  position: absolute; left: -9999px; top: 0; z-index: 100;
+  background: var(--stamp); color: var(--stamp-on);
+  padding: 0.75rem 1.25rem; font-size: var(--step-s); font-weight: 700;
+}
+.skip:focus { left: 1rem; top: 1rem; }
+
+/* ── Sections & rules ──────────────────────────────────────── */
+
+section { border-top: 2px solid var(--rule); }
+.pad { padding-block: clamp(3.5rem, 7vw, 6.5rem); }
+.pad-tight { padding-block: clamp(2.75rem, 5vw, 4.25rem); }
+
+.head-block { margin-bottom: clamp(2rem, 4vw, 3.25rem); }
+
+/* ── Document strip (fixed) ────────────────────────────────── */
+
+.strip {
+  position: fixed; inset: 0 0 auto 0; z-index: 20;
+  background: var(--paper);
+  border-bottom: 1px solid var(--rule);
+}
+@media (min-width: 1181px) { .strip { padding-inline: 30px; } }
+.strip-in {
+  max-width: var(--shell); margin-inline: auto;
+  padding: 0.5rem var(--gutter);
+  display: flex; align-items: center; gap: 1.25rem;
+  font-family: 'Courier Prime', ui-monospace, monospace;
+  font-size: var(--step-xs);
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+.strip-id { font-weight: 700; letter-spacing: 0.16em; white-space: nowrap; }
+.strip-id a { text-decoration: none; display: inline-block; padding-block: 0.85rem; margin-block: -0.85rem; }
+.strip-sec { color: var(--ink-2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.strip-sec b { color: var(--stamp); font-weight: 700; }
+.strip-nav { margin-left: auto; display: flex; align-items: center; gap: 1.15rem; }
+.strip-nav a { color: var(--ink-2); text-decoration: none; white-space: nowrap; padding-block: 0.35rem; }
+.strip-nav a:hover { color: var(--ink); }
+.strip-nav a[aria-current='true'] { color: var(--ink); box-shadow: inset 0 -2px 0 var(--stamp); }
+@media (max-width: 900px) { .strip-nav { display: none; } }
+
+.tog {
+  font: inherit; letter-spacing: 0.09em; text-transform: uppercase;
+  background: none; color: var(--ink-2);
+  border: 1px solid var(--rule-soft); border-radius: 0;
+  padding: 0.3rem 0.55rem; cursor: pointer; white-space: nowrap;
+}
+.tog:hover { color: var(--ink); border-color: var(--rule); }
+.tog b { color: var(--ink); font-weight: 700; }
+
+.menu-btn { margin-left: auto; }
+@media (min-width: 901px) { .menu-btn { display: none; } }
+
+.sheet {
+  position: fixed; inset: 0; z-index: 19;
+  background: var(--paper);
+  padding: 5rem var(--gutter) 2rem;
+  display: none; flex-direction: column;
+  overflow-y: auto;
+}
+.sheet[data-open='true'] { display: flex; }
+.sheet a {
+  display: block; padding: 1.15rem 0;
+  border-bottom: 1px solid var(--rule-soft);
+  font-size: var(--step-l); font-weight: 700; font-stretch: 92%;
+  letter-spacing: -0.025em; text-decoration: none;
+}
+.sheet a span {
+  font-family: 'Courier Prime', monospace; font-size: var(--step-xs);
+  font-weight: 400; letter-spacing: 0.13em; color: var(--ink-2);
+  display: block; margin-bottom: 0.15rem;
+}
+
+/* ── Masthead ──────────────────────────────────────────────── */
+
+.masthead { border-top: none; padding-top: 3.25rem; }
+
+.docline {
+  display: flex; flex-wrap: wrap; gap: 0.4rem 1.75rem;
+  padding-block: 0.85rem;
+  border-block: 1px solid var(--rule-soft);
+  font-family: 'Courier Prime', monospace;
+  font-size: var(--step-xs); letter-spacing: 0.13em; text-transform: uppercase;
+  color: var(--ink-2);
+}
+.docline b { color: var(--ink); font-weight: 400; }
+
+.name-row {
+  display: grid; grid-template-columns: 1fr auto;
+  gap: clamp(1rem, 3vw, 3rem); align-items: end;
+  padding-block: clamp(1.5rem, 3vw, 2.5rem) clamp(1.25rem, 2.5vw, 2rem);
+}
+@media (max-width: 720px) { .name-row { grid-template-columns: 1fr; align-items: start; } }
+
+h1.name {
+  font-size: var(--step-2xl);
+  font-stretch: 112%;
+  font-weight: 800;
+  letter-spacing: -0.045em;
+  line-height: 0.86;
+  text-transform: uppercase;
+}
+
+/* The one authored moment: the approval stamp lands. */
+.stamp {
+  justify-self: end;
+  border: 2.5px solid var(--stamp);
+  box-shadow: 0 0 0 1.5px var(--paper), 0 0 0 4px var(--stamp);
+  color: var(--stamp);
+  padding: 0.6rem 1.15rem 0.5rem;
+  text-align: center;
+  transform: rotate(-4deg);
+  font-family: 'Courier Prime', monospace;
+  white-space: nowrap;
+}
+.stamp b { display: block; font-size: clamp(1.05rem, 2.2vw, 1.5rem); font-weight: 700; letter-spacing: 0.1em; line-height: 1; }
+.stamp i { display: block; font-style: normal; font-size: var(--step-xs); letter-spacing: 0.19em; margin-top: 0.4rem; opacity: 0.85; }
+@media (max-width: 720px) {
+  .stamp { justify-self: end; transform: rotate(-3deg); margin-top: 0.9rem; padding: 0.5rem 0.95rem 0.4rem; }
+  .stamp b { font-size: 1.05rem; }
+  .stamp i { margin-top: 0.3rem; }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .stamp { animation: land 720ms cubic-bezier(0.16, 1, 0.3, 1) 420ms both; }
+  @keyframes land {
+    0%   { opacity: 0; transform: rotate(-16deg) scale(1.75); }
+    55%  { opacity: 1; }
+    75%  { transform: rotate(-2.4deg) scale(0.965); }
+    100% { transform: rotate(-4deg) scale(1); }
   }
-  .card-shimmer:hover::before { opacity: 1; }
+}
 
-  /* Grid pattern for hero */
-  .hero-grid {
-    background-image:
-      linear-gradient(rgba(0,120,212,0.04) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(0,120,212,0.04) 1px, transparent 1px);
-    background-size: 60px 60px;
+.change {
+  display: grid; grid-template-columns: max-content minmax(0, 1fr) max-content;
+  gap: 0.45rem 1.5rem; align-items: baseline;
+  padding-block: clamp(1.25rem, 2.5vw, 1.9rem);
+  border-top: 2px solid var(--rule);
+}
+@media (max-width: 620px) { .change { grid-template-columns: 1fr; gap: 0.15rem; } }
+.change .label { padding-top: 0.4em; }
+.change-from { font-size: var(--step-m); color: var(--ink-2); }
+.change-to {
+  font-size: var(--step-l); font-weight: 800; font-stretch: 100%;
+  letter-spacing: -0.03em; line-height: 1.12; text-wrap: balance;
+}
+.change-to em { font-style: normal; color: var(--stamp); }
+@media (max-width: 620px) { .change-from { margin-bottom: 0.6rem; } }
+
+/* ── ID photo ──────────────────────────────────────────────────
+   House rule: the record is machine-printed, its attachments are
+   hand-drawn. The portrait is a sketch, so it is treated as ink on
+   pale photo stock and multiplied into the sheet — printed with the
+   page rather than pasted on top of it. */
+.idphoto {
+  grid-column: 3; grid-row: 1 / span 2; align-self: center;
+  margin: 0; width: clamp(106px, 12vw, 148px);
+  padding: 6px 6px 7px; background: #f1f2ec;
+  border: 1px solid var(--rule);
+  box-shadow: 1px 2px 0 rgba(18, 21, 15, 0.16);
+}
+.idphoto img {
+  display: block; width: 100%; height: auto;
+  filter: grayscale(1) contrast(1.32) brightness(1.06);
+  mix-blend-mode: multiply;
+}
+.idphoto figcaption {
+  margin-top: 6px; text-align: center;
+  font-family: 'Courier Prime', monospace; font-size: 0.6rem;
+  letter-spacing: 0.12em; text-transform: uppercase; color: #565d51;
+}
+@media (max-width: 620px) { .idphoto figcaption { letter-spacing: 0.04em; } }
+@media (max-width: 620px) {
+  .change { grid-template-columns: minmax(0, 1fr) max-content; gap: 0.15rem 1.1rem; }
+  .change .label, .change-from, .change-to { grid-column: 1; }
+  .idphoto { grid-column: 2; grid-row: 1 / span 4; align-self: start; width: clamp(80px, 25vw, 106px); }
+}
+
+/* Statement of purpose — closes the masthead on a band. */
+.mission {
+  margin-top: clamp(1.75rem, 3.5vw, 2.5rem);
+  display: grid; grid-template-columns: max-content minmax(0, 1fr);
+  gap: 0.35rem 1.5rem; align-items: baseline;
+  padding: 1rem 1.15rem 1.05rem;
+  background: var(--band);
+  border-top: 2px solid var(--rule);
+  border-bottom: 1px solid var(--rule-soft);
+}
+@media (max-width: 620px) { .mission { grid-template-columns: 1fr; } }
+.mission p { margin: 0; font-size: var(--step-m); font-weight: 500; line-height: 1.45; text-wrap: pretty; }
+.mission em {
+  font-style: normal; font-family: 'Courier Prime', monospace;
+  font-size: var(--step-s); letter-spacing: 0.07em; text-transform: uppercase;
+  color: var(--stamp);
+}
+
+/* ── Standing orders — five values, printed as a fixed row ────── */
+.orders { margin-top: clamp(2.25rem, 4.5vw, 3.25rem); border-top: 2px solid var(--rule); }
+.orders > .label { display: block; padding: 0.8rem 0 0.9rem; }
+.orders ol {
+  list-style: none; margin: 0; padding: 0;
+  display: grid; grid-template-columns: repeat(5, minmax(0, 1fr));
+  border-top: 1px solid var(--rule-soft);
+}
+@media (max-width: 940px) { .orders ol { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 520px) { .orders ol { grid-template-columns: 1fr; } }
+.orders li {
+  padding: 1rem 1.1rem 1.15rem;
+  border-right: 1px solid var(--rule-soft);
+  border-bottom: 1px solid var(--rule-soft);
+  background: var(--band-soft);
+}
+.orders li:nth-child(odd) { background: var(--band); }
+.orders li:last-child { border-right: none; }
+@media (max-width: 940px) {
+  .orders li:nth-child(2n) { border-right: none; }
+  .orders li:nth-child(4n), .orders li:nth-child(4n+1) { background: var(--band-soft); }
+  .orders li:nth-child(4n+2), .orders li:nth-child(4n+3) { background: var(--band); }
+}
+@media (max-width: 520px) { .orders li { border-right: none; } }
+.orders i {
+  display: block; font-style: normal; margin-bottom: 0.5rem;
+  font-family: 'Courier Prime', monospace; font-size: 0.66rem;
+  letter-spacing: 0.13em; color: var(--stamp);
+}
+.orders b {
+  display: block; font-size: var(--step-m); font-weight: 800;
+  font-stretch: 92%; letter-spacing: -0.012em; line-height: 1.15;
+}
+.orders span {
+  display: block; margin-top: 0.45rem;
+  font-family: 'Courier Prime', monospace; font-size: var(--step-s);
+  line-height: 1.45; color: var(--ink-2);
+}
+
+/* ── Attachment — the hand-drawn one-page version ─────────────── */.exhibit { margin: 0; }
+.exhibit > a {
+  display: block; padding: clamp(9px, 1.2vw, 15px);
+  background: #f1f2ec; border: 1px solid var(--rule);
+  box-shadow: 2px 3px 0 rgba(18, 21, 15, 0.14);
+  text-decoration: none;
+}
+.exhibit > a:hover { box-shadow: 2px 3px 0 var(--stamp); }
+.exhibit img { display: block; width: 100%; height: auto; mix-blend-mode: multiply; }
+.exhibit figcaption {
+  display: flex; flex-wrap: wrap; gap: 0.5rem 1.25rem; align-items: baseline;
+  margin-top: 0.85rem; font-family: 'Courier Prime', monospace;
+  font-size: var(--step-s); color: var(--ink-2);
+}
+.exhibit figcaption a {
+  color: var(--stamp); text-underline-offset: 3px;
+  display: inline-flex; align-items: center;
+  min-height: 44px; padding-block: 0.25rem;
+}
+.exhibit figcaption b { color: var(--stamp); letter-spacing: 0.1em; text-transform: uppercase; font-weight: 400; }
+
+/* The last word on the sheet. */
+.credo {
+  margin: 0 0 clamp(1.6rem, 3vw, 2.4rem);
+  padding-bottom: clamp(1.6rem, 3vw, 2.4rem);
+  border-bottom: 1px solid var(--rule-soft);
+  max-width: 26ch;
+  font-size: var(--step-l); font-weight: 500;
+  line-height: 1.25; letter-spacing: -0.025em; text-wrap: balance;
+}
+.credo em { font-style: normal; color: var(--stamp); }
+
+/* Banded field strip — the green-bar signature. */
+.fields { border-top: 1px solid var(--rule-soft); }
+.fields dl { display: grid; grid-template-columns: repeat(4, 1fr); margin: 0; }
+@media (max-width: 860px) { .fields dl { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 380px) { .fields dl { grid-template-columns: 1fr; } }
+.fields div {
+  padding: 0.85rem 1rem 0.9rem;
+  border-right: 1px solid var(--rule-soft);
+  border-bottom: 1px solid var(--rule-soft);
+  background: var(--band-soft);
+}
+.fields div:nth-child(odd) { background: var(--band); }
+.fields div:last-child { border-right: none; }
+.fields dd { margin: 0.3rem 0 0; font-family: 'Courier Prime', monospace; font-size: var(--step-s); line-height: 1.35; }
+
+.thesis {
+  display: grid; grid-template-columns: minmax(0, 1fr) auto;
+  gap: clamp(1.5rem, 4vw, 3.5rem); align-items: end;
+  padding-top: clamp(1.75rem, 3.5vw, 2.75rem);
+}
+@media (max-width: 860px) { .thesis { grid-template-columns: 1fr; align-items: start; } }
+.thesis p {
+  max-width: 46ch;
+  font-size: var(--step-l);
+  font-weight: 500;
+  line-height: 1.32;
+  letter-spacing: -0.022em;
+  text-wrap: pretty;
+}
+.thesis p + p { margin-top: 0.85rem; font-size: var(--step-m); font-weight: 400; line-height: 1.6; letter-spacing: 0; color: var(--ink-2); max-width: 52ch; }
+
+.act { display: flex; flex-wrap: wrap; gap: 0.75rem; align-items: center; }
+.btn {
+  display: inline-flex; align-items: center; gap: 0.6rem;
+  background: var(--stamp); color: var(--stamp-on);
+  padding: 0.85rem 1.4rem;
+  font-family: 'Courier Prime', monospace; font-size: var(--step-s);
+  letter-spacing: 0.13em; text-transform: uppercase; font-weight: 700;
+  text-decoration: none; border: 2px solid var(--stamp);
+  transition: background 160ms ease, color 160ms ease;
+}
+.btn:hover { background: transparent; color: var(--stamp); }
+.btn-ghost { background: transparent; color: var(--ink); border-color: var(--rule); font-weight: 400; }
+.btn-ghost:hover { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+
+/* ── Procedure: Model / Coach / Care ───────────────────────── */
+
+.proc { border-top: 1px solid var(--rule-soft); }
+.proc > article {
+  display: grid;
+  grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr);
+  gap: clamp(1.5rem, 4vw, 4rem);
+  padding-block: clamp(2rem, 3.5vw, 2.9rem);
+  border-bottom: 1px solid var(--rule-soft);
+}
+@media (max-width: 900px) { .proc > article { grid-template-columns: 1fr; gap: 1.5rem; } }
+
+.proc h3 {
+  font-size: clamp(1.6rem, 1.1rem + 2vw, 2.6rem);
+  font-stretch: 118%;
+  text-transform: uppercase;
+  letter-spacing: -0.035em;
+  line-height: 0.95;
+}
+.proc h3 + p {
+  margin: 0.5rem 0 1.15rem;
+  font-family: 'Courier Prime', monospace;
+  font-size: var(--step-s);
+  letter-spacing: 0.05em;
+  color: var(--stamp);
+}
+.proc ul { margin: 0; padding: 0; list-style: none; }
+.proc li {
+  position: relative;
+  padding: 0.55rem 0 0.55rem 1.9rem;
+  border-top: 1px solid var(--rule-soft);
+  max-width: 56ch;
+}
+.proc li::before {
+  content: '';
+  position: absolute; left: 0.35rem; top: 1.1em;
+  width: 0.6rem; height: 1px; background: var(--ink-2);
+}
+
+/* Margin annotation — a signed comment in the document's margin. */
+.note {
+  align-self: start;
+  background: var(--band);
+  border-left: 1px solid var(--rule);
+  padding: 1.15rem 1.25rem;
+}
+.note blockquote { margin: 0; font-size: var(--step-m); line-height: 1.48; text-wrap: pretty; }
+.note figcaption {
+  margin-top: 0.85rem; padding-top: 0.7rem;
+  border-top: 1px solid var(--rule-soft);
+  font-family: 'Courier Prime', monospace; font-size: var(--step-xs);
+  letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-2);
+}
+.note figcaption b { display: block; color: var(--ink); font-weight: 700; letter-spacing: 0.13em; }
+
+/* ── Register (career) ─────────────────────────────────────── */
+
+.reg { border-top: 2px solid var(--rule); }
+.reg > article {
+  display: grid;
+  grid-template-columns: 7.5rem minmax(0, 1fr) minmax(0, 1.15fr);
+  gap: 0 clamp(1rem, 2.5vw, 2.5rem);
+  padding: clamp(1.35rem, 2.5vw, 1.9rem) clamp(0.75rem, 1.5vw, 1.25rem);
+  border-bottom: 1px solid var(--rule-soft);
+}
+.reg > article:nth-child(odd) { background: var(--band); }
+.reg > article:nth-child(even) { background: var(--band-soft); }
+/* The one record still in effect carries the stamp ink down its edge. */
+.reg > article:first-child { box-shadow: inset 4px 0 0 var(--stamp); }
+/* The archived head of the register: present, but deliberately quiet. */
+.reg-prior { color: var(--ink-2); }
+.reg-prior h3 { font-size: var(--step-m); font-stretch: 100%; font-weight: 700; color: var(--ink-2); }
+.reg-prior .reg-body p { margin: 0; }
+@media (max-width: 960px) {
+  .reg > article { grid-template-columns: 1fr; gap: 0.5rem; }
+}
+
+.reg-ref { font-family: 'Courier Prime', monospace; font-size: var(--step-xs); letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-2); }
+.reg-ref b { display: block; color: var(--ink); font-weight: 700; font-size: var(--step-s); letter-spacing: 0.08em; }
+.reg-ref .live { color: var(--stamp); font-weight: 700; }
+
+.reg h3 { font-size: var(--step-l); font-stretch: 96%; letter-spacing: -0.03em; line-height: 1.14; text-wrap: balance; }
+.reg-org { margin: 0.35rem 0 0; font-family: 'Courier Prime', monospace; font-size: var(--step-s); color: var(--ink-2); }
+.reg-body { font-size: 0.9375rem; line-height: 1.62; color: var(--ink-2); max-width: 54ch; }
+.reg-body strong { color: var(--ink); font-weight: 700; }
+@media (max-width: 960px) { .reg-body { margin-top: 0.5rem; } }
+
+.tags { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-top: 0.9rem; }
+.tags span {
+  font-family: 'Courier Prime', monospace; font-size: var(--step-xs);
+  letter-spacing: 0.1em; text-transform: uppercase;
+  border: 1px solid var(--rule-soft); padding: 0.2rem 0.5rem; color: var(--ink);
+}
+.tags span.hot { border-color: var(--stamp); color: var(--stamp); }
+
+/* ── Inverted band (council) ───────────────────────────────── */
+
+.inverted { background: var(--inverted-bg); color: var(--inverted-ink); border-top: 2px solid var(--rule); }
+.inverted .label, .inverted .lede { color: var(--inverted-2); }
+.inverted .statement {
+  font-size: clamp(1.6rem, 1rem + 3.1vw, 3.4rem);
+  font-stretch: 100%; font-weight: 800;
+  letter-spacing: -0.04em; line-height: 1.03;
+  max-width: 20ch; text-wrap: balance; margin: 0;
+}
+.inverted .statement em { font-style: normal; color: var(--inverted-stamp); }
+.council-grid {
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(1.75rem, 4vw, 4rem);
+  align-items: start;
+  margin-top: clamp(1.75rem, 3.5vw, 2.75rem);
+  padding-top: clamp(1.75rem, 3.5vw, 2.5rem);
+  border-top: 1px solid rgba(242,244,239,0.22);
+}
+@media (max-width: 860px) { .council-grid { grid-template-columns: 1fr; } }
+.council-grid p { color: var(--inverted-2); max-width: 52ch; }
+.council-grid p strong { color: var(--inverted-ink); font-weight: 600; }
+.council-rec { margin: 0.9rem 0 0; border-top: 1px solid rgba(242,244,239,0.34); }
+.council-rec > div {
+  display: grid; grid-template-columns: minmax(0, 1fr) auto;
+  gap: 1.25rem; align-items: baseline;
+  padding: 0.85rem 0.15rem;
+  border-bottom: 1px solid rgba(242,244,239,0.16);
+}
+.council-rec dt {
+  font-family: 'Courier Prime', monospace; font-size: var(--step-xs);
+  letter-spacing: 0.12em; text-transform: uppercase; color: var(--inverted-2);
+}
+.council-rec dd {
+  margin: 0; font-family: 'Courier Prime', monospace; font-weight: 700;
+  font-size: var(--step-m); line-height: 1.2; color: var(--inverted-ink);
+}
+
+/* ── Spec table (scope) ────────────────────────────────────── */
+
+.split {
+  display: grid; grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+  gap: clamp(2rem, 5vw, 4.5rem); align-items: start;
+}
+@media (max-width: 980px) { .split { grid-template-columns: 1fr; } }
+
+.spec { width: 100%; border-collapse: collapse; text-align: left; }
+.spec caption { text-align: left; padding-bottom: 0.9rem; }
+.spec th, .spec td { padding: 0.9rem 1rem; vertical-align: top; border-bottom: 1px solid var(--rule-soft); }
+.spec thead th {
+  font-family: 'Courier Prime', monospace; font-size: var(--step-xs);
+  letter-spacing: 0.13em; text-transform: uppercase; color: var(--ink-2);
+  font-weight: 400; border-bottom: 2px solid var(--rule); padding-block: 0.5rem 0.6rem;
+}
+.spec tbody tr:nth-child(odd) { background: var(--band); }
+.spec tbody tr:nth-child(even) { background: var(--band-soft); }
+.spec tbody th { font-weight: 700; font-size: 0.9375rem; letter-spacing: -0.01em; width: 34%; }
+.spec tbody th small { display: block; font-family: 'Courier Prime', monospace; font-size: var(--step-xs); font-weight: 400; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-2); margin-top: 0.25rem; }
+.spec td { font-size: 0.9375rem; line-height: 1.56; color: var(--ink-2); }
+.spec .st { font-family: 'Courier Prime', monospace; font-size: var(--step-xs); letter-spacing: 0.1em; text-transform: uppercase; white-space: nowrap; width: 1%; }
+.spec .st.on { color: var(--stamp); font-weight: 700; }
+@media (max-width: 620px) {
+  .spec thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .spec tbody th, .spec td { display: block; width: auto; border-bottom: none; padding-block: 0.35rem; }
+  .spec tbody th { padding-top: 0.9rem; }
+  .spec tbody td:last-child { padding-bottom: 0.9rem; border-bottom: 1px solid var(--rule-soft); }
+}
+
+.forward { border-left: 1px solid var(--rule); padding-left: clamp(1rem, 2vw, 1.6rem); }
+.forward h3 { font-size: var(--step-l); font-stretch: 96%; letter-spacing: -0.03em; margin-bottom: 0.9rem; }
+.forward ol { margin: 0; padding: 0; list-style: none; counter-reset: f; }
+.forward li { padding: 0.8rem 0; border-top: 1px solid var(--rule-soft); font-size: 0.9375rem; line-height: 1.56; color: var(--ink-2); }
+.forward li b { display: block; color: var(--ink); font-weight: 700; letter-spacing: -0.01em; margin-bottom: 0.15rem; }
+
+/* ── Off the clock ─────────────────────────────────────────── */
+
+.human { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(1.75rem, 4vw, 4rem); align-items: start; }
+@media (max-width: 860px) { .human { grid-template-columns: 1fr; } }
+.human .prose p { font-size: var(--step-m); }
+.human .prose strong { font-weight: 700; }
+.chips { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; background: var(--rule-soft); border: 1px solid var(--rule-soft); }
+@media (max-width: 520px) { .chips { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.chips span {
+  background: var(--band); display: flex; align-items: center; justify-content: center;
+  padding: 0.9rem 0.6rem; text-align: center;
+  font-family: 'Courier Prime', monospace; font-size: var(--step-xs);
+  letter-spacing: 0.11em; text-transform: uppercase;
+}
+.offrec dl { margin: 0.9rem 0 0; border-top: 1px solid var(--rule); }
+.offrec dl > div {
+  display: grid; grid-template-columns: 10rem minmax(0, 1fr); gap: 0 1.5rem;
+  padding: 0.8rem 1rem; border-bottom: 1px solid var(--rule-soft);
+}
+@media (max-width: 520px) { .offrec dl > div { grid-template-columns: 1fr; gap: 0.3rem; } }
+.offrec dl > div:nth-child(odd) { background: var(--band); }
+.offrec dl > div:nth-child(even) { background: var(--band-soft); }
+.offrec dd { margin: 0; font-family: 'Courier Prime', monospace; font-size: var(--step-s); line-height: 1.4; }
+
+/* ── Escalation ────────────────────────────────────────────── */
+
+.esc { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: clamp(1.75rem, 4vw, 4rem); align-items: start; }
+@media (max-width: 860px) { .esc { grid-template-columns: 1fr; } }
+.esc-rows { border-top: 2px solid var(--rule); }
+.esc-rows a, .esc-rows div {
+  display: grid; grid-template-columns: 8.5rem minmax(0, 1fr);
+  gap: 1rem; align-items: baseline;
+  padding: 1rem 0.75rem;
+  border-bottom: 1px solid var(--rule-soft);
+  text-decoration: none;
+}
+.esc-rows a:nth-child(odd), .esc-rows div:nth-child(odd) { background: var(--band); }
+.esc-rows a:nth-child(even), .esc-rows div:nth-child(even) { background: var(--band-soft); }
+.esc-rows a:hover { background: var(--ink); color: var(--paper); }
+.esc-rows a:hover .label { color: var(--paper); opacity: 0.7; }
+.esc-rows b { font-family: 'Courier Prime', monospace; font-weight: 700; font-size: var(--step-s); word-break: break-word; }
+@media (max-width: 520px) {
+  .esc-rows a, .esc-rows div { grid-template-columns: 1fr; gap: 0.2rem; }
+}
+
+/* ── Sign-off ──────────────────────────────────────────────── */
+
+footer { border-top: 2px solid var(--rule); padding-block: 2.25rem 3rem; }
+.signoff {
+  display: flex; flex-wrap: wrap; gap: 0.75rem 2.25rem; align-items: baseline;
+  font-family: 'Courier Prime', monospace; font-size: var(--step-xs);
+  letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-2);
+}
+.signoff b { color: var(--ink); font-weight: 700; letter-spacing: 0.16em; }
+.signoff a { color: var(--ink-2); }
+.signoff .end { margin-left: auto; }
+@media (max-width: 720px) { .signoff .end { margin-left: 0; } }
+
+.printer {
+  display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.6rem 1.25rem;
+  margin: 1.75rem 0 0; padding-top: 1.25rem; border-top: 1px solid var(--rule-soft);
+}
+.printer button {
+  font: inherit; font-family: 'Courier Prime', monospace; font-size: var(--step-xs);
+  letter-spacing: 0.13em; text-transform: uppercase; font-weight: 700;
+  color: var(--ink); background: none; cursor: pointer;
+  border: 1px solid var(--rule); padding: 0.6rem 1.05rem;
+}
+.printer button:hover { background: var(--ink); color: var(--paper); }
+.printer span {
+  font-family: 'Courier Prime', monospace; font-size: var(--step-xs);
+  letter-spacing: 0.06em; color: var(--ink-2);
+}
+
+@media print {
+  /* The record prints as a record: day ink, bands intact, controls gone. */
+  html[data-theme='night'] {
+    --paper: #ffffff; --band: #e4ece0; --band-soft: #f1f5ee;
+    --ink: #000000; --ink-2: #3d443a; --rule: #000000; --rule-soft: #b9c1b1;
+    --stamp: #8f2d0f; --stamp-on: #ffffff;
+    --inverted-bg: #ffffff; --inverted-ink: #000000; --inverted-2: #3d443a;
+    --inverted-stamp: #8f2d0f;
   }
-  .dark .hero-grid {
-    background-image:
-      linear-gradient(rgba(80,184,255,0.06) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(80,184,255,0.06) 1px, transparent 1px);
-  }
-
-  /* Marquee */
-  .marquee-track { display: flex; width: max-content; }
-
-  /* Timeline vertical line */
-  .timeline-line {
-    position: absolute;
-    left: 50%;
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    background: linear-gradient(180deg, transparent, #0078d4 10%, #0078d4 90%, transparent);
-    transform: translateX(-50%);
-  }
-  @media (max-width: 767px) {
-    .timeline-line { left: 24px; }
-  }
-
-  /* Section gradient divider */
-  .section-divider {
-    height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(0,120,212,0.2), transparent);
-  }
-  .dark .section-divider {
-    background: linear-gradient(90deg, transparent, rgba(80,184,255,0.15), transparent);
-  }
-
-  /* Glassmorphism nav */
-  .nav-glass {
-    backdrop-filter: blur(16px) saturate(1.4);
-    -webkit-backdrop-filter: blur(16px) saturate(1.4);
-  }
-
-  /* Button press effect */
-  .btn-press { transition: transform 0.2s ease, box-shadow 0.2s ease; }
-  .btn-press:hover { transform: translateY(-2px); }
-  .btn-press:active { transform: translateY(0); }
-
-  /* Scrollbar styling */
-  ::-webkit-scrollbar { width: 8px; }
-  ::-webkit-scrollbar-track { background: transparent; }
-  ::-webkit-scrollbar-thumb { background: rgba(0,120,212,0.3); border-radius: 10px; }
-  .dark ::-webkit-scrollbar-thumb { background: rgba(80,184,255,0.3); }
-
-  /* Company logo hover */
-  .company-logo-wrap { transition: transform 0.3s ease, filter 0.3s ease; }
-  .company-logo-wrap:hover { transform: translateY(-4px) scale(1.05); }
-
-  /* Counter number */
-  .counter { font-variant-numeric: tabular-nums; }
-
-  html { scroll-behavior: smooth; }
-
-  /* Scroll Progress Bar */
-  #scrollProgress { transition: width 0.08s linear; }
-
-  /* Active nav link (scrollspy) */
-  nav a.nav-active { color: #0078d4 !important; }
-  .dark nav a.nav-active { color: #50b8ff !important; }
-
-  /* Typewriter cursor */
-  .tw-cursor {
-    display: inline-block;
-    width: 3px;
-    height: 0.8em;
-    background: #50b8ff;
-    margin-left: 3px;
-    vertical-align: middle;
-    border-radius: 2px;
-    animation: blink 1s step-end infinite;
-  }
-  @keyframes blink { 0%,100%{ opacity:1 } 50%{ opacity:0 } }
-
-  /* Back to top */
-  #backToTop { opacity:0; transform:translateY(16px); pointer-events:none; transition:opacity 0.3s ease, transform 0.3s ease; }
-  #backToTop.btt-visible { opacity:1; transform:translateY(0); pointer-events:auto; }
+  @page { margin: 14mm 12mm; }
+  * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .strip, .sheet, .skip, .perf, .act, .printer, .exhibit figcaption a { display: none !important; }
+  html, body { overflow: visible !important; }
+  .stamp { box-shadow: none; }
+  .idphoto { box-shadow: none; }
+  .exhibit > a { box-shadow: none; padding: 4mm; }
+  .exhibit, .orders li, .idphoto { break-inside: avoid; }
+  body { font-size: 10pt; line-height: 1.45; }
+  .pad, .pad-tight { padding-block: 0 !important; }
+  .shell { max-width: none; padding-inline: 0; }
+  .masthead, .inverted, section, footer { padding-inline: 0 !important; }
+  h1.name { font-size: 34pt; }
+  .statement, .section-head { font-size: 17pt; }
+  .reg h3, .forward h3 { font-size: 11.5pt; }
+  .thesis p { font-size: 13pt; }
+  .inverted { border-block: 2px solid var(--rule); }
+  .reg > article, .spec tbody tr, .proc li, .offrec dl > div { break-inside: avoid; }
+  section { border-top: 1px solid var(--rule-soft); padding-top: 8mm; margin-top: 7mm; }
+  .masthead { border-top: none; padding-top: 0; margin-top: 0; }
+  a { text-decoration: none; color: inherit; }
+  footer { border-top: 2px solid var(--rule); }
+}
 </style>
 </head>
 
-<body class="font-sans text-gray-800 dark:text-gray-200 bg-white dark:bg-dark-bg antialiased overflow-x-hidden">
+<body>
+<a class="skip" href="#record">Skip to the record</a>
 
-<!-- Scroll Progress Bar -->
-<div id="scrollProgress" class="fixed top-0 left-0 z-[60] h-[3px] bg-gradient-to-r from-primary to-accent pointer-events-none" style="width:0%"></div>
+<svg width="0" height="0" aria-hidden="true" focusable="false" style="position:absolute">
+  <defs>
+    <pattern id="perfpat" width="30" height="30" patternUnits="userSpaceOnUse">
+      <circle cx="15" cy="15" r="3.75" class="perf-dot" />
+    </pattern>
+  </defs>
+</svg>
+<svg class="perf perf-l" aria-hidden="true" focusable="false"><rect width="100%" height="100%" fill="url(#perfpat)" /></svg>
+<svg class="perf perf-r" aria-hidden="true" focusable="false"><rect width="100%" height="100%" fill="url(#perfpat)" /></svg>
 
-<!-- ==================== NAVIGATION ====================-->
-<nav id="nav" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex items-center justify-between h-16 lg:h-20">
-      <!-- Logo -->
-      <a href="#" class="font-heading font-bold text-xl tracking-tight text-gray-900 dark:text-white">
-        dan<span class="text-primary">.</span>rivero
-      </a>
-
-      <!-- Desktop Links -->
-      <div class="hidden md:flex items-center gap-8">
-        <a href="#focus" class="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-accent transition-colors">Focus</a>
-        <a href="#journey" class="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-accent transition-colors">Journey</a>
-        <a href="#about" class="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-accent transition-colors">About</a>
-        <a href="#value" class="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-accent transition-colors">Value</a>
-        <a href="#contact" class="text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-primary dark:hover:text-accent transition-colors">Contact</a>
-        <a href="#contact" class="inline-flex items-center px-5 py-2.5 rounded-full bg-primary text-white text-sm font-semibold hover:bg-blue-700 shadow-lg shadow-primary/25 hover:shadow-primary/40 btn-press transition-all">
-          Get in Touch
-        </a>
-        <!-- Dark mode toggle (desktop) -->
-        <button id="darkToggle" class="w-10 h-10 rounded-full bg-gray-100 dark:bg-dark-card border border-gray-200 dark:border-white/10 hover:bg-gray-200 dark:hover:bg-dark-surface flex items-center justify-center transition-all" aria-label="Toggle dark mode">
-          <svg class="w-[18px] h-[18px] hidden dark:block text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"/></svg>
-          <svg class="w-[18px] h-[18px] block dark:hidden text-gray-600" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/></svg>
-        </button>
-      </div>
-
-      <!-- Mobile: dark toggle + menu button -->
-      <div class="md:hidden flex items-center gap-2">
-        <button id="darkToggleMobile" class="w-9 h-9 rounded-full bg-gray-100 dark:bg-dark-card border border-gray-200 dark:border-white/10 flex items-center justify-center transition-all" aria-label="Toggle dark mode">
-          <svg class="w-4 h-4 hidden dark:block text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd"/></svg>
-          <svg class="w-4 h-4 block dark:hidden text-gray-600" fill="currentColor" viewBox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"/></svg>
-        </button>
-        <button id="mobileMenuBtn" class="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-dark-card transition-colors" aria-label="Menu">
-          <!-- Hamburger icon -->
-          <svg id="menuIconOpen" class="w-6 h-6 text-gray-700 dark:text-gray-300" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
-          <!-- X icon (hidden by default) -->
-          <svg id="menuIconClose" class="w-6 h-6 text-gray-700 dark:text-gray-300 hidden" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
-        </button>
-      </div>
-
-    </div>
+<!-- ══ DOCUMENT STRIP ══════════════════════════════════════ -->
+<header class="strip">
+  <div class="strip-in">
+    <span class="strip-id"><a href="#top">DAN RIVERO</a></span>
+    <span class="strip-sec">SECTION: <b id="secName">MASTHEAD</b></span>
+    <nav class="strip-nav" aria-label="Sections">
+      <a href="#lead">How I lead</a>
+      <a href="#record">Record</a>
+      <a href="#council">Council</a>
+      <a href="#scope">Scope</a>
+      <a href="#credentials">Credentials</a>
+      <a href="#contact">Contact</a>
+      <button class="tog" id="tog" type="button" aria-pressed="false">
+        <span aria-hidden="true">Day</span><span aria-hidden="true"> / </span><b aria-hidden="true">Night</b>
+        <span class="skip">Switch between the day and night rendering</span>
+      </button>
+    </nav>
+    <button class="tog menu-btn" id="menuBtn" type="button" aria-expanded="false" aria-controls="sheet">Contents</button>
   </div>
+</header>
+
+<nav class="sheet" id="sheet" aria-label="Contents">
+  <a href="#lead"><span>SEC 01</span>How I lead</a>
+  <a href="#exhibit"><span>ATT A</span>The one-page version</a>
+  <a href="#record"><span>SEC 02</span>The record</a>
+  <a href="#council"><span>SEC 03</span>The council</a>
+  <a href="#scope"><span>SEC 04</span>Systems in scope</a>
+  <a href="#credentials"><span>SEC 05</span>Credentials</a>
+  <a href="#human"><span>SEC 06</span>The whole file</a>
+  <a href="#contact"><span>SEC 07</span>Escalation path</a>
+  <button class="tog" id="togMobile" type="button" aria-pressed="false" style="margin-top:1.5rem;align-self:flex-start">Day / <b>Night</b></button>
 </nav>
 
-<!-- ==================== MOBILE MENU OVERLAY ==================== -->
-<div id="mobileMenu" class="fixed inset-0 z-40 bg-white dark:bg-dark-bg hidden md:hidden transition-opacity duration-300" style="padding-top:64px">
-  <div class="flex flex-col items-center justify-center h-full gap-2 px-6 -mt-16">
-    <a href="#focus" class="mobile-link w-full text-center py-4 text-2xl font-heading font-bold text-gray-900 dark:text-white hover:text-primary dark:hover:text-accent transition-colors">Focus</a>
-    <div class="w-16 h-px bg-gray-200 dark:bg-white/10"></div>
-    <a href="#journey" class="mobile-link w-full text-center py-4 text-2xl font-heading font-bold text-gray-900 dark:text-white hover:text-primary dark:hover:text-accent transition-colors">Journey</a>
-    <div class="w-16 h-px bg-gray-200 dark:bg-white/10"></div>
-    <a href="#about" class="mobile-link w-full text-center py-4 text-2xl font-heading font-bold text-gray-900 dark:text-white hover:text-primary dark:hover:text-accent transition-colors">About</a>
-    <div class="w-16 h-px bg-gray-200 dark:bg-white/10"></div>
-    <a href="#value" class="mobile-link w-full text-center py-4 text-2xl font-heading font-bold text-gray-900 dark:text-white hover:text-primary dark:hover:text-accent transition-colors">Value</a>
-    <div class="w-16 h-px bg-gray-200 dark:bg-white/10"></div>
-    <a href="#contact" class="mobile-link w-full text-center py-4 text-2xl font-heading font-bold text-gray-900 dark:text-white hover:text-primary dark:hover:text-accent transition-colors">Contact</a>
-    <a href="#contact" class="mobile-link mt-6 px-8 py-3.5 rounded-full bg-primary text-white text-base font-semibold shadow-lg shadow-primary/25">Get in Touch</a>
-  </div>
-</div>
+<main id="top">
 
-<!-- ==================== HERO ==================== -->
-<section class="relative min-h-screen flex items-center pt-20 hero-grid overflow-hidden">
-  <!-- Decorative blobs -->
-  <div class="absolute top-20 -left-32 w-[500px] h-[500px] bg-primary/5 dark:bg-primary/10 rounded-full blur-3xl animate-float pointer-events-none"></div>
-  <div class="absolute bottom-10 right-0 w-[400px] h-[400px] bg-accent/5 dark:bg-accent/10 rounded-full blur-3xl pointer-events-none" style="animation:float 8s ease-in-out infinite 2s"></div>
-  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-gradient-radial from-primary/[0.03] to-transparent rounded-full pointer-events-none"></div>
+<!-- ══ MASTHEAD ════════════════════════════════════════════ -->
+<section class="masthead">
+  <div class="shell">
 
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-0 w-full">
-    <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-      <!-- Left Column -->
+    <div class="docline">
+      <span><b>DRIV.SPACE</b></span>
+      <span>Personnel change record</span>
+      <span>Rev <b>2026.08</b></span>
+      <span>Sheet <b>1 of 1</b></span>
+    </div>
+
+    <div class="name-row">
+      <h1 class="name">Dan&nbsp;Rivero</h1>
+      <div class="stamp" role="img" aria-label="Stamped: in effect, 2026">
+        <b>IN EFFECT</b>
+        <i>Jul 2026</i>
+      </div>
+    </div>
+
+    <div class="change">
+      <span class="label">From</span>
+      <p class="change-from">Senior Solution Engineer · AI Workforce</p>
+      <span class="label">To</span>
+      <p class="change-to">Managing Director, Solution&nbsp;Engineering <em>— Financial Services</em></p>
+      <figure class="idphoto">
+        <img src="portrait.jpg" width="380" height="475" alt="Sketched portrait of Dan Rivero" loading="eager" decoding="async">
+        <figcaption>Photo on file</figcaption>
+      </figure>
+    </div>
+
+    <div class="fields">
+      <dl>
+        <div><dt class="label">Organization</dt><dd>Microsoft Corporation</dd></div>
+        <div><dt class="label">Territory</dt><dd>Financial Services</dd></div>
+        <div><dt class="label">In service since</dt><dd>2000 · 26 years</dd></div>
+        <div><dt class="label">Based</dt><dd>Aurora, Illinois</dd></div>
+      </dl>
+    </div>
+
+    <div class="thesis">
       <div>
-        <!-- Eyebrow -->
-        <div class="fade-up inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/5 dark:bg-primary/15 border border-primary/10 dark:border-primary/20 mb-6">
-          <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
-          <span class="text-sm font-medium text-primary dark:text-accent">Senior Solution Engineer · AI Workforce · Microsoft</span>
-        </div>
-
-        <!-- Headline -->
-        <h1 class="fade-up delay-100 font-heading font-extrabold text-4xl sm:text-5xl lg:text-6xl leading-[1.1] tracking-tight text-gray-900 dark:text-white mb-6">
-          Making AI work<br/>
-          <span id="typewriterText" class="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">in Financial Services.</span><span class="tw-cursor" aria-hidden="true"></span>
-        </h1>
-
-        <!-- Sub -->
-        <p class="fade-up delay-200 text-lg sm:text-xl text-gray-600 dark:text-gray-400 leading-relaxed max-w-xl mb-8">
-          26 years of technology expertise. One mission: helping the world's leading financial institutions move from AI ambition to AI reality — powered by <strong class="text-gray-800 dark:text-gray-200">Microsoft 365 Copilot</strong>, <strong class="text-gray-800 dark:text-gray-200">Copilot Studio</strong>, and <strong class="text-gray-800 dark:text-gray-200">Microsoft Teams</strong>.
-        </p>
-
-        <!-- Inline Stats Strip -->
-        <div class="fade-up delay-300 flex flex-wrap items-center gap-4 sm:gap-0 mb-10 p-4 rounded-2xl bg-white/60 dark:bg-dark-card/60 border border-gray-200/60 dark:border-white/5 shadow-sm">
-          <div class="flex items-center gap-2 sm:px-5">
-            <span class="text-xl">🏦</span>
-            <span class="text-sm font-semibold text-gray-700 dark:text-gray-300">Financial Services</span>
-          </div>
-          <div class="hidden sm:block w-px h-8 bg-gray-200 dark:bg-white/10"></div>
-          <div class="flex items-center gap-2 sm:px-5">
-            <span class="text-xl">🏅</span>
-            <span class="text-sm font-semibold text-gray-700 dark:text-gray-300"><span id="heroCertCount">0</span> Certifications</span>
-          </div>
-          <div class="hidden sm:block w-px h-8 bg-gray-200 dark:bg-white/10"></div>
-          <div class="flex items-center gap-2 sm:px-5">
-            <span class="text-xl">📍</span>
-            <span class="text-sm font-semibold text-gray-700 dark:text-gray-300">Chicago, IL</span>
-          </div>
-        </div>
-
-        <!-- Buttons -->
-        <div class="fade-up delay-400 flex flex-wrap gap-4">
-          <a href="#focus" class="inline-flex items-center px-7 py-3.5 rounded-full bg-primary text-white font-semibold hover:bg-blue-700 shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 btn-press transition-all">
-            See What I Do
-            <svg class="ml-2 w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-          </a>
-          <a href="#contact" class="inline-flex items-center px-7 py-3.5 rounded-full border-2 border-primary/30 dark:border-primary/40 text-primary dark:text-accent font-semibold hover:border-primary hover:bg-primary/5 dark:hover:bg-primary/10 btn-press transition-all">
-            Let's Connect
-          </a>
-        </div>
+        <p>A runbook is what you write so that somebody else can do the work without you. That is the whole career, and it is the reason for this record.</p>
+        <p>Twenty years running the systems before I ever sold one, six at Microsoft deep in the product by choice, and now a team. I still build. I have just started measuring the work in other people.</p>
       </div>
-
-      <!-- Right Column: Hero Card (hidden on mobile) -->
-      <div class="hidden lg:flex justify-center fade-up delay-300">
-        <div id="heroCardWrapper" class="relative" style="perspective:1000px;transform-style:preserve-3d">
-          <!-- Glow behind card -->
-          <div class="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 rounded-3xl blur-2xl scale-110"></div>
-          <div class="relative bg-gradient-to-br from-primary via-blue-600 to-accent rounded-3xl p-10 text-white shadow-2xl shadow-primary/30 max-w-sm animate-float">
-            <div class="text-8xl font-heading font-extrabold leading-none mb-3 tracking-tight">26<span class="text-accent/80">+</span></div>
-            <div class="text-2xl font-heading font-bold mb-2">Years in Technology</div>
-            <div class="w-12 h-1 bg-white/30 rounded-full mb-4"></div>
-            <p class="text-blue-100 text-base leading-relaxed">From Geek Squad to Microsoft AI</p>
-            <!-- Decorative elements -->
-            <div class="absolute top-6 right-6 w-16 h-16 border-2 border-white/10 rounded-2xl"></div>
-            <div class="absolute bottom-6 right-6 w-8 h-8 border-2 border-white/10 rounded-lg rotate-12"></div>
-          </div>
-        </div>
+      <div class="act">
+        <a class="btn" href="#contact">Get in touch</a>
+        <a class="btn btn-ghost" href="#record">Read the record</a>
       </div>
     </div>
+
+    <div class="mission">
+      <span class="label">Mission</span>
+      <p>Helping financial institutions move from AI ambition to AI reality. <em>People. Technology. Outcomes.</em></p>
+    </div>
+
   </div>
 </section>
 
-<!-- Section Divider -->
-<div class="section-divider"></div>
+<!-- ══ HOW I LEAD ══════════════════════════════════════════ -->
+<section id="lead" class="pad" data-sec="How I lead">
+  <div class="shell">
+    <div class="head-block">
+      <h2 class="section-head">Model. Coach. Care.</h2>
+      <p class="lede">Microsoft defines the manager role this way. It was already how I worked before the title caught up, which is the only reason I trust it. Underneath it: clarity, ownership, trust.</p>
+    </div>
 
-<!-- ==================== SKILLS MARQUEE ==================== -->
-<section class="relative bg-primary dark:bg-primary/90 py-5 overflow-hidden">
-  <div class="marquee-track animate-marquee">
-    <span class="inline-flex items-center gap-12 text-white/90 text-sm font-semibold tracking-wide uppercase whitespace-nowrap px-6">
-      <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>Microsoft 365 Copilot</span>
-      <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>Copilot Studio</span>
-      <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>Microsoft Teams</span>
-      <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>Teams Rooms</span>
-      <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>Prompt Engineering</span>
-      <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>Financial Services AI</span>
-      <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>Enterprise AI Strategy</span>
-      <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>Unified Communications</span>
-      <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>Microsoft 365</span>
-    </span>
-    <span class="inline-flex items-center gap-12 text-white/90 text-sm font-semibold tracking-wide uppercase whitespace-nowrap px-6" aria-hidden="true">
-      <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>Microsoft 365 Copilot</span>
-      <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>Copilot Studio</span>
-      <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>Microsoft Teams</span>
-      <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>Teams Rooms</span>
-      <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>Prompt Engineering</span>
-      <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>Financial Services AI</span>
-      <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>Enterprise AI Strategy</span>
-      <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>Unified Communications</span>
-      <span class="flex items-center gap-2"><span class="w-1.5 h-1.5 rounded-full bg-white/50"></span>Microsoft 365</span>
-    </span>
-  </div>
-</section>
+    <div class="proc">
 
-<!-- ==================== COMPANY LOGOS STRIP ==================== -->
-<section class="py-14 bg-light-alt dark:bg-dark-card/50">
-  <div class="max-w-5xl mx-auto px-4 sm:px-6">
-    <p class="text-center text-xs font-semibold uppercase tracking-[0.2em] text-gray-400 dark:text-gray-500 mb-10 fade-up">Where I've Built My Career</p>
-    <div class="flex flex-wrap items-center justify-center gap-4 sm:gap-2 fade-up delay-100">
+      <article>
+        <div>
+          <h3>Model</h3>
+          <p>Show what good looks like</p>
+          <ul>
+            <li>Stay close to the work: discovery, strategy, customer conversations. Not the sidelines.</li>
+            <li>Out-prepare the room, and find the real question behind the ask.</li>
+            <li>Connect the technology to a business outcome. Be the trusted advisor, not the feature.</li>
+            <li>Stay a learn-it-all. Hands on with agents, Copilot Studio, and whatever is next.</li>
+          </ul>
+        </div>
+        <figure class="note">
+          <blockquote>“Dan Rivero has had a profound impact on my professional growth through consistent guidance, thoughtful coaching, and an unwavering commitment to excellence.”</blockquote>
+          <figcaption><b>Senior Solution Engineer</b>Reference on file</figcaption>
+        </figure>
+      </article>
 
-      <!-- Geek Squad -->
-      <div class="company-logo-wrap flex items-center px-4 py-2 opacity-60 dark:opacity-50 hover:opacity-100 transition-all cursor-default">
-        <span class="text-sm font-bold text-gray-600 dark:text-gray-400">Geek Squad</span>
-      </div>
+      <article>
+        <div>
+          <h3>Coach</h3>
+          <p>Make great work repeatable</p>
+          <ul>
+            <li>Coach the real gap in the moment, to help win. Not to critique after.</li>
+            <li>Build demo-review rhythms and discovery playbooks so a win repeats instead of resetting.</li>
+            <li>Debrief the losses as carefully as the wins, so the lesson spreads past the person who learned it.</li>
+            <li>Raise the bar on real working examples. No Mickey Mouse demos.</li>
+          </ul>
+        </div>
+        <figure class="note">
+          <blockquote>“Dan is a natural born leader that all of the SEs already turn to for mentorship and guidance… always putting others first.”</blockquote>
+          <figcaption><b>Senior Solution Engineer</b>Reference on file</figcaption>
+        </figure>
+      </article>
 
-      <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 hidden sm:block flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+      <article>
+        <div>
+          <h3>Care</h3>
+          <p>High bar, people first</p>
+          <ul>
+            <li>Air cover with a high bar. Wins loud, feedback private.</li>
+            <li>Build a connected team with no silos, partnering early across account executives, specialists, and engineers.</li>
+            <li>Develop engineers the way I already do it: alongside them, on live work.</li>
+            <li>Keep quick wins on the board, so the long transformation stays survivable.</li>
+          </ul>
+        </div>
+        <figure class="note">
+          <blockquote>“Dan has truly gone above and beyond to make sure I’m prepared to succeed… You are a leader. I see it.”</blockquote>
+          <figcaption><b>Solution Engineer</b>Onboarded by Dan · on file</figcaption>
+        </figure>
+      </article>
 
-      <!-- Chopper Trading -->
-      <div class="company-logo-wrap flex items-center px-4 py-2 opacity-60 dark:opacity-50 hover:opacity-100 transition-all cursor-default">
-        <span class="text-sm font-bold text-gray-600 dark:text-gray-400">Chopper Trading</span>
-      </div>
+    </div>
 
-      <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 hidden sm:block flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-
-      <!-- TSG / TeleTech -->
-      <div class="company-logo-wrap flex items-center px-4 py-2 opacity-60 dark:opacity-50 hover:opacity-100 transition-all cursor-default">
-        <span class="text-sm font-bold text-gray-600 dark:text-gray-400">TSG / TeleTech</span>
-      </div>
-
-      <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 hidden sm:block flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-
-      <!-- Allstate -->
-      <div class="company-logo-wrap flex items-center px-4 py-2 opacity-60 dark:opacity-50 hover:opacity-100 transition-all cursor-default">
-        <span class="text-sm font-bold text-gray-600 dark:text-gray-400">Allstate</span>
-      </div>
-
-      <svg class="w-4 h-4 text-gray-300 dark:text-gray-600 hidden sm:block flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-
-      <!-- Microsoft (highlighted) -->
-      <div class="company-logo-wrap flex items-center px-4 py-2 opacity-100 transition-all cursor-default">
-        <span class="text-sm font-bold text-primary dark:text-accent">Microsoft</span>
-      </div>
-
+    <div class="orders">
+      <span class="label">Standing orders</span>
+      <ol>
+        <li><i>01</i><b>People first</b><span>Relationships before everything.</span></li>
+        <li><i>02</i><b>Coach and empower</b><span>I coach people into confidence.</span></li>
+        <li><i>03</i><b>High bar for quality</b><span>I hold the bar high, for myself and everyone else.</span></li>
+        <li><i>04</i><b>Prepare deeply</b><span>Preparation is where confidence comes from.</span></li>
+        <li><i>05</i><b>Simplify complexity</b><span>I reframe the problem and make the complex simple.</span></li>
+      </ol>
     </div>
   </div>
 </section>
-
-<!-- Section Divider -->
-<div class="section-divider"></div>
-
-<!-- ==================== WHAT I DO ==================== -->
-<section id="focus" class="py-24 bg-white dark:bg-dark-bg">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <!-- Section Header -->
-    <div class="text-center mb-16">
-      <p class="fade-up text-sm font-semibold uppercase tracking-[0.2em] text-primary dark:text-accent mb-3">What I Do</p>
-      <h2 class="fade-up delay-100 font-heading font-bold text-3xl sm:text-4xl lg:text-5xl text-gray-900 dark:text-white mb-4">
-        Specialized in what matters most.
-      </h2>
-      <p class="fade-up delay-200 text-lg text-gray-500 dark:text-gray-400 max-w-2xl mx-auto">
-        Deep expertise across the Microsoft AI and collaboration stack — purpose-built for the demands of financial services.
-      </p>
+<!-- ══ ATTACHMENT A ════════════════════════════════════════ -->
+<section id="exhibit" class="pad-tight" data-sec="Attachment A">
+  <div class="shell">
+    <div class="head-block">
+      <h2 class="section-head">The one-page version.</h2>
+      <p class="lede">The same person, drawn on a single sheet. It is filed under the previous title, which is rather the point of a change record. The paperwork gets superseded. The person carries forward.</p>
     </div>
-
-    <!-- Cards Grid -->
-    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-
-      <!-- Card 1: M365 Copilot -->
-      <div class="fade-up group card-shimmer bg-white dark:bg-dark-card border border-gray-200/80 dark:border-white/5 rounded-2xl p-7 hover:shadow-xl hover:shadow-primary/5 dark:hover:shadow-primary/10 transition-all duration-500">
-        <div class="w-14 h-14 rounded-2xl bg-primary/10 dark:bg-primary/20 flex items-center justify-center mb-5 group-hover:scale-110 group-hover:bg-primary/20 dark:group-hover:bg-primary/30 transition-all duration-300">
-          <span class="text-2xl">🤖</span>
-        </div>
-        <h3 class="font-heading font-bold text-lg text-gray-900 dark:text-white mb-3">Microsoft 365 Copilot</h3>
-        <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Guiding financial institutions through the full M365 Copilot journey — from readiness and governance to scaled deployment — unlocking real productivity, compliance intelligence, and measurable ROI.</p>
-      </div>
-
-      <!-- Card 2: Copilot Studio -->
-      <div class="fade-up delay-100 group card-shimmer bg-white dark:bg-dark-card border border-gray-200/80 dark:border-white/5 rounded-2xl p-7 hover:shadow-xl hover:shadow-primary/5 dark:hover:shadow-primary/10 transition-all duration-500">
-        <div class="w-14 h-14 rounded-2xl bg-primary/10 dark:bg-primary/20 flex items-center justify-center mb-5 group-hover:scale-110 group-hover:bg-primary/20 dark:group-hover:bg-primary/30 transition-all duration-300">
-          <span class="text-2xl">🧠</span>
-        </div>
-        <h3 class="font-heading font-bold text-lg text-gray-900 dark:text-white mb-3">Copilot Studio</h3>
-        <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Designing and deploying custom AI agents that automate complex financial workflows, surface critical insights in real time, and give knowledge workers an unfair productivity advantage.</p>
-      </div>
-
-      <!-- Card 3: Microsoft Teams -->
-      <div class="fade-up delay-200 group card-shimmer bg-white dark:bg-dark-card border border-gray-200/80 dark:border-white/5 rounded-2xl p-7 hover:shadow-xl hover:shadow-primary/5 dark:hover:shadow-primary/10 transition-all duration-500">
-        <div class="w-14 h-14 rounded-2xl bg-primary/10 dark:bg-primary/20 flex items-center justify-center mb-5 group-hover:scale-110 group-hover:bg-primary/20 dark:group-hover:bg-primary/30 transition-all duration-300">
-          <span class="text-2xl">💬</span>
-        </div>
-        <h3 class="font-heading font-bold text-lg text-gray-900 dark:text-white mb-3">Microsoft Teams</h3>
-        <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Transforming how financial institutions communicate — enabling secure, compliant, enterprise-grade unified collaboration that meets the rigorous demands of regulated industries at global scale.</p>
-      </div>
-
-      <!-- Card 4: Teams Rooms -->
-      <div class="fade-up delay-100 group card-shimmer bg-white dark:bg-dark-card border border-gray-200/80 dark:border-white/5 rounded-2xl p-7 hover:shadow-xl hover:shadow-primary/5 dark:hover:shadow-primary/10 transition-all duration-500">
-        <div class="w-14 h-14 rounded-2xl bg-primary/10 dark:bg-primary/20 flex items-center justify-center mb-5 group-hover:scale-110 group-hover:bg-primary/20 dark:group-hover:bg-primary/30 transition-all duration-300">
-          <span class="text-2xl">🏢</span>
-        </div>
-        <h3 class="font-heading font-bold text-lg text-gray-900 dark:text-white mb-3">Microsoft Teams Rooms</h3>
-        <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Modernizing the hybrid meeting experience for enterprise environments — bringing AI-powered, immersive collaboration to every boardroom, trading floor, and branch location.</p>
-      </div>
-
-      <!-- Card 5: Prompt Engineering -->
-      <div class="fade-up delay-200 group card-shimmer bg-white dark:bg-dark-card border border-gray-200/80 dark:border-white/5 rounded-2xl p-7 hover:shadow-xl hover:shadow-primary/5 dark:hover:shadow-primary/10 transition-all duration-500">
-        <div class="w-14 h-14 rounded-2xl bg-primary/10 dark:bg-primary/20 flex items-center justify-center mb-5 group-hover:scale-110 group-hover:bg-primary/20 dark:group-hover:bg-primary/30 transition-all duration-300">
-          <span class="text-2xl">✍️</span>
-        </div>
-        <h3 class="font-heading font-bold text-lg text-gray-900 dark:text-white mb-3">Prompt Engineering</h3>
-        <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Crafting precision prompts that unlock the full potential of large language models — building repeatable, high-quality AI interactions designed for real enterprise use cases in financial services.</p>
-      </div>
-
-      <!-- Card 6: Financial Services AI -->
-      <div class="fade-up delay-300 group card-shimmer bg-white dark:bg-dark-card border border-gray-200/80 dark:border-white/5 rounded-2xl p-7 hover:shadow-xl hover:shadow-primary/5 dark:hover:shadow-primary/10 transition-all duration-500">
-        <div class="w-14 h-14 rounded-2xl bg-primary/10 dark:bg-primary/20 flex items-center justify-center mb-5 group-hover:scale-110 group-hover:bg-primary/20 dark:group-hover:bg-primary/30 transition-all duration-300">
-          <span class="text-2xl">🏦</span>
-        </div>
-        <h3 class="font-heading font-bold text-lg text-gray-900 dark:text-white mb-3">Financial Services AI</h3>
-        <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Deep expertise in the unique regulatory, compliance, and operational demands of financial institutions — turning cutting-edge Microsoft AI into trusted, production-ready outcomes your business can rely on.</p>
-      </div>
-
-    </div>
+    <figure class="exhibit">
+      <a href="exhibit-a.jpg" target="_blank" rel="noopener">
+        <img src="exhibit-a.jpg" width="1536" height="1024" loading="lazy" decoding="async" alt="Hand-drawn one-page summary: what Dan does, the teams he works across, his mission, his values, his toolkit, and life outside work.">
+      </a>
+      <figcaption>
+        <b>Attachment A</b>
+        <span>Drawn under the previous title. Retained for reference.</span>
+        <a href="exhibit-a.jpg" target="_blank" rel="noopener">Open full size&nbsp;↗</a>
+      </figcaption>
+    </figure>
   </div>
 </section>
 
-<!-- Section Divider -->
-<div class="section-divider"></div>
-
-<!-- ==================== CAREER TIMELINE ==================== -->
-<section id="journey" class="py-24 bg-light-alt dark:bg-dark-card/30 relative overflow-hidden">
-  <!-- Watermark "26" -->
-  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-heading font-extrabold text-[20rem] sm:text-[28rem] text-gray-100/50 dark:text-white/[0.02] select-none pointer-events-none leading-none" aria-hidden="true">26</div>
-
-  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-    <!-- Section Header -->
-    <div class="text-center mb-20">
-      <p class="fade-up text-sm font-semibold uppercase tracking-[0.2em] text-primary dark:text-accent mb-3">The Journey</p>
-      <h2 class="fade-up delay-100 font-heading font-bold text-3xl sm:text-4xl lg:text-5xl text-gray-900 dark:text-white mb-4">
-        26 years of building what's next.
-      </h2>
-      <p class="fade-up delay-200 text-lg text-gray-500 dark:text-gray-400 max-w-2xl mx-auto">
-        From troubleshooting PCs in the field to deploying AI at enterprise scale — every chapter built on the last.
-      </p>
+<!-- ══ THE RECORD ══════════════════════════════════════════ -->
+<section id="record" class="pad" data-sec="The record">
+  <div class="shell">
+    <div class="head-block">
+      <h2 class="section-head">Twenty-six years, in change order.</h2>
+      <p class="lede">Newest first, the way a change register actually reads. Every figure here is one I can produce the paperwork for.</p>
     </div>
+  </div>
 
-    <!-- Timeline -->
-    <div class="relative">
-      <!-- Vertical Line -->
-      <div class="timeline-line hidden md:block"></div>
-      <div class="md:hidden absolute left-6 top-0 bottom-0 w-0.5 bg-gradient-to-b from-transparent via-primary to-transparent"></div>
+  <div class="shell">
+    <div class="reg">
 
-      <!-- Entry 1 -->
-      <div class="fade-up relative flex flex-col md:flex-row md:items-start mb-16 group">
-        <div class="pl-12 md:pl-0 md:w-1/2 md:text-right md:pr-12">
-          <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-primary/10 dark:bg-primary/20 text-primary dark:text-accent mb-2">~2000 – Early Career</span>
-          <h3 class="font-heading font-bold text-xl text-gray-900 dark:text-white">Senior Field Agent</h3>
-          <p class="text-sm font-semibold text-primary dark:text-accent mb-2">Geek Squad</p>
-          <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Started as a charter Geek Squad field agent — one of the original team members. Troubleshooting, installing, and repairing technology in the real world. Built an instinct for diagnosing complex problems fast and a relentless drive to find solutions that stick.</p>
+      <article>
+        <div class="reg-ref"><b>CHG-07</b><span class="live">In effect</span></div>
+        <div>
+          <h3>Managing Director, Solution Engineering — Financial Services</h3>
+          <p class="reg-org">Microsoft Corporation · July 2026 — present</p>
+          <div class="tags"><span class="hot">Current</span><span>People leadership</span><span>Territory strategy</span></div>
         </div>
-        <!-- Dot -->
-        <div class="absolute left-[18px] md:left-1/2 md:-translate-x-1/2 top-2 md:top-3 w-4 h-4 rounded-full bg-white dark:bg-dark-bg border-[3px] border-primary z-10 group-hover:scale-125 transition-transform"></div>
-        <div class="md:w-1/2 md:pl-12"></div>
-      </div>
+        <div class="reg-body">
+          <p>I lead the solution engineering team covering financial services: setting the technical strategy across the territory, coaching the team through the complex, high-value decisions, and carrying real accountability for how these engineers grow. The work is the work I have been doing for six years. What changed is that the scope is now a team.</p>
+        </div>
+      </article>
 
-      <!-- Entry 2 -->
-      <div class="fade-up relative flex flex-col md:flex-row md:items-start mb-16 group">
-        <div class="md:w-1/2 md:pr-12"></div>
-        <!-- Dot -->
-        <div class="absolute left-[18px] md:left-1/2 md:-translate-x-1/2 top-2 md:top-3 w-4 h-4 rounded-full bg-white dark:bg-dark-bg border-[3px] border-primary z-10 group-hover:scale-125 transition-transform"></div>
-        <div class="md:w-1/2 md:pl-12 pl-12 md:pl-12">
-          <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-primary/10 dark:bg-primary/20 text-primary dark:text-accent mb-2">~2003 – Leadership</span>
-          <h3 class="font-heading font-bold text-xl text-gray-900 dark:text-white">Field Operations Manager</h3>
-          <p class="text-sm font-semibold text-primary dark:text-accent mb-2">Geek Squad</p>
-          <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Stepped into management, leading a team of field agents across service operations. Discovered a passion for developing people and building high-performing teams — a leadership mindset that has shaped every role since.</p>
+      <article>
+        <div class="reg-ref"><b>CHG-06</b><span>Closed</span></div>
+        <div>
+          <h3>Senior Solution Engineer · AI Workforce</h3>
+          <p class="reg-org">Microsoft Corporation · 2020 — 2026</p>
+          <div class="tags"><span>150K+ Copilot seats</span><span>Fortune 500</span><span>7 SEs mentored</span></div>
         </div>
-      </div>
+        <div class="reg-body">
+          <p>Came in as an individual contributor by choice, to go deep. Owned and won the customer technical decisions across Microsoft 365 Copilot, Copilot Chat, Teams Phone, Rooms and Premium, Frontline, and Employee Experience. That meant clearing the privacy, security, compliance, and integration blockers until the commitment was real rather than enthusiastic.</p>
+          <p>Leaned into Copilot early enough to shape the customer conversation instead of reacting to it: <strong>150K+ seats</strong> and Fortune 500 technical wins. Displaced OpenAI, Anthropic, Google, Zoom, Cisco, and Slack in qualified enterprise opportunities. Mentored <strong>seven</strong> solution engineers and ran a <strong>15-person</strong> peer forum along the way. That is where I think I did the most good.</p>
+        </div>
+      </article>
 
-      <!-- Entry 3 -->
-      <div class="fade-up relative flex flex-col md:flex-row md:items-start mb-16 group">
-        <div class="pl-12 md:pl-0 md:w-1/2 md:text-right md:pr-12">
-          <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-primary/10 dark:bg-primary/20 text-primary dark:text-accent mb-2">~2006 – Finance Sector</span>
-          <h3 class="font-heading font-bold text-xl text-gray-900 dark:text-white">Level 3 IT Support Specialist</h3>
-          <p class="text-sm font-semibold text-primary dark:text-accent mb-2">Chopper Trading</p>
-          <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Entered the high-stakes world of financial services technology — providing Level 3 support in a trading environment where every second matters. Gained deep respect for the performance and reliability demands of finance.</p>
+      <article>
+        <div class="reg-ref"><b>CHG-05</b><span>Closed</span></div>
+        <div>
+          <h3>Senior Teams / Skype for Business Engineer · Managing Engineer</h3>
+          <p class="reg-org">Allstate Insurance · 2016 — 2020</p>
+          <div class="tags"><span>98,000+ users migrated</span><span>Global team</span><span>Tier 3 escalation</span></div>
         </div>
-        <div class="absolute left-[18px] md:left-1/2 md:-translate-x-1/2 top-2 md:top-3 w-4 h-4 rounded-full bg-white dark:bg-dark-bg border-[3px] border-primary z-10 group-hover:scale-125 transition-transform"></div>
-        <div class="md:w-1/2 md:pl-12"></div>
-      </div>
+        <div class="reg-body">
+          <p>Led the migration of <strong>98,000+ users</strong> off Cisco WebEx onto Skype for Business Online, then the enterprise move to Microsoft Teams. Technical lead on the collaboration RFP, and primary Tier 3 escalation for the estate.</p>
+          <p>Also managed a distributed team of support engineers in Northern Ireland on a dotted line: monthly one-on-ones, monthly SLA reviews, annual evaluations. Built that support operation from nothing. No ticket baseline existed and no SLA history existed, so I established both and then held us to them.</p>
+        </div>
+      </article>
 
-      <!-- Entry 4 -->
-      <div class="fade-up relative flex flex-col md:flex-row md:items-start mb-16 group">
-        <div class="md:w-1/2 md:pr-12"></div>
-        <div class="absolute left-[18px] md:left-1/2 md:-translate-x-1/2 top-2 md:top-3 w-4 h-4 rounded-full bg-white dark:bg-dark-bg border-[3px] border-primary z-10 group-hover:scale-125 transition-transform"></div>
-        <div class="md:w-1/2 md:pl-12 pl-12 md:pl-12">
-          <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-primary/10 dark:bg-primary/20 text-primary dark:text-accent mb-2">~2009 – Enterprise Infrastructure</span>
-          <h3 class="font-heading font-bold text-xl text-gray-900 dark:text-white">Senior Network &amp; Microsoft Engineer</h3>
-          <p class="text-sm font-semibold text-primary dark:text-accent mb-2">Technology Solutions Group, a TeleTech Company</p>
-          <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Led enterprise deployments spanning wireless networks, data networking, Microsoft Lync Server, Skype for Business Server, and complex Avaya &amp; Microsoft UC integrations — building the infrastructure foundation that would define the rest of my career.</p>
+      <article>
+        <div class="reg-ref"><b>CHG-04</b><span>Closed</span></div>
+        <div>
+          <h3>Unified Communications Engineer</h3>
+          <p class="reg-org">Insight Global → AT&amp;T · 2015 — 2016</p>
+          <div class="tags"><span>Fortune 100</span><span>Hosted voice</span></div>
         </div>
-      </div>
+        <div class="reg-body">
+          <p>Hosted Lync and Skype for Business for Fortune 100 customers, on a team running hundreds of thousands of seats out of AT&amp;T’s global data centers. Tier 3 on the tickets nobody else wanted.</p>
+        </div>
+      </article>
 
-      <!-- Entry 5 -->
-      <div class="fade-up relative flex flex-col md:flex-row md:items-start mb-16 group">
-        <div class="pl-12 md:pl-0 md:w-1/2 md:text-right md:pr-12">
-          <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-primary/10 dark:bg-primary/20 text-primary dark:text-accent mb-2">~2015 – Enterprise Scale</span>
-          <h3 class="font-heading font-bold text-xl text-gray-900 dark:text-white">Senior Engineer · Unified Communications</h3>
-          <p class="text-sm font-semibold text-primary dark:text-accent mb-2">Allstate</p>
-          <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Led the enterprise-wide migration from Webex to Skype for Business, followed by a full Microsoft Teams implementation — replacing legacy systems, decommissioning aging infrastructure, and transforming how one of America's largest insurers communicates and collaborates.</p>
+      <article>
+        <div class="reg-ref"><b>CHG-03</b><span>Closed</span></div>
+        <div>
+          <h3>Senior Unified Communications / Data Engineer</h3>
+          <p class="reg-org">Technology Solutions Group, a TeleTech company · 2013 — 2015</p>
+          <div class="tags"><span>4,000+ user migrations</span><span>First time pre-sales</span></div>
         </div>
-        <div class="absolute left-[18px] md:left-1/2 md:-translate-x-1/2 top-2 md:top-3 w-4 h-4 rounded-full bg-white dark:bg-dark-bg border-[3px] border-primary z-10 group-hover:scale-125 transition-transform"></div>
-        <div class="md:w-1/2 md:pl-12"></div>
-      </div>
+        <div class="reg-body">
+          <p>Technical lead for Avaya Aura and Office 365 integration through Sonus and AudioCodes gateways, and for Lync 2013 migrations at <strong>4,000+</strong> users. Project lead on network builds across Aruba, Cisco, HP, Juniper, and Extreme.</p>
+          <p>First job where I sat in the customer meeting to help win the work, not only to deliver it afterward. It turned out I liked that part.</p>
+        </div>
+      </article>
 
-      <!-- Entry 6 -->
-      <div class="fade-up relative flex flex-col md:flex-row md:items-start mb-16 group">
-        <div class="md:w-1/2 md:pr-12"></div>
-        <div class="absolute left-[18px] md:left-1/2 md:-translate-x-1/2 top-2 md:top-3 w-4 h-4 rounded-full bg-white dark:bg-dark-bg border-[3px] border-primary z-10 group-hover:scale-125 transition-transform"></div>
-        <div class="md:w-1/2 md:pl-12 pl-12 md:pl-12">
-          <span class="inline-block px-3 py-1 rounded-full text-xs font-semibold bg-primary/10 dark:bg-primary/20 text-primary dark:text-accent mb-2">~2020 – Microsoft</span>
-          <h3 class="font-heading font-bold text-xl text-gray-900 dark:text-white">Solutions Engineer · Microsoft 365 Copilot</h3>
-          <p class="text-sm font-semibold text-primary dark:text-accent mb-2">Microsoft</p>
-          <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Joined Microsoft as a Solutions Engineer with a dedicated focus on Microsoft 365 Copilot — helping financial institutions understand, adopt, and scale Copilot across their organizations. From demos and discovery to architecture and deployment strategy, this was where years of enterprise experience met the next era of AI.</p>
+      <article>
+        <div class="reg-ref"><b>CHG-02</b><span>Closed</span></div>
+        <div>
+          <h3>Infrastructure Support Specialist</h3>
+          <p class="reg-org">Chopper Trading · 2010 — 2013</p>
+          <div class="tags"><span>Proprietary trading floor</span><span>Global expansion lead</span></div>
         </div>
-      </div>
+        <div class="reg-body">
+          <p>A proprietary trading floor, where a slow desktop is a real number on somebody’s P&amp;L by lunchtime. Ran Active Directory, Exchange, MDT imaging, and the Citrix and Wyse estate; led the enterprise Windows 7 rollout; served as global expansion lead for new office build-outs.</p>
+          <p>Financial services stopped being an industry to me here and started being a set of constraints.</p>
+        </div>
+      </article>
 
-      <!-- Entry 7: CURRENT -->
-      <div class="fade-up relative flex flex-col md:flex-row md:items-start group">
-        <div class="pl-12 md:pl-0 md:w-1/2 md:text-right md:pr-12">
-          <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold bg-primary text-white mb-2">
-            <span class="w-2 h-2 rounded-full bg-white animate-pulse"></span>
-            Now · Microsoft
-          </span>
-          <h3 class="font-heading font-bold text-xl text-gray-900 dark:text-white">Senior Solution Engineer · AI Workforce</h3>
-          <p class="text-sm font-semibold text-primary dark:text-accent mb-2">Microsoft</p>
-          <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Today, at the leading edge of the AI revolution — partnering with major financial institutions to deploy Microsoft 365 Copilot, Copilot Studio, and Microsoft Teams at enterprise scale. 26 years of hands-on technology experience, deployed in service of the most exciting moment in tech history.</p>
+      <article>
+        <div class="reg-ref"><b>CHG-01</b><span>Closed</span></div>
+        <div>
+          <h3>Field Agent → Supervisor</h3>
+          <p class="reg-org">Best Buy · Geek Squad · 2003 — 2010</p>
+          <div class="tags"><span>31 of 200 selected</span><span>25+ techs led</span><span>Budget &amp; P&amp;L</span></div>
         </div>
-        <!-- Pulsing Dot -->
-        <div class="absolute left-[18px] md:left-1/2 md:-translate-x-1/2 top-2 md:top-3 z-10">
-          <div class="w-5 h-5 rounded-full bg-primary animate-pulse-dot"></div>
-          <div class="absolute inset-0 w-5 h-5 rounded-full bg-primary/40 animate-ping"></div>
+        <div class="reg-body">
+          <p>One of <strong>31 technicians</strong> chosen from 200 applicants for the first Geek Squad rollout across metro Chicago. Made supervisor in 2006 and spent four years leading, training and developing <strong>25+ techs</strong>, owning the team budget and P&amp;L.</p>
+          <p>Also where I found out I would rather build people than fix machines. Everything since has been a longer version of that sentence.</p>
         </div>
-        <div class="md:w-1/2 md:pl-12"></div>
-      </div>
+      </article>
+
+      <article class="reg-prior">
+        <div class="reg-ref"><b>CHG-00</b><span>Archived</span></div>
+        <div>
+          <h3>Before the record</h3>
+          <p class="reg-org">2000 — 2003</p>
+        </div>
+        <div class="reg-body">
+          <p>Where the twenty-six years actually start. Predates this system, and is not filed here.</p>
+        </div>
+      </article>
 
     </div>
   </div>
 </section>
 
-<!-- Section Divider -->
-<div class="section-divider"></div>
+<!-- ══ THE COUNCIL ═════════════════════════════════════════ -->
+<section id="council" class="inverted pad" data-sec="The council">
+  <div class="shell">
+    <h2 class="statement">I founded the Financial&nbsp;Services Copilot Council. <em>Two hundred and eighty-one executives later, I co-chair it.</em></h2>
 
-<!-- ==================== ABOUT ==================== -->
-<section id="about" class="py-24 bg-white dark:bg-dark-bg">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="grid lg:grid-cols-2 gap-16 items-start">
-
-      <!-- Left: Text -->
+    <div class="council-grid">
       <div>
-        <p class="fade-up text-sm font-semibold uppercase tracking-[0.2em] text-primary dark:text-accent mb-3">About</p>
-        <h2 class="fade-up delay-100 font-heading font-bold text-3xl sm:text-4xl lg:text-5xl text-gray-900 dark:text-white mb-8">
-          More than a tech guy.
-        </h2>
-        <div class="fade-up delay-200 space-y-5 text-gray-600 dark:text-gray-400 leading-relaxed">
-          <p>
-            Over <strong class="text-gray-800 dark:text-gray-200">26 years in technology</strong>, I've built a career that spans from troubleshooting PCs in the field to deploying AI at the largest financial institutions in the world. I've earned <strong class="text-gray-800 dark:text-gray-200">22 Microsoft certifications</strong> and built deep expertise across the Microsoft ecosystem — but what I'm most proud of is the ability to meet people where they are and help them get where they need to go.
-          </p>
-          <p>
-            Based in <strong class="text-gray-800 dark:text-gray-200">Chicago, IL</strong>, I specialize in <strong class="text-gray-800 dark:text-gray-200">financial services</strong> — an industry where precision, compliance, and reliability aren't optional. I'm as comfortable in the server room as I am in the boardroom, and I bring that rare combination of deep technical skill and genuine human connection to every engagement.
-          </p>
-          <p>
-            Today, I'm focused on helping the world's leading financial institutions harness the power of <strong class="text-gray-800 dark:text-gray-200">Microsoft 365 Copilot, Copilot Studio, and Microsoft Teams</strong> — turning AI ambition into AI reality.
-          </p>
-        </div>
-
-        <!-- Skill Tags -->
-        <div class="fade-up delay-300 flex flex-wrap gap-2 mt-8">
-          <span class="px-3 py-1.5 rounded-full text-xs font-semibold bg-primary/10 dark:bg-primary/20 text-primary dark:text-accent hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors cursor-default">M365 Copilot</span>
-          <span class="px-3 py-1.5 rounded-full text-xs font-semibold bg-primary/10 dark:bg-primary/20 text-primary dark:text-accent hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors cursor-default">Copilot Studio</span>
-          <span class="px-3 py-1.5 rounded-full text-xs font-semibold bg-primary/10 dark:bg-primary/20 text-primary dark:text-accent hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors cursor-default">Microsoft Teams</span>
-          <span class="px-3 py-1.5 rounded-full text-xs font-semibold bg-primary/10 dark:bg-primary/20 text-primary dark:text-accent hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors cursor-default">Teams Rooms</span>
-          <span class="px-3 py-1.5 rounded-full text-xs font-semibold bg-primary/10 dark:bg-primary/20 text-primary dark:text-accent hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors cursor-default">Prompt Engineering</span>
-          <span class="px-3 py-1.5 rounded-full text-xs font-semibold bg-primary/10 dark:bg-primary/20 text-primary dark:text-accent hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors cursor-default">Microsoft 365</span>
-          <span class="px-3 py-1.5 rounded-full text-xs font-semibold bg-primary/10 dark:bg-primary/20 text-primary dark:text-accent hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors cursor-default">Financial Services</span>
-          <span class="px-3 py-1.5 rounded-full text-xs font-semibold bg-primary/10 dark:bg-primary/20 text-primary dark:text-accent hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors cursor-default">Enterprise AI</span>
-          <span class="px-3 py-1.5 rounded-full text-xs font-semibold bg-primary/10 dark:bg-primary/20 text-primary dark:text-accent hover:bg-primary/20 dark:hover:bg-primary/30 transition-colors cursor-default">Unified Communications</span>
-        </div>
+        <p>Senior AI leaders and C-suite executives from across the industry, on a regular cadence. The point was never a vendor briefing. Microsoft can already book those.</p>
+        <p>The point is that the people carrying this problem inside their own institution get to compare notes with the people carrying it inside a competing one: <strong>what actually shipped, what quietly failed, what the regulator asked on the second call.</strong> Adoption moves faster when the peer group is real. That has been true every time.</p>
       </div>
-
-      <!-- Right: Stat Cards -->
-      <div class="fade-up delay-200 grid grid-cols-2 gap-4">
-
-        <!-- Stat 1 -->
-        <div class="card-shimmer bg-light-alt dark:bg-dark-card border border-gray-200/80 dark:border-white/5 rounded-2xl p-6 text-center hover:shadow-lg transition-all duration-300">
-          <div class="text-3xl mb-2">⏱️</div>
-          <div class="font-heading font-extrabold text-3xl text-gray-900 dark:text-white mb-1">
-            <span class="counter" data-target="26">0</span><span class="text-primary">+</span>
-          </div>
-          <p class="text-xs font-medium text-gray-500 dark:text-gray-400">Years in Technology</p>
-        </div>
-
-        <!-- Stat 2 -->
-        <div class="card-shimmer bg-light-alt dark:bg-dark-card border border-gray-200/80 dark:border-white/5 rounded-2xl p-6 text-center hover:shadow-lg transition-all duration-300">
-          <div class="text-3xl mb-2">🏅</div>
-          <div class="font-heading font-extrabold text-3xl text-gray-900 dark:text-white mb-1">
-            <span class="counter" data-target="22">0</span><span class="text-primary">+</span>
-          </div>
-          <p class="text-xs font-medium text-gray-500 dark:text-gray-400">Microsoft Certifications</p>
-        </div>
-
-        <!-- Stat 3 -->
-        <div class="card-shimmer bg-light-alt dark:bg-dark-card border border-gray-200/80 dark:border-white/5 rounded-2xl p-6 text-center hover:shadow-lg transition-all duration-300">
-          <div class="text-3xl mb-2">🏦</div>
-          <div class="font-heading font-extrabold text-xl text-gray-900 dark:text-white mb-1">FS</div>
-          <p class="text-xs font-medium text-gray-500 dark:text-gray-400">Financial Services Focus</p>
-        </div>
-
-        <!-- Stat 4 -->
-        <div class="card-shimmer bg-light-alt dark:bg-dark-card border border-gray-200/80 dark:border-white/5 rounded-2xl p-6 text-center hover:shadow-lg transition-all duration-300">
-          <div class="text-3xl mb-2">🤖</div>
-          <div class="font-heading font-extrabold text-xl text-gray-900 dark:text-white mb-1">AI</div>
-          <p class="text-xs font-medium text-gray-500 dark:text-gray-400">Microsoft AI Workforce</p>
-        </div>
-
+      <div>
+        <span class="label">Council record</span>
+        <dl class="council-rec">
+          <div><dt>Executives convened</dt><dd>281</dd></div>
+          <div><dt>Peer forum members</dt><dd>15</dd></div>
+          <div><dt>Engineers mentored</dt><dd>7</dd></div>
+          <div><dt>My standing</dt><dd>Founder &amp; co-chair</dd></div>
+        </dl>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Section Divider -->
-<div class="section-divider"></div>
-
-<!-- ==================== WHAT I BRING ==================== -->
-<section id="value" class="py-24 bg-light-alt dark:bg-dark-card/30">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <!-- Section Header -->
-    <div class="text-center mb-16">
-      <p class="fade-up text-sm font-semibold uppercase tracking-[0.2em] text-primary dark:text-accent mb-3">What I Bring</p>
-      <h2 class="fade-up delay-100 font-heading font-bold text-3xl sm:text-4xl lg:text-5xl text-gray-900 dark:text-white mb-4">
-        Three things that set me apart.
-      </h2>
-      <p class="fade-up delay-200 text-lg text-gray-500 dark:text-gray-400 max-w-2xl mx-auto">
-        The rare combination that separates a great demo from a real, lasting deployment.
-      </p>
+<!-- ══ SYSTEMS IN SCOPE ════════════════════════════════════ -->
+<section id="scope" class="pad" data-sec="Systems in scope">
+  <div class="shell">
+    <div class="head-block">
+      <h2 class="section-head">Systems in scope.</h2>
+      <p class="lede">What the team is accountable for inside a regulated institution. Four modes, usually in this order: set the technical strategy, build the demo and the proof of concept, drive adoption from pilot to production, then stay the advisor they call after the paperwork is signed.</p>
     </div>
 
-    <!-- Pillars -->
-    <div class="grid md:grid-cols-3 gap-6">
+    <div class="split">
+      <table class="spec">
+        <thead>
+          <tr><th scope="col">System</th><th scope="col">What the work is</th><th scope="col">Depth</th></tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Microsoft 365 Copilot<small>Readiness · governance · scale</small></th>
+            <td>Getting from a license count to a habit. In a bank the demo is not the hard part. The compliance review, the data boundary, and the rollout sequence are.</td>
+            <td class="st on">Lead</td>
+          </tr>
+          <tr>
+            <th scope="row">Copilot Chat<small>Workforce entry point</small></th>
+            <td>Where most of an organization actually meets AI. Measured on usage depth and monthly active use, not on seats invoiced.</td>
+            <td class="st on">Lead</td>
+          </tr>
+          <tr>
+            <th scope="row">Copilot Studio &amp; agents<small>Agent365 · governance</small></th>
+            <td>Custom agents against real financial workflows, built where the data and the controls already live, then secured, measured, and placed against the rest of the platform.</td>
+            <td class="st on">Lead</td>
+          </tr>
+          <tr>
+            <th scope="row">Microsoft Teams<small>Phone · Premium · Rooms</small></th>
+            <td>Regulated-grade collaboration: recording, retention, and eDiscovery that survive an audit, and rooms that work on a trading floor as well as in a boardroom.</td>
+            <td class="st">Deep</td>
+          </tr>
+          <tr>
+            <th scope="row">Employee Experience &amp; Viva<small>Frontline included</small></th>
+            <td>Reaching the people who never sit at a desk, and the ones who sit at one but have never opened the intranet.</td>
+            <td class="st">Deep</td>
+          </tr>
+          <tr>
+            <th scope="row">Competitive<small>OpenAI · Anthropic · Google · Zoom · Cisco · Slack</small></th>
+            <td>I would rather win on the integration and the compliance story than on a feature grid. Feature grids change monthly; a data boundary does not.</td>
+            <td class="st">Active</td>
+          </tr>
+        </tbody>
+      </table>
 
-      <!-- Pillar 1: Tech Depth -->
-      <div class="fade-up group card-shimmer bg-white dark:bg-dark-card border border-gray-200/80 dark:border-white/5 rounded-2xl p-7 hover:shadow-xl hover:shadow-primary/5 dark:hover:shadow-primary/10 transition-all duration-500">
-        <div class="w-14 h-14 rounded-2xl bg-primary/10 dark:bg-primary/20 flex items-center justify-center mb-5 group-hover:scale-110 group-hover:bg-primary/20 dark:group-hover:bg-primary/30 transition-all duration-300">
-          <span class="text-2xl">⚙️</span>
-        </div>
-        <h3 class="font-heading font-bold text-lg text-gray-900 dark:text-white mb-3">Tech Depth</h3>
-        <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">26 years of hands-on engineering — from field work and high-frequency trading systems to enterprise cloud and Microsoft AI. I don't just present slides. I've built, broken, and fixed the infrastructure.</p>
+      <div class="forward">
+        <h3>Where I think this goes</h3>
+        <ol>
+          <li><b>From licenses to consumption</b>The scoreboard moves to monthly active use, usage depth, business impact, and FinOps. Selling the seat was the easy decade.</li>
+          <li><b>Agents are the growth</b>Customers do not need another capability tour. They need three real use cases, a quick win, and a responsible path to scale.</li>
+          <li><b>Governance decides the ceiling</b>How agents get secured, measured, and placed against Security and Azure is what determines whether year two happens at all.</li>
+          <li><b>Depth beats coverage</b>Every engineer owns a minor and becomes the local expert in it, so the team has somewhere to send the hard question.</li>
+        </ol>
       </div>
-
-      <!-- Pillar 2: Business Acumen -->
-      <div class="fade-up delay-100 group card-shimmer bg-white dark:bg-dark-card border border-gray-200/80 dark:border-white/5 rounded-2xl p-7 hover:shadow-xl hover:shadow-primary/5 dark:hover:shadow-primary/10 transition-all duration-500">
-        <div class="w-14 h-14 rounded-2xl bg-primary/10 dark:bg-primary/20 flex items-center justify-center mb-5 group-hover:scale-110 group-hover:bg-primary/20 dark:group-hover:bg-primary/30 transition-all duration-300">
-          <span class="text-2xl">📊</span>
-        </div>
-        <h3 class="font-heading font-bold text-lg text-gray-900 dark:text-white mb-3">Business Acumen</h3>
-        <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">I translate complex technology into the language executives understand: ROI, efficiency gains, compliance enablement, and competitive advantage. I bridge the gap between IT and the C-suite with confidence.</p>
-      </div>
-
-      <!-- Pillar 3: Finance Domain -->
-      <div class="fade-up delay-200 group card-shimmer bg-white dark:bg-dark-card border border-gray-200/80 dark:border-white/5 rounded-2xl p-7 hover:shadow-xl hover:shadow-primary/5 dark:hover:shadow-primary/10 transition-all duration-500">
-        <div class="w-14 h-14 rounded-2xl bg-primary/10 dark:bg-primary/20 flex items-center justify-center mb-5 group-hover:scale-110 group-hover:bg-primary/20 dark:group-hover:bg-primary/30 transition-all duration-300">
-          <span class="text-2xl">🏦</span>
-        </div>
-        <h3 class="font-heading font-bold text-lg text-gray-900 dark:text-white mb-3">Finance Domain</h3>
-        <p class="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">Deep expertise in the regulatory, risk, and operational demands of financial services. I speak both IT and FinServ fluently — making me the trusted bridge between Microsoft and major financial institutions.</p>
-      </div>
-
     </div>
   </div>
 </section>
 
-<!-- Section Divider -->
-<div class="section-divider"></div>
+<!-- ══ CREDENTIALS ═════════════════════════════════════════ -->
+<section id="credentials" class="pad" data-sec="Credentials">
+  <div class="shell">
+    <div class="head-block">
+      <h2 class="section-head">Credentials on file.</h2>
+      <p class="lede">Eleven, plus the degree. Named individually rather than totaled, because a total is not something you can check.</p>
+    </div>
 
-<!-- ==================== CONTACT ==================== -->
-<section id="contact" class="py-24 bg-white dark:bg-dark-bg relative overflow-hidden">
-  <!-- Decorative blobs -->
-  <div class="absolute -top-20 -right-20 w-96 h-96 bg-primary/5 dark:bg-primary/10 rounded-full blur-3xl pointer-events-none"></div>
-  <div class="absolute -bottom-20 -left-20 w-80 h-80 bg-accent/5 dark:bg-accent/10 rounded-full blur-3xl pointer-events-none"></div>
+    <table class="spec">
+      <caption class="label">Microsoft credentials and education · verified against certification record</caption>
+      <thead>
+        <tr><th scope="col">Credential</th><th scope="col">Issued or expires</th><th scope="col">Status</th></tr>
+      </thead>
+      <tbody>
+        <tr><th scope="row">Applied Skills — Generate Reports with AI Research Agents</th><td class="field">Dec 2025</td><td class="st on">Earned</td></tr>
+        <tr><th scope="row">Applied Skills — Enhance Agents with Autonomous Capabilities</th><td class="field">Nov 2025</td><td class="st on">Earned</td></tr>
+        <tr><th scope="row">Microsoft 365 Certified: Teams Administrator Associate</th><td class="field">Exp. May 2027</td><td class="st on">Active</td></tr>
+        <tr><th scope="row">Microsoft 365 Certified: Collaboration Communications Systems Engineer Associate</th><td class="field">Exp. May 2027</td><td class="st on">Active</td></tr>
+        <tr><th scope="row">Microsoft Certified: Power Platform Fundamentals</th><td class="field">—</td><td class="st on">Active</td></tr>
+        <tr><th scope="row">Microsoft Teams Rooms Technical Solutions Professional</th><td class="field">—</td><td class="st on">Active</td></tr>
+        <tr><th scope="row">Microsoft Teams Rooms Solution Sales Professional</th><td class="field">—</td><td class="st on">Active</td></tr>
+        <tr><th scope="row">MCSE: Productivity</th><td class="field">Charter member</td><td class="st on">Charter</td></tr>
+        <tr><th scope="row">MCSE: Communication</th><td class="field">—</td><td class="st">Held</td></tr>
+        <tr><th scope="row">MCSA: Office 365</th><td class="field">—</td><td class="st">Held</td></tr>
+        <tr><th scope="row">Microsoft Certified Professional</th><td class="field">—</td><td class="st">Held</td></tr>
+        <tr><th scope="row">BBA, Information Systems — Loyola University Chicago</th><td class="field">May 2010</td><td class="st">Conferred</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
 
-  <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center relative z-10">
-    <p class="fade-up text-sm font-semibold uppercase tracking-[0.2em] text-primary dark:text-accent mb-3">Contact</p>
-    <h2 class="fade-up delay-100 font-heading font-bold text-3xl sm:text-4xl lg:text-5xl text-gray-900 dark:text-white mb-6">
-      Let's build something<br class="hidden sm:block"/> remarkable together.
-    </h2>
-    <p class="fade-up delay-200 text-lg text-gray-500 dark:text-gray-400 max-w-xl mx-auto mb-10 leading-relaxed">
-      Whether it's AI strategy, M365 Copilot deployment, Copilot Studio agents, or Microsoft Teams transformation — I'd love to connect.
+<!-- ══ OFF THE CLOCK ═══════════════════════════════════════ -->
+<section id="human" class="pad-tight" data-sec="The whole file">
+  <div class="shell">
+    <div class="human">
+      <div class="prose">
+        <h2 class="section-head" style="font-size:var(--step-l);max-width:none">The rest of the file.</h2>
+        <p style="margin-top:1rem">Rooted in <strong>Aurora, Illinois</strong>, with my wife <strong>Denise</strong> and our three-year-old son <strong>Tyler</strong>.</p>
+        <p>Becoming a parent is what made the coaching thing obvious to me. I had assumed it was a work preference. It is not. It is just how I am wired, and I get to do it in both places.</p>
+        <p>I am still a builder. Agents, Copilot Studio, whatever ships next. Still a student, always a geek. I would rather have built the thing than read the deck about it, and the house is where I go to break things safely.</p>
+        <p>Chicago proud. Cubs in the summer, Bears in the fall, a golf swing I am still fixing, and a smoker that gets more planning than most projects. The gym before the inbox. Travel when we can, podcasts when we cannot, and good coffee without exception.</p>
+        <p>None of that is separate from the job. It is the same person, on a different sheet.</p>
+      </div>
+      <div class="offrec">
+        <span class="label">On file</span>
+        <dl>
+          <div><dt class="label">Home</dt><dd>Aurora, Illinois</dd></div>
+          <div><dt class="label">Household</dt><dd>Denise · Tyler, age 3</dd></div>
+          <div><dt class="label">Allegiance</dt><dd>Cubs · Bears · Chicago proud</dd></div>
+          <div><dt class="label">Weekends</dt><dd>Golf · Smoker &amp; grill</dd></div>
+          <div><dt class="label">Routine</dt><dd>Gym before the inbox</dd></div>
+          <div><dt class="label">In my ears</dt><dd>Music &amp; podcasts</dd></div>
+          <div><dt class="label">Also on file</dt><dd>Travel · Good coffee, always</dd></div>
+          <div><dt class="label">Still tinkering</dt><dd>Home automation · AI</dd></div>
+        </dl>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ ESCALATION PATH ═════════════════════════════════════ -->
+<section id="contact" class="pad" data-sec="Escalation path">
+  <div class="shell">
+    <div class="esc">
+      <div>
+        <h2 class="section-head">Escalation path.</h2>
+        <p class="lede">If you are working on Copilot inside a bank, an insurer, or an asset manager, or you want to know what the council is doing, this is the short route to me.</p>
+        <div class="act" style="margin-top:1.75rem">
+          <a class="btn" href="mailto:DLRivero2@gmail.com?subject=From%20driv.space">Send a note</a>
+        </div>
+      </div>
+
+      <div class="esc-rows">
+        <a href="mailto:DLRivero2@gmail.com?subject=From%20driv.space">
+          <span class="label">Email</span><b>DLRivero2@gmail.com</b>
+        </a>
+        <a href="https://www.linkedin.com/in/drivero/" rel="me noopener" target="_blank">
+          <span class="label">LinkedIn</span><b>linkedin.com/in/drivero ↗</b>
+        </a>
+        <div>
+          <span class="label">Based</span><b>Aurora, Illinois</b>
+        </div>
+        <div>
+          <span class="label">Territory</span><b>Financial Services</b>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="shell">
+    <p class="credo">“Technology is powerful, but <em>people</em> make it matter.”</p>
+    <p class="signoff" style="margin:0">
+      <b>Dan Rivero</b>
+      <span>Managing Director, Solution Engineering — Financial Services</span>
+      <span>Microsoft</span>
+      <span class="end">© <span id="yr">2026</span> · driv.space</span>
     </p>
-
-    <div class="fade-up delay-300 flex flex-col sm:flex-row items-center justify-center gap-4">
-      <!-- Email -->
-      <a href="mailto:DLRivero2@gmail.com" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-primary text-white font-semibold hover:bg-blue-700 shadow-lg shadow-primary/25 hover:shadow-xl hover:shadow-primary/30 btn-press transition-all">
-        <span>✉️</span>
-        Email Me
-      </a>
-      <!-- LinkedIn -->
-      <a href="https://www.linkedin.com/in/drivero/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full border-2 border-gray-300 dark:border-white/10 text-gray-700 dark:text-gray-300 font-semibold hover:border-[#0A66C2] hover:text-[#0A66C2] dark:hover:text-[#0A66C2] hover:bg-[#0A66C2]/5 btn-press transition-all">
-        <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-        LinkedIn
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- Section Divider -->
-<div class="section-divider"></div>
-
-<!-- ==================== FOOTER ==================== -->
-<footer class="py-12 bg-white dark:bg-dark-bg border-t border-gray-100 dark:border-white/5">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-    <a href="#" class="font-heading font-bold text-xl tracking-tight text-gray-900 dark:text-white inline-block mb-4">
-      dan<span class="text-primary">.</span>rivero
-    </a>
-    <p class="text-sm text-gray-400 dark:text-gray-500 mb-2">
-      © <span id="footerYear">2025</span> Dan Rivero · Chicago, IL · All rights reserved.
-    </p>
-    <p class="text-xs text-gray-400 dark:text-gray-600">
-      Senior Solution Engineer · AI Workforce · Microsoft
+    <p class="printer">
+      <button type="button" id="printBtn">Print this record</button>
+      <span>One sheet, bands and all, the way it was meant to come off the line.</span>
     </p>
   </div>
 </footer>
 
-<!-- Back to Top -->
-<button id="backToTop" class="fixed bottom-8 right-8 z-50 w-12 h-12 rounded-full bg-primary text-white shadow-lg shadow-primary/40 flex items-center justify-center hover:bg-blue-700 hover:shadow-xl hover:shadow-primary/50 btn-press" aria-label="Back to top">
-  <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 10l7-7m0 0l7 7m-7-7v18"/></svg>
-</button>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Dan Rivero",
+  "alternateName": "Daniel L. Rivero",
+  "url": "https://driv.space/",
+  "jobTitle": "Managing Director, Solution Engineering — Financial Services",
+  "worksFor": { "@type": "Organization", "name": "Microsoft Corporation" },
+  "address": { "@type": "PostalAddress", "addressLocality": "Aurora", "addressRegion": "IL", "addressCountry": "US" },
+  "alumniOf": { "@type": "CollegeOrUniversity", "name": "Loyola University Chicago" },
+  "knowsAbout": ["Microsoft 365 Copilot", "Copilot Studio", "AI agents", "Microsoft Teams", "Financial services technology", "Solution engineering"],
+  "sameAs": ["https://www.linkedin.com/in/drivero/"]
+}
+</script>
 
-<!-- ==================== JAVASCRIPT ==================== -->
 <script>
-(function() {
+(function () {
   'use strict';
 
-  // ── Dark Mode ──
-  const html = document.documentElement;
-  const toggle = document.getElementById('darkToggle');
-  const toggleMobile = document.getElementById('darkToggleMobile');
+  var root = document.documentElement;
 
-  function applyTheme(dark) {
-    html.classList.toggle('dark', dark);
-    localStorage.setItem('theme', dark ? 'dark' : 'light');
+  // ── Day / night ──
+  function setTheme(night) {
+    root.dataset.theme = night ? 'night' : 'day';
+    try { localStorage.setItem('driv-theme', night ? 'night' : 'day'); } catch (e) {}
+    document.querySelectorAll('.tog[aria-pressed]').forEach(function (b) {
+      b.setAttribute('aria-pressed', String(night));
+    });
   }
+  setTheme(root.dataset.theme === 'night');
 
-  // Init: check localStorage, then system preference
-  const saved = localStorage.getItem('theme');
-  if (saved === 'dark' || (!saved && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-    applyTheme(true);
-  }
-
-  function handleToggle() { applyTheme(!html.classList.contains('dark')); }
-  toggle.addEventListener('click', handleToggle);
-  if (toggleMobile) toggleMobile.addEventListener('click', handleToggle);
-
-  // Listen for system preference changes
-  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
-    if (!localStorage.getItem('theme')) applyTheme(e.matches);
+  ['tog', 'togMobile'].forEach(function (id) {
+    var b = document.getElementById(id);
+    if (b) b.addEventListener('click', function () { setTheme(root.dataset.theme !== 'night'); });
   });
 
-  // ── Navigation Glassmorphism on Scroll ──
-  const nav = document.getElementById('nav');
-  const navBgClasses = ['nav-glass', 'bg-white/80', 'dark:bg-dark-bg/80', 'shadow-sm', 'border-b', 'border-gray-200/50', 'dark:border-white/5'];
+  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', function (e) {
+    var stored = null;
+    try { stored = localStorage.getItem('driv-theme'); } catch (err) {}
+    if (!stored) setTheme(e.matches);
+  });
 
-  function updateNav() {
-    if (window.scrollY > 50) {
-      nav.classList.add(...navBgClasses);
-    } else {
-      nav.classList.remove(...navBgClasses);
-    }
-  }
-  window.addEventListener('scroll', updateNav, { passive: true });
-  updateNav();
+  // ── Contents sheet ──
+  var sheet = document.getElementById('sheet');
+  var menuBtn = document.getElementById('menuBtn');
 
-  // ── Mobile Menu (full-screen overlay) ──
-  const menuBtn = document.getElementById('mobileMenuBtn');
-  const menu = document.getElementById('mobileMenu');
-  const iconOpen = document.getElementById('menuIconOpen');
-  const iconClose = document.getElementById('menuIconClose');
-  let mobileMenuOpen = false;
-
-  function toggleMobileMenu(open) {
-    mobileMenuOpen = open;
-    menu.classList.toggle('hidden', !open);
-    iconOpen.classList.toggle('hidden', open);
-    iconClose.classList.toggle('hidden', !open);
+  function openSheet(open) {
+    sheet.dataset.open = String(open);
+    menuBtn.setAttribute('aria-expanded', String(open));
+    menuBtn.textContent = open ? 'Close' : 'Contents';
     document.body.style.overflow = open ? 'hidden' : '';
   }
-
-  menuBtn.addEventListener('click', () => toggleMobileMenu(!mobileMenuOpen));
-  document.querySelectorAll('.mobile-link').forEach(link => {
-    link.addEventListener('click', () => toggleMobileMenu(false));
+  menuBtn.addEventListener('click', function () { openSheet(sheet.dataset.open !== 'true'); });
+  sheet.querySelectorAll('a').forEach(function (a) {
+    a.addEventListener('click', function () { openSheet(false); });
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && sheet.dataset.open === 'true') { openSheet(false); menuBtn.focus(); }
   });
 
-  // ── Fade-Up on Scroll ──
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
+  // ── The strip re-reads its SECTION field as the document scrolls ──
+  var secName = document.getElementById('secName');
+  var sections = Array.prototype.slice.call(document.querySelectorAll('section[data-sec]'));
+  var links = Array.prototype.slice.call(document.querySelectorAll('.strip-nav a'));
+
+  function mark(id, name) {
+    if (secName.textContent !== name) secName.textContent = name;
+    links.forEach(function (l) {
+      l.setAttribute('aria-current', String(l.getAttribute('href') === '#' + id));
     });
-  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-
-  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
-
-  // ── Animated Counters ──
-  const counterObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const el = entry.target;
-        const target = parseInt(el.getAttribute('data-target'), 10);
-        let current = 0;
-        const duration = 2000;
-        const step = target / (duration / 16);
-        const timer = setInterval(() => {
-          current += step;
-          if (current >= target) {
-            el.textContent = target;
-            clearInterval(timer);
-          } else {
-            el.textContent = Math.floor(current);
-          }
-        }, 16);
-        counterObserver.unobserve(el);
-      }
-    });
-  }, { threshold: 0.5 });
-
-  document.querySelectorAll('.counter').forEach(el => counterObserver.observe(el));
-
-  // ── Scroll Progress Bar ──
-  const progressBar = document.getElementById('scrollProgress');
-  function updateProgress() {
-    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-    progressBar.style.width = (docHeight > 0 ? (window.scrollY / docHeight) * 100 : 0) + '%';
   }
-  window.addEventListener('scroll', updateProgress, { passive: true });
 
-  // ── Scrollspy ──
-  const navLinks = document.querySelectorAll('nav a[href^="#"]');
-  const spySections = document.querySelectorAll('section[id]');
-  const spyObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const id = entry.target.id;
-        navLinks.forEach(link => {
-          link.classList.remove('nav-active');
-          if (link.getAttribute('href') === '#' + id) link.classList.add('nav-active');
-        });
-      }
-    });
-  }, { threshold: 0, rootMargin: '-60px 0px -50% 0px' });
-  spySections.forEach(s => spyObserver.observe(s));
-  // Clear all active states when scrolled back to top (before first section)
-  window.addEventListener('scroll', () => {
-    if (window.scrollY < 100) navLinks.forEach(l => l.classList.remove('nav-active'));
-  }, { passive: true });
-
-  // ── Back to Top ──
-  const btt = document.getElementById('backToTop');
-  function updateBtt() { btt.classList.toggle('btt-visible', window.scrollY > 400); }
-  window.addEventListener('scroll', updateBtt, { passive: true });
-  btt.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-
-  // ── Typewriter Effect ──
-  const twEl = document.getElementById('typewriterText');
-  if (twEl) {
-    const twPhrases = ['in Financial Services.', 'for Global Banks.', 'in Capital Markets.', 'at Enterprise Scale.', 'for Insurance Leaders.'];
-    let twIdx = 0, twChar = twPhrases[0].length, twDeleting = true;
-    function typeWrite() {
-      const phrase = twPhrases[twIdx];
-      if (!twDeleting) {
-        twChar++;
-        twEl.textContent = phrase.substring(0, twChar);
-        if (twChar >= phrase.length) { twDeleting = true; setTimeout(typeWrite, 2600); return; }
-        setTimeout(typeWrite, 80);
-      } else {
-        twChar--;
-        twEl.textContent = phrase.substring(0, twChar);
-        if (twChar === 0) {
-          twDeleting = false;
-          twIdx = (twIdx + 1) % twPhrases.length;
-          setTimeout(typeWrite, 350);
-          return;
-        }
-        setTimeout(typeWrite, 45);
-      }
+  function readPosition() {
+    var line = window.scrollY + 140;
+    var current = null;
+    for (var i = 0; i < sections.length; i++) {
+      if (sections[i].offsetTop <= line) current = sections[i];
     }
-    setTimeout(typeWrite, 3500);
+    if (current) mark(current.id, current.dataset.sec.toUpperCase());
+    else mark('', 'MASTHEAD');
   }
 
-  // ── Hero Card Mouse Parallax ──
-  const heroSection = document.querySelector('section.hero-grid');
-  const heroWrapper = document.getElementById('heroCardWrapper');
-  if (heroSection && heroWrapper) {
-    heroSection.addEventListener('mousemove', (e) => {
-      const rect = heroSection.getBoundingClientRect();
-      const x = ((e.clientX - rect.left) / rect.width - 0.5) * 14;
-      const y = ((e.clientY - rect.top) / rect.height - 0.5) * 8;
-      heroWrapper.style.transform = `rotateX(${-y}deg) rotateY(${x}deg)`;
-    });
-    heroSection.addEventListener('mouseleave', () => { heroWrapper.style.transform = ''; });
-  }
+  var ticking = false;
+  window.addEventListener('scroll', function () {
+    if (ticking) return;
+    ticking = true;
+    window.requestAnimationFrame(function () { readPosition(); ticking = false; });
+  }, { passive: true });
+  window.addEventListener('resize', readPosition, { passive: true });
+  readPosition();
 
-  // ── D Key → Dark Mode Toggle ──
-  document.addEventListener('keydown', (e) => {
-    if (e.key !== 'd' && e.key !== 'D') return;
-    const tag = e.target.tagName.toLowerCase();
-    if (tag === 'input' || tag === 'textarea' || tag === 'select') return;
-    handleToggle();
-  });
+  // ── Sign-off year ──
+  document.getElementById('yr').textContent = new Date().getFullYear();
 
-  // ── Hero Certification Counter (page load) ──
-  const heroCertEl = document.getElementById('heroCertCount');
-  if (heroCertEl) {
-    let count = 0;
-    const certTarget = 22;
-    const certStep = certTarget / (1400 / 16);
-    setTimeout(() => {
-      const t = setInterval(() => {
-        count += certStep;
-        if (count >= certTarget) { heroCertEl.textContent = certTarget; clearInterval(t); }
-        else heroCertEl.textContent = Math.floor(count);
-      }, 16);
-    }, 900);
-  }
-
-  // ── Dynamic Footer Year ──
-  const fyEl = document.getElementById('footerYear');
-  if (fyEl) fyEl.textContent = new Date().getFullYear();
-
+  var printBtn = document.getElementById('printBtn');
+  if (printBtn) printBtn.addEventListener('click', function () { window.print(); });
 })();
 </script>
 
